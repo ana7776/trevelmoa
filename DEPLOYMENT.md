@@ -6,14 +6,21 @@
 - 등록기관: 가비아
 - 배포 대상: Cloudflare Pages
 - 사이트 내부 canonical, sitemap, robots URL은 `https://trevelmoa.com` 기준으로 설정 완료
+- Cloudflare Pages 프로젝트: `trevelmoa`
+- 현재 Pages 배포 URL: `https://99a65ac5.trevelmoa.pages.dev`
+- Cloudflare 네임서버:
+  - `clark.ns.cloudflare.com`
+  - `elaine.ns.cloudflare.com`
 
 ## 권장 연결 방식
 
 Cloudflare Pages에서 루트 도메인 `trevelmoa.com`과 `www.trevelmoa.com`을 모두 안정적으로 쓰려면 Cloudflare를 DNS 관리자로 사용하는 방식이 가장 단순하다.
 
-1. Cloudflare 대시보드에서 `trevelmoa.com` 사이트를 추가한다.
-2. Cloudflare가 제시하는 2개의 네임서버 값을 확인한다.
+1. Cloudflare 대시보드에서 `trevelmoa.com` 사이트를 추가한다. 완료.
+2. Cloudflare가 제시하는 2개의 네임서버 값을 확인한다. 완료.
 3. 가비아 My가비아 > 도메인 관리 > `trevelmoa.com` > 네임서버 변경에서 Cloudflare 네임서버 2개로 교체한다.
+   - `clark.ns.cloudflare.com`
+   - `elaine.ns.cloudflare.com`
 4. Cloudflare에서 도메인이 Active 상태가 될 때까지 기다린다.
 5. Workers & Pages > Pages 프로젝트 > Custom domains에서 아래 도메인을 추가한다.
    - `trevelmoa.com`

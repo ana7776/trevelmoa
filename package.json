@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "serve": "node scripts/local-server.mjs",
+    "prepare:dist": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/prepare-dist.ps1",
     "images:r2": "node scripts/crawl-images-to-r2.mjs"
   },
   "dependencies": {
