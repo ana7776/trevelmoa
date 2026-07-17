@@ -19,6 +19,11 @@ npm run serve
 - 배포 도메인: `https://trevelmoa.com`
 - 도메인 연결 절차는 `DEPLOYMENT.md`를 참고하세요.
 
+## GitHub
+
+- Repository: `https://github.com/ana7776/trevelmoa`
+- Production branch: `main`
+
 ## 이미지 자동화
 
 ```bash
