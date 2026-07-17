@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-label="자전거길 풍경">
+  <rect width="1400" height="900" fill="#d8ece6"/>
+  <path d="M0 620 C250 500 430 620 650 520 S1080 390 1400 470 V900 H0 Z" fill="#8dc4a7"/>
+  <path d="M0 720 C280 620 470 690 710 600 S1110 560 1400 650 V900 H0 Z" fill="#527f68"/>
+  <path d="M115 870 C360 690 575 645 805 645 C1008 645 1170 690 1370 830" fill="none" stroke="#f8faf7" stroke-width="64" stroke-linecap="round"/>
+  <path d="M115 870 C360 690 575 645 805 645 C1008 645 1170 690 1370 830" fill="none" stroke="#2c493d" stroke-width="4" stroke-dasharray="28 26" opacity=".45"/>
+  <circle cx="1120" cy="210" r="78" fill="#f5b641"/>
+  <g fill="none" stroke="#17201b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" transform="translate(840 520)">
+    <circle cx="0" cy="135" r="62"/>
+    <circle cx="230" cy="135" r="62"/>
+    <path d="M0 135 L85 35 L140 135 L230 135 L176 48"/>
+    <path d="M85 35 H168"/>
+    <path d="M140 135 L80 135"/>
+    <path d="M168 48 L205 15"/>
+  </g>
+</svg>

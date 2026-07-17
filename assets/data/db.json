@@ -1,0 +1,38 @@
+{
+  "site": {
+    "name": "RideMoa",
+    "locale": "ko-KR",
+    "description": "전국 자전거길 여행 전 확인 사항과 코스별 준비 정보를 제공하는 정적 정보 사이트"
+  },
+  "routes": [
+    {
+      "slug": "river-beginner",
+      "title": "강변 평지 자전거길",
+      "theme": "초보 추천",
+      "distanceKm": "20-40",
+      "difficulty": "easy",
+      "contentBlocks": ["summary", "checklist", "transport", "seasonTips", "faq", "affiliateProducts"]
+    },
+    {
+      "slug": "island-coast",
+      "title": "섬과 해안 자전거길",
+      "theme": "여행형",
+      "distanceKm": "10-50",
+      "difficulty": "medium",
+      "contentBlocks": ["summary", "ferryNotice", "windNotice", "transport", "faq", "affiliateProducts"]
+    },
+    {
+      "slug": "certification-route",
+      "title": "인증·종주 자전거길",
+      "theme": "종주 준비",
+      "distanceKm": "variable",
+      "difficulty": "medium",
+      "contentBlocks": ["summary", "stampGuide", "supplies", "sleepPlan", "faq", "affiliateProducts"]
+    }
+  ],
+  "monetizationSlots": [
+    {"id": "article-after-intro", "type": "adsense", "status": "disabled-before-approval"},
+    {"id": "article-mid-checklist", "type": "adsense", "status": "disabled-before-approval"},
+    {"id": "gear-recommendations", "type": "affiliate", "status": "ready-after-disclosure"}
+  ]
+}

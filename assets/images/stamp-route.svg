@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="자전거 인증 스탬프">
+  <rect width="800" height="500" fill="#f1f6ee"/>
+  <rect x="205" y="95" width="390" height="310" rx="8" fill="#fff" stroke="#dbe4df" stroke-width="8"/>
+  <circle cx="400" cy="250" r="95" fill="none" stroke="#1f6b4f" stroke-width="18"/>
+  <path d="M336 250 h128 M400 186 v128" stroke="#1f6b4f" stroke-width="18" stroke-linecap="round"/>
+  <path d="M250 380 h300" stroke="#f5b641" stroke-width="18" stroke-linecap="round"/>
+  <path d="M145 155 C80 245 95 330 160 390" fill="none" stroke="#78b8ce" stroke-width="24" stroke-linecap="round"/>
+</svg>

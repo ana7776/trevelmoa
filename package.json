@@ -1,0 +1,19 @@
+{
+  "name": "ridemoa-static",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "node scripts/local-server.mjs",
+    "images:r2": "node scripts/crawl-images-to-r2.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.621.0",
+    "cheerio": "^1.0.0",
+    "sharp": "^0.33.5",
+    "undici": "^6.19.8"
+  },
+  "devDependencies": {
+    "serve": "^14.2.3"
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="섬 자전거길">
+  <rect width="800" height="500" fill="#dff0f7"/>
+  <path d="M0 305 C145 255 260 310 360 280 C510 235 620 255 800 210 V500 H0 Z" fill="#4f93b2"/>
+  <path d="M170 360 C260 265 410 275 500 365 C430 390 260 400 170 360 Z" fill="#68a884"/>
+  <path d="M240 355 C330 320 410 330 475 365" fill="none" stroke="#fff" stroke-width="24" stroke-linecap="round"/>
+  <path d="M555 175 l54 30 l-54 30 z" fill="#f5b641"/>
+  <path d="M530 238 h145" stroke="#17201b" stroke-width="14" stroke-linecap="round"/>
+</svg>
