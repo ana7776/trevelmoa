@@ -52,7 +52,7 @@ function createObjectKey(imageUrl) {
 async function fetchBuffer(url) {
   const response = await fetch(url, {
     headers: {
-      "user-agent": "RideMoa image optimizer; contact=contact@example.com"
+      "user-agent": "RideMoa image optimizer; contact=contact@trevelmoa.com"
     }
   });
 
@@ -88,7 +88,7 @@ async function uploadWebp(buffer, key) {
 async function collectImages(pageUrl) {
   const response = await fetch(pageUrl, {
     headers: {
-      "user-agent": "RideMoa content research; contact=contact@example.com"
+      "user-agent": "RideMoa content research; contact=contact@trevelmoa.com"
     }
   });
 

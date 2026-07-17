@@ -16,7 +16,8 @@ npm run serve
 - Build command: 비워두기
 - Output directory: `/`
 - 환경: Static HTML
-- 배포 후 `example.com`으로 들어간 canonical, sitemap, robots URL을 실제 도메인으로 교체하세요.
+- 배포 도메인: `https://trevelmoa.com`
+- 도메인 연결 절차는 `DEPLOYMENT.md`를 참고하세요.
 
 ## 이미지 자동화
 
