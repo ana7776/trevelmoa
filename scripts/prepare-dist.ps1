@@ -71,6 +71,8 @@ New-Item -ItemType Directory -Force -Path $dist | Out-Null
 $items = @(
   "index.html",
   "assets",
+  "calendar",
+  "data",
   "info",
   "pages",
   "posts",

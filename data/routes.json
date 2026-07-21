@@ -1,0 +1,10 @@
+{
+  "updated": "2026-07-21",
+  "routes": [
+    {"id": "han-river-beginner", "region": "서울·경기", "difficulty": "초보", "duration": "반나절", "url": "/info/beginner/han-river-bike-beginner-course.html"},
+    {"id": "seoul-gyeonggi-short", "region": "서울·경기", "difficulty": "초보", "duration": "당일", "url": "/info/region/seoul-gyeonggi-short-bike-routes.html"},
+    {"id": "jeju-coast", "region": "제주", "difficulty": "중간", "duration": "1박 이상", "url": "/info/region/jeju-bike-trip-preparation.html"},
+    {"id": "gangwon-scenic", "region": "강원", "difficulty": "중간", "duration": "당일", "url": "/info/region/gangwon-scenic-bike-route-prep.html"},
+    {"id": "overnight-grand-ride", "region": "전국", "difficulty": "장거리", "duration": "1박 이상", "url": "/info/planning/overnight-lodging-plan.html"}
+  ]
+}

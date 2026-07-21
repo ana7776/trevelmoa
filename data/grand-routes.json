@@ -1,0 +1,10 @@
+{
+  "updated": "2026-07-21",
+  "chapters": [
+    {"chapter": 1, "title": "출발 전 체력 기준", "url": "/info/beginner/first-ride-distance.html"},
+    {"chapter": 2, "title": "당일 코스 선택", "url": "/info/planning/beautiful-bike-routes-selection-guide.html"},
+    {"chapter": 3, "title": "지역별 변수 확인", "url": "/info/region/seoul-gyeonggi-short-bike-routes.html"},
+    {"chapter": 4, "title": "장거리 준비물", "url": "/info/planning/bike-trip-packing-checklist.html"},
+    {"chapter": 5, "title": "종주 숙박 분할", "url": "/info/planning/overnight-lodging-plan.html"}
+  ]
+}
