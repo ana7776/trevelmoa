@@ -6,7 +6,6 @@
   <title>라이드모아 | 전국 자전거길 여행 가이드</title>
   <meta name="description" content="전국 자전거 여행 코스, 방문 전 체크리스트, 계절별 라이딩 팁, 교통 정보와 FAQ를 한곳에서 확인하는 자전거길 정보 허브입니다.">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="naver-site-verification" content="NAVER_VERIFICATION_CODE">
   <link rel="canonical" href="https://trevelmoa.com/">
   <link rel="stylesheet" href="/assets/css/styles.css">
   <meta property="og:type" content="website">
@@ -29,12 +28,16 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="/" aria-label="라이드모아 홈">RideMoa</a>
+    <a class="brand" href="/" aria-label="라이드모아 홈">라이드모아</a>
     <nav class="nav" aria-label="주요 메뉴">
       <a href="#routes">코스</a>
       <a href="#guides">가이드</a>
-      <a href="/posts/national-bike-route-guide.html">표준 글</a>
+      <a href="#latest">최신 글</a>
+      <a href="/pages/routes-by-region.html">지역별</a>
+      <a href="/pages/routes-by-distance.html">거리별</a>
+      <a href="/pages/routes-by-purpose.html">목적별</a>
       <a href="/pages/about.html">소개</a>
+      <a href="/pages/contact.html">문의</a>
       <a href="/pages/privacy.html">개인정보처리방침</a>
     </nav>
   </header>
@@ -54,7 +57,7 @@
         <strong>오늘의 추천</strong>
         <span>초보자: 강변 평지 코스</span>
         <span>중급자: 섬 순환 코스</span>
-        <span>준비물: 헬멧, 라이트, 보조배터리</span>
+        <span>선택법: 공식 100선 후보를 내 일정에 맞게 거르기</span>
       </div>
     </section>
 
@@ -64,14 +67,40 @@
         <h2>테마별 자전거길</h2>
         <p>지역명만 모은 목록이 아니라, 검색 유입과 체류 시간을 고려해 목적별로 탐색할 수 있게 구성했습니다.</p>
       </div>
+      <div class="info-grid">
+        <article class="info-card">
+          <h3>지역별 탐색</h3>
+          <p>서울·경기, 제주, 강원, 전라, 경상처럼 출발지와 여행 지역을 기준으로 코스를 고릅니다.</p>
+          <a href="/pages/routes-by-region.html">지역별 보기</a>
+        </article>
+        <article class="info-card">
+          <h3>거리별 탐색</h3>
+          <p>30km 이하, 50km 이하, 100km 이하처럼 체력과 일정에 맞는 거리부터 정합니다.</p>
+          <a href="/pages/routes-by-distance.html">거리별 보기</a>
+        </article>
+        <article class="info-card">
+          <h3>목적별 탐색</h3>
+          <p>초보, 가족, 사진 여행, 종주 연습, 섬 여행처럼 목적에 맞는 기준으로 찾습니다.</p>
+          <a href="/pages/routes-by-purpose.html">목적별 보기</a>
+        </article>
+      </div>
       <div class="route-grid">
+        <article class="route-card">
+          <img src="/assets/images/stamp-route.svg" alt="아름다운 자전거길 선택 기준 일러스트">
+          <div>
+            <p class="tag">공식 참고</p>
+            <h3>아름다운 자전거길 고르는 법</h3>
+            <p>공식 100선 구조를 참고해 접근성, 안전성, 풍경, 보급, 일정 기준으로 후보를 고르는 방법입니다.</p>
+            <a href="/posts/beautiful-bike-routes-selection-guide.html">선택 가이드 보기</a>
+          </div>
+        </article>
         <article class="route-card">
           <img src="/assets/images/river-route.svg" alt="강변 자전거길 일러스트">
           <div>
             <p class="tag">초보 추천</p>
             <h3>강변 평지 코스</h3>
             <p>주행 부담이 낮고 편의시설 접근성이 좋아 첫 장거리 라이딩에 적합한 코스 모음입니다.</p>
-            <a href="/posts/national-bike-route-guide.html">가이드 보기</a>
+            <a href="/posts/han-river-bike-beginner-course.html">한강 초보 코스 보기</a>
           </div>
         </article>
         <article class="route-card">
@@ -80,7 +109,16 @@
             <p class="tag">여행형</p>
             <h3>섬과 해안 코스</h3>
             <p>선박 시간, 바람 방향, 보급 지점을 함께 확인해야 하는 여행형 자전거길입니다.</p>
-            <a href="/posts/national-bike-route-guide.html#transport">이동 팁 보기</a>
+            <a href="/posts/jeju-bike-trip-preparation.html">제주 준비 가이드 보기</a>
+          </div>
+        </article>
+        <article class="route-card">
+          <img src="/assets/images/river-route.svg" alt="가이드 자전거 여행 선택 일러스트">
+          <div>
+            <p class="tag">여행 상품 선택</p>
+            <h3>가이드와 셀프가이드 선택법</h3>
+            <p>지역, 거리, 일정, 후기, 포함 비용을 기준으로 내게 맞는 자전거 여행 방식을 고릅니다.</p>
+            <a href="/posts/guided-vs-self-guided-bike-trip.html">선택법 보기</a>
           </div>
         </article>
         <article class="route-card">
@@ -89,7 +127,7 @@
             <p class="tag">종주 준비</p>
             <h3>인증·종주 코스</h3>
             <p>인증센터, 수첩, 보급 계획, 숙박 분할까지 종주 전에 필요한 항목을 점검합니다.</p>
-            <a href="/posts/national-bike-route-guide.html#checklist">체크리스트 보기</a>
+            <a href="/posts/bike-trip-packing-checklist.html">준비물 체크리스트 보기</a>
           </div>
         </article>
       </div>
@@ -97,43 +135,99 @@
 
     <section class="section split" id="guides">
       <div>
-        <p class="eyebrow">AdSense Ready</p>
-        <h2>승인 전부터 필요한 콘텐츠 구조</h2>
-        <p>구글 애드센스 심사는 얇은 페이지보다 신뢰 가능한 설명, 고유한 편집 관점, 정책 페이지, 명확한 탐색 구조를 선호합니다. 이 사이트는 각 글마다 방문 전 확인 사항, FAQ, 출처 표기, 제휴 고지 영역을 포함하도록 설계했습니다.</p>
+        <p class="eyebrow">Editorial Standard</p>
+        <h2>정보성 디렉토리에 필요한 콘텐츠 구조</h2>
+        <p>얇은 페이지보다 신뢰 가능한 설명, 고유한 편집 관점, 정책 페이지, 명확한 탐색 구조가 중요합니다. 이 사이트는 각 글마다 방문 전 확인 사항, FAQ, 출처 표기, 업데이트 정책을 포함하도록 설계했습니다.</p>
       </div>
       <ul class="check-list">
-        <li>개인정보처리방침, 문의 안내, 광고/제휴 고지 포함</li>
-        <li>글 본문 중간 광고 슬롯은 승인 전 주석 상태로 보관</li>
+        <li>개인정보처리방침, 사이트 소개, 문의 안내 등 기본 신뢰 요소 포함</li>
+        <li>글 본문은 목록 나열보다 방문 전 판단 기준과 체크리스트 중심으로 구성</li>
         <li>네이버/구글 검색용 메타 태그와 구조화 데이터 적용</li>
         <li>지역별 DB를 기반으로 콘텐츠를 확장할 수 있는 구조</li>
       </ul>
     </section>
 
+    <section class="section" id="latest">
+      <div class="section-head">
+        <p class="eyebrow">Latest Guides</p>
+        <h2>최근 자전거 여행 글</h2>
+        <p>자전거 여행 정보는 짧은 소개보다 방문자의 실제 문제를 해결하는 구체적인 안내가 중요합니다.</p>
+      </div>
+      <div class="route-grid">
+        <article class="route-card">
+          <img src="/assets/images/stamp-route.svg" alt="공식 자전거길 100선 선택 가이드 일러스트">
+          <div>
+            <p class="tag">공식 자료 활용</p>
+            <h3>아름다운 자전거길 고르는 법</h3>
+            <p>지역별 명단을 복제하지 않고 실제 일정에 맞는 후보를 고르는 체크리스트로 재구성했습니다.</p>
+            <a href="/posts/beautiful-bike-routes-selection-guide.html">글 읽기</a>
+          </div>
+        </article>
+        <article class="route-card">
+          <img src="/assets/images/river-route.svg" alt="한강 자전거길 초보 코스 일러스트">
+          <div>
+            <p class="tag">짧은 코스</p>
+            <h3>서울 경기 30km 이하 자전거길 고르는 법</h3>
+            <p>초보자가 짧은 코스를 고를 때 확인할 복귀 동선, 휴식 지점, 안전 기준을 정리했습니다.</p>
+            <a href="/posts/seoul-gyeonggi-short-bike-routes.html">글 읽기</a>
+          </div>
+        </article>
+        <article class="route-card">
+          <img src="/assets/images/island-route.svg" alt="제주 자전거 여행 준비 일러스트">
+          <div>
+            <p class="tag">섬 여행</p>
+            <h3>제주 자전거 여행 준비 가이드</h3>
+            <p>제주 라이딩의 일정 분할, 바람과 날씨, 짐 운반, 대여 선택 기준을 안내합니다.</p>
+            <a href="/posts/jeju-bike-trip-preparation.html">글 읽기</a>
+          </div>
+        </article>
+        <article class="route-card">
+          <img src="/assets/images/river-route.svg" alt="가이드 자전거 여행과 셀프가이드 비교 일러스트">
+          <div>
+            <p class="tag">여행 방식</p>
+            <h3>가이드 자전거 여행과 셀프가이드 선택법</h3>
+            <p>상품형 자전거 여행을 볼 때 확인할 지역, 거리, 비용, 후기, FAQ 기준을 정리했습니다.</p>
+            <a href="/posts/guided-vs-self-guided-bike-trip.html">글 읽기</a>
+          </div>
+        </article>
+        <article class="route-card">
+          <img src="/assets/images/stamp-route.svg" alt="자전거 여행 준비물 체크리스트 일러스트">
+          <div>
+            <p class="tag">가족 안전</p>
+            <h3>가족 자전거 나들이 코스 고르는 법</h3>
+            <p>아이와 초보자가 함께할 때 필요한 안전한 길, 휴식 공간, 역할 나누기를 정리했습니다.</p>
+            <a href="/posts/family-bike-ride-safety-guide.html">글 읽기</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section class="section">
       <div class="section-head">
-        <p class="eyebrow">Monetization</p>
-        <h2>승인 후 확장 가능한 수익 영역</h2>
+        <p class="eyebrow">Quality Guide</p>
+        <h2>정보성 글을 유지하는 운영 원칙</h2>
       </div>
       <div class="monetize-grid">
         <article>
-          <h3>본문 광고</h3>
-          <p>도입부 이후, 체크리스트 이후, FAQ 이전에 자연스러운 광고 삽입 지점을 마련했습니다.</p>
+          <h3>출처 확인</h3>
+          <p>공식 자료는 원문 링크로 안내하고, 본문은 방문자가 이해하기 쉬운 판단 기준으로 재구성합니다.</p>
         </article>
         <article>
-          <h3>제휴 상품</h3>
-          <p>헬멧, 라이트, 공구, 방수 가방처럼 자전거 여행 문맥에 맞는 상품 추천 영역을 제공합니다.</p>
+          <h3>준비물 설명</h3>
+          <p>특정 제품을 권하지 않고 상황별로 필요한 장비의 역할과 확인 기준만 설명합니다.</p>
         </article>
         <article>
-          <h3>지역 제휴</h3>
-          <p>숙소, 렌탈샵, 카페, 짐 배송 서비스 등 지역 기반 제휴 콘텐츠로 확장할 수 있습니다.</p>
+          <h3>정기 점검</h3>
+          <p>운영 시간, 교통편, 코스 상태처럼 바뀌는 정보는 업데이트 정책을 명시하고 재확인을 안내합니다.</p>
         </article>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© 2026 RideMoa. 본 사이트는 여행 준비용 편집 정보를 제공하며, 운영 시간·교통편은 방문 전 공식 채널에서 재확인하세요.</p>
+    <p>© 2026 라이드모아 (RideMoa). 본 사이트는 여행 준비용 편집 정보를 제공하며, 운영 시간·교통편은 방문 전 공식 채널에서 재확인하세요.</p>
     <a href="/pages/about.html">사이트 소개</a>
+    <a href="/pages/contact.html">문의</a>
     <a href="/pages/privacy.html">개인정보처리방침</a>
   </footer>
 </body>

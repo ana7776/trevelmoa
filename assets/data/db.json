@@ -11,7 +11,7 @@
       "theme": "초보 추천",
       "distanceKm": "20-40",
       "difficulty": "easy",
-      "contentBlocks": ["summary", "checklist", "transport", "seasonTips", "faq", "affiliateProducts"]
+      "contentBlocks": ["summary", "checklist", "transport", "seasonTips", "faq"]
     },
     {
       "slug": "island-coast",
@@ -19,7 +19,7 @@
       "theme": "여행형",
       "distanceKm": "10-50",
       "difficulty": "medium",
-      "contentBlocks": ["summary", "ferryNotice", "windNotice", "transport", "faq", "affiliateProducts"]
+      "contentBlocks": ["summary", "ferryNotice", "windNotice", "transport", "faq"]
     },
     {
       "slug": "certification-route",
@@ -27,12 +27,7 @@
       "theme": "종주 준비",
       "distanceKm": "variable",
       "difficulty": "medium",
-      "contentBlocks": ["summary", "stampGuide", "supplies", "sleepPlan", "faq", "affiliateProducts"]
+      "contentBlocks": ["summary", "stampGuide", "supplies", "sleepPlan", "faq"]
     }
-  ],
-  "monetizationSlots": [
-    {"id": "article-after-intro", "type": "adsense", "status": "disabled-before-approval"},
-    {"id": "article-mid-checklist", "type": "adsense", "status": "disabled-before-approval"},
-    {"id": "gear-recommendations", "type": "affiliate", "status": "ready-after-disclosure"}
   ]
 }
