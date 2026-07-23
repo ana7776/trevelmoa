@@ -1,10 +1,55 @@
 {
-  "updated": "2026-07-21",
+  "updated": "2026-07-23",
   "chapters": [
-    {"chapter": 1, "title": "출발 전 체력 기준", "url": "/info/beginner/first-ride-distance.html"},
-    {"chapter": 2, "title": "당일 코스 선택", "url": "/info/planning/beautiful-bike-routes-selection-guide.html"},
-    {"chapter": 3, "title": "지역별 변수 확인", "url": "/info/region/seoul-gyeonggi-short-bike-routes.html"},
-    {"chapter": 4, "title": "장거리 준비물", "url": "/info/planning/bike-trip-packing-checklist.html"},
-    {"chapter": 5, "title": "종주 숙박 분할", "url": "/info/planning/overnight-lodging-plan.html"}
+    {
+      "chapter": 1,
+      "title": "아름다운 자전거길 선택 기준",
+      "url": "/info/planning/beautiful-bike-routes-selection-guide.html"
+    },
+    {
+      "chapter": 2,
+      "title": "자전거 여행 준비물 체크리스트",
+      "url": "/info/planning/bike-trip-packing-checklist.html"
+    },
+    {
+      "chapter": 3,
+      "title": "장거리 자전거 여행 일정 짜는 법",
+      "url": "/info/planning/long-distance-bike-ride-planning.html"
+    },
+    {
+      "chapter": 4,
+      "title": "자전거 종주 숙박 분할 설계",
+      "url": "/info/planning/overnight-lodging-plan.html"
+    },
+    {
+      "chapter": 5,
+      "title": "서울·경기 짧은 자전거길 추천 전 확인 가이드",
+      "url": "/info/planning/seoul-gyeonggi-short-bike-routes.html"
+    },
+    {
+      "chapter": 6,
+      "title": "제주 자전거 여행 준비 가이드",
+      "url": "/info/planning/jeju-bike-trip-preparation.html"
+    },
+    {
+      "chapter": 7,
+      "title": "강원 풍경 자전거길 여행 준비",
+      "url": "/info/planning/gangwon-scenic-bike-route-prep.html"
+    },
+    {
+      "chapter": 8,
+      "title": "국토종주 인증제 실전 가이드",
+      "url": "/info/certification/cross-country-certification-guide.html"
+    },
+    {
+      "chapter": 9,
+      "title": "인증수첩과 앱 인증 비교",
+      "url": "/info/certification/passbook-vs-app-certification.html"
+    },
+    {
+      "chapter": 10,
+      "title": "초보 기준 종주 순서 추천",
+      "url": "/info/certification/recommended-grand-route-order.html"
+    }
   ]
 }
