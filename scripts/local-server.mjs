@@ -16,7 +16,7 @@ const types = {
 
 function resolvePath(urlPath) {
   const cleanPath = decodeURIComponent(urlPath.split("?")[0]);
-  const requested = cleanPath === "/" ? "/index.html" : cleanPath;
+  const requested = cleanPath === "/" ? "/index.html" : cleanPath.endsWith("/") ? `${cleanPath}index.html` : cleanPath;
   const filePath = path.normalize(path.join(root, requested));
   if (!filePath.startsWith(root)) return null;
   return filePath;

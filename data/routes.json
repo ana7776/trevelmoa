@@ -79,12 +79,12 @@
     },
     {
       "title": "서울·경기 짧은 자전거길 추천 전 확인 가이드",
-      "category": "planning",
-      "categoryLabel": "계획",
+      "category": "beginner",
+      "categoryLabel": "초보",
       "region": "수도권",
       "difficulty": "초보",
       "duration": "당일",
-      "url": "/info/planning/seoul-gyeonggi-short-bike-routes.html",
+      "url": "/info/beginner/seoul-gyeonggi-short-bike-routes.html",
       "description": "서울과 경기권에서 짧게 다녀오기 좋은 자전거길을 고를 때 접근, 혼잡, 복귀 동선을 확인하는 방법입니다."
     },
     {
@@ -166,6 +166,46 @@
       "duration": "1박 이상",
       "url": "/info/safety/long-distance-pain-prevention-posture.html",
       "description": "안장 높이, 손목과 목 부담 분산, 휴식 간격을 기준으로 장거리 라이딩 통증을 줄이는 방법입니다."
+    },
+    {
+      "title": "라이딩 전 자전거 점검 5분 루틴",
+      "category": "beginner",
+      "categoryLabel": "초보",
+      "region": "전국",
+      "difficulty": "초보",
+      "duration": "반나절",
+      "url": "/info/beginner/pre-ride-bike-check-routine.html",
+      "description": "출발 직전 타이어 공기압, 브레이크, 체인, 안장 높이, 라이트를 5분 안에 확인하는 초보 점검 순서입니다."
+    },
+    {
+      "title": "보급 지점 없는 구간 대비법",
+      "category": "planning",
+      "categoryLabel": "계획",
+      "region": "전국",
+      "difficulty": "중급",
+      "duration": "당일",
+      "url": "/info/planning/no-supply-section-preparation.html",
+      "description": "편의점과 식당이 드문 자전거길에서 물과 행동식을 계산하고 통신 사각지대와 대안 경로를 준비하는 방법입니다."
+    },
+    {
+      "title": "국토종주 비용 총정리",
+      "category": "certification",
+      "categoryLabel": "인증",
+      "region": "전국",
+      "difficulty": "중급",
+      "duration": "1박 이상",
+      "url": "/info/certification/cross-country-bike-trip-budget.html",
+      "description": "국토종주를 준비할 때 인증수첩, 숙박, 식비, 교통비, 소모품까지 항목별 예산을 잡는 방법입니다."
+    },
+    {
+      "title": "자전거 보험 필요 여부 판단",
+      "category": "safety",
+      "categoryLabel": "안전",
+      "region": "전국",
+      "difficulty": "초보",
+      "duration": "당일",
+      "url": "/info/safety/bicycle-insurance-decision-guide.html",
+      "description": "자전거 라이딩 전 배상책임, 본인상해 담보, 실손보험과의 중복 여부를 확인하는 판단 기준입니다."
     }
   ]
 }
