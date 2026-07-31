@@ -2,9 +2,10 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
 const site = "https://trevelmoa.com";
-const today = "2026-07-23";
+const today = "2026-07-31";
 
 const labels = {
+  route: "코스",
   beginner: "초보",
   planning: "계획",
   certification: "인증",
@@ -405,6 +406,137 @@ const articles = [
   }
 ];
 
+const routeCourses = [
+  {
+    path: "routes/seoul/hangang.html",
+    id: "hangang",
+    regionSlug: "seoul",
+    region: "서울",
+    title: "한강 자전거길",
+    subtitle: "서울 강변 입문 순환 코스",
+    h1: "한강 자전거길 - 서울 강변 입문 코스",
+    description: "서울 한강공원 일대를 기준으로 초보자가 거리, 혼잡, 복귀 교통을 조절하기 쉬운 대표 자전거길 상세 가이드입니다.",
+    distance: "10-40km 선택",
+    difficulty: "초보",
+    duration: "반나절",
+    transit: "지하철 접근 쉬움",
+    weatherLabel: "서울 한강 인근",
+    weather: { latitude: 37.528, longitude: 126.932 },
+    summary: [["거리", "10-40km 선택"], ["난이도", "초보"], ["예상 소요", "2-5시간"], ["자전거 반입 교통", "지하철역 접근 가능"]],
+    facts: [["노면 상태", "대부분 포장 자전거도로이나 공원 진입부와 교량 하부는 보행자 접점이 많습니다."], ["누적 상승", "강변 평지 위주라 낮은 편입니다."], ["야간 조명", "주요 공원 구간은 비교적 밝지만 외진 연결로는 조명 공백이 있을 수 있습니다."]],
+    amenities: [["화장실 간격", "주요 한강공원마다 확인 가능합니다."], ["보급·편의점 간격", "공원 매점과 편의시설은 많지만 계절·시간대별 운영 차이가 있습니다."], ["주차", "한강공원 주차장 이용 가능 여부를 출발 전 확인하세요."], ["주의 구간", "다리 밑, 편의점 주변, 주차장 진입부, 주말 혼잡 구간"]],
+    sections: [
+      ["코스 성격", "한강 자전거길은 서울 안에서 접근성과 복귀 선택지가 좋은 코스입니다. 같은 길이라도 여의도, 반포, 잠실, 난지처럼 출발 지점에 따라 분위기와 혼잡도가 달라지므로 처음에는 익숙한 공원을 기준으로 짧게 왕복하는 편이 좋습니다."],
+      ["구간별 노면과 경사", "강변 자전거도로는 대체로 평탄하지만 교량 하부와 공원 출입부에서는 시야가 짧아집니다. 속도를 내기보다 보행자 흐름, 진입 차량, 정차한 자전거를 먼저 확인해야 합니다."],
+      ["보급과 화장실", "도심형 코스라 보급 부담은 낮은 편이지만 주말 오후에는 매점과 화장실 주변이 붐빕니다. 물은 출발 전에 챙기고, 휴식은 주행로 가장자리보다 공원 안쪽의 넓은 공간에서 하는 것이 안전합니다."],
+      ["계절 변수", "집중호우 뒤에는 저지대 진입로가 닫히거나 진흙이 남을 수 있습니다. 봄과 가을에는 이용자가 크게 늘고, 겨울 야간에는 강바람 때문에 체감온도가 빠르게 떨어집니다."],
+      ["초보자 판단 기준", "초보자는 목적지를 멀리 잡기보다 돌아올 지하철역과 중간 휴식 지점을 먼저 정하세요. 사람이 많은 시간대라면 평균 속도를 낮춰도 일정이 늦어지지 않도록 거리를 줄이는 편이 낫습니다."]
+    ],
+    missed: "사람이 적은 길보다 사람이 많은 합류부가 더 어렵습니다. 특히 다리 밑 그늘에서 갑자기 보행자가 나타나는 상황을 예상해야 합니다.",
+    notRecommended: "주말 한낮의 혼잡을 견디기 어렵거나, 일정 속도로 오래 달리는 훈련을 원한다면 이 코스는 답답할 수 있습니다.",
+    criteria: [["접근", "지하철과 공원 진입로가 많아 짧게 시작하고 중간에 마치기 쉽습니다."], ["난이도 체감", "경사는 낮지만 혼잡과 합류부가 실제 난도를 올립니다."], ["보급", "편의시설은 많은 편이나 행사와 계절 운영 차이를 확인해야 합니다."], ["계절 변수", "호우 뒤 통제, 겨울 강풍, 봄가을 주말 혼잡이 핵심 변수입니다."]],
+    faq: [["처음 타도 괜찮나요?", "짧은 구간과 낮 시간대를 고르면 시작하기 좋습니다. 다만 주말 혼잡 시간은 피하는 편이 안전합니다."], ["공유 자전거로 가능할까요?", "짧은 왕복은 가능하지만 반납 구역, 안장 조절, 배터리 상태를 먼저 확인하세요."], ["야간 라이딩은 어떤가요?", "익숙한 구간과 충분한 조명이 있을 때만 권합니다. 초행이라면 낮에 먼저 달려보세요."], ["차도와 섞이나요?", "주요 강변로는 분리 구간이 많지만 진입로와 주차장 주변에서는 차량 접점이 생깁니다."], ["아이와 함께 갈 수 있나요?", "가능하지만 짧은 거리, 넓은 공원 주변, 한산한 시간대를 선택하세요."]],
+    related: ["info/beginner/han-river-bike-beginner-course.html", "info/beginner/seoul-gyeonggi-short-bike-routes.html", "info/beginner/family-bike-ride-safety-guide.html"],
+    sources: [["서울시 한강공원", "https://hangang.seoul.go.kr/"], ["서울시 자전거 이용 안내", "https://bike.seoul.go.kr/"], ["Open-Meteo Forecast API", "https://open-meteo.com/en/docs"]]
+  },
+  {
+    path: "routes/gangwon/uiamho.html",
+    id: "uiamho",
+    regionSlug: "gangwon",
+    region: "강원",
+    title: "의암호 자전거길",
+    subtitle: "춘천 호반 순환 코스",
+    h1: "의암호 자전거길 - 춘천 호반 순환 코스",
+    description: "춘천 의암호 주변을 달리는 호반형 자전거길로, 풍경은 뛰어나지만 교량과 관광지 주변 흐름을 함께 봐야 하는 코스입니다.",
+    distance: "약 30km 안팎",
+    difficulty: "초보-중급",
+    duration: "당일",
+    transit: "춘천역 접근",
+    weatherLabel: "춘천 의암호 인근",
+    weather: { latitude: 37.881, longitude: 127.729 },
+    summary: [["거리", "약 30km 안팎"], ["난이도", "초보-중급"], ["예상 소요", "3-5시간"], ["자전거 반입 교통", "경춘선·ITX 조건 확인"]],
+    facts: [["노면 상태", "호수 주변 포장 구간 중심이나 관광지 연결부와 데크·교량 구간은 속도를 낮춰야 합니다."], ["누적 상승", "평지와 짧은 오르내림이 섞여 한강보다 체력 소모가 큽니다."], ["야간 조명", "도심 가까운 구간을 벗어나면 조명 공백이 생길 수 있어 낮 주행을 권합니다."]],
+    amenities: [["화장실 간격", "공원, 관광지, 역 주변을 기준으로 계획하세요."], ["보급·편의점 간격", "춘천 도심과 관광지 주변은 가능하나 호수 외곽은 미리 채우는 편이 좋습니다."], ["주차", "공지천·삼악산 호수케이블카 주변 등 공영 주차 여부를 확인하세요."], ["주의 구간", "교량, 데크, 관광객 동선, 바람이 강한 호수 가장자리"]],
+    sections: [
+      ["코스 성격", "의암호 자전거길은 도시와 호수 풍경이 가까이 붙어 있어 당일 여행 만족도가 높은 코스입니다. 한강보다 조용한 구간이 많지만 관광지 주변에서는 보행자와 사진 촬영 동선이 섞입니다."],
+      ["구간별 노면과 경사", "대부분 달리기 편한 포장 구간이지만 데크와 교량에서는 폭과 시야가 달라집니다. 짧은 오르내림이 반복되면 초보자에게는 예상보다 다리에 피로가 쌓일 수 있습니다."],
+      ["보급과 화장실", "춘천 도심 가까운 쪽에서 물과 간식을 먼저 준비하면 외곽 구간이 편합니다. 화장실은 관광지와 공원에 의존하는 편이라 지도 저장을 해두는 것이 좋습니다."],
+      ["계절 변수", "호수 주변은 바람과 기온 차가 체감 난도를 바꿉니다. 겨울 아침에는 그늘진 노면이 늦게 마를 수 있고, 여름 오후에는 그늘이 끊기는 구간에서 체력 소모가 커집니다."],
+      ["초보자 판단 기준", "평지 라이딩 경험이 있다면 무리 없이 도전할 수 있지만, 처음부터 순환 전체를 목표로 잡지는 마세요. 춘천역 기준으로 짧게 맛보고 돌아올 동선을 먼저 세우면 실패 확률이 낮습니다."]
+    ],
+    missed: "호수 풍경에 집중하다 보면 보행자와 관광객이 많은 지점을 늦게 봅니다. 전망 좋은 곳일수록 속도를 낮춰야 합니다.",
+    notRecommended: "자전거 반입 교통을 확인하지 않았거나, 강풍 예보가 있는 날 장거리 초행으로 가려는 경우에는 추천하지 않습니다.",
+    criteria: [["접근", "춘천역을 기준으로 접근성이 좋지만 열차 자전거 반입 조건을 먼저 확인해야 합니다."], ["난이도 체감", "큰 산악 코스는 아니지만 짧은 오르내림과 바람 때문에 초보에게는 중급처럼 느껴질 수 있습니다."], ["보급", "도심권에서 멀어지기 전 물과 간식을 보충하면 안정적입니다."], ["계절 변수", "호수 바람, 겨울 그늘 결빙, 관광 성수기 보행자 흐름이 변수입니다."]],
+    faq: [["춘천역에서 바로 시작할 수 있나요?", "가능한 동선을 잡기 쉽지만 역 주변 이동과 자전거 반입 조건은 출발 전 확인하세요."], ["초보도 한 바퀴 돌 수 있나요?", "평지 30km 경험이 있다면 가능성이 높습니다. 초행이라면 중간 복귀 지점을 먼저 정하세요."], ["사진 찍기 좋은 코스인가요?", "좋습니다. 다만 전망 지점 주변에서는 정차 위치를 안전하게 잡아야 합니다."], ["겨울에도 탈 수 있나요?", "날씨가 맑아도 그늘진 구간과 다리 위 결빙 가능성을 확인해야 합니다."], ["로드자전거가 아니어도 되나요?", "생활자전거나 하이브리드도 가능하지만 브레이크와 타이어 상태를 먼저 점검하세요."]],
+    related: ["info/planning/gangwon-scenic-bike-route-prep.html", "info/planning/bike-trip-packing-checklist.html", "info/safety/summer-winter-riding-risks.html"],
+    sources: [["춘천시 문화관광", "https://www.chuncheon.go.kr/tour/"], ["대한민국 구석구석", "https://korean.visitkorea.or.kr/"], ["Open-Meteo Forecast API", "https://open-meteo.com/en/docs"]]
+  },
+  {
+    path: "routes/jeju/jeju-coastal.html",
+    id: "jeju-coastal",
+    regionSlug: "jeju",
+    region: "제주",
+    title: "제주 환상 종주 일부 구간",
+    subtitle: "해안 바람을 먼저 보는 제주 당일 구간",
+    h1: "제주 환상 종주 일부 구간 - 해안 바람 체크 코스",
+    description: "제주 해안 자전거 여행을 처음 준비하는 사람을 위해 바람, 보급, 숙소 분할을 중심으로 일부 구간을 판단하는 상세 페이지입니다.",
+    distance: "30-60km 선택",
+    difficulty: "중급",
+    duration: "반나절-당일",
+    transit: "항공·선박 후 현지 이동",
+    weatherLabel: "제주 해안 인근",
+    weather: { latitude: 33.499, longitude: 126.531 },
+    summary: [["거리", "30-60km 선택"], ["난이도", "중급"], ["예상 소요", "4-7시간"], ["자전거 반입 교통", "항공·선박·버스 조건 확인"]],
+    facts: [["노면 상태", "해안도로와 자전거길이 섞이므로 차도 접점과 갓길 폭을 함께 봐야 합니다."], ["누적 상승", "구간마다 다르며 해안이라도 짧은 오르내림과 맞바람이 체감 난도를 높입니다."], ["야간 조명", "도심 밖 해안 구간은 조명이 충분하지 않을 수 있어 낮 주행이 기본입니다."]],
+    amenities: [["화장실 간격", "해수욕장, 항구, 관광지 공중화장실을 기준으로 확인하세요."], ["보급·편의점 간격", "마을 사이가 길어지는 구간은 마지막 편의점에서 물을 보충하세요."], ["주차", "렌터카 병행 시 해변·항구 주차 가능 여부를 현장 표지로 확인하세요."], ["주의 구간", "해안 강풍, 버스·렌터카 접점, 방풍림 그늘, 비 온 뒤 모래와 자갈"]],
+    sections: [
+      ["코스 성격", "제주 환상 종주는 완주보다 구간 선택이 중요합니다. 일부 구간만 타더라도 바람 방향, 숙소 위치, 보급 간격을 먼저 정하면 만족도가 훨씬 올라갑니다."],
+      ["구간별 노면과 경사", "해안 풍경이 이어지지만 자전거길, 차도, 마을길이 바뀌는 지점이 있습니다. 바람이 정면에서 불면 평지라도 오르막처럼 느껴지고, 횡풍은 핸들 안정성을 흔들 수 있습니다."],
+      ["보급과 화장실", "관광지 주변은 편하지만 마을 간격이 벌어지는 구간에서는 물과 간식을 미리 챙겨야 합니다. 화장실은 해수욕장과 항구를 기준으로 잡되 운영 여부가 계절마다 달라질 수 있습니다."],
+      ["계절 변수", "여름에는 햇빛과 열, 겨울에는 강풍과 체온 저하가 부담입니다. 비가 온 뒤에는 해안도로에 모래와 잔자갈이 남을 수 있어 코너에서 속도를 줄여야 합니다."],
+      ["초보자 판단 기준", "제주 초행이라면 완주 계획보다 숙소 주변의 짧은 왕복 구간부터 시작하세요. 바람 방향이 나쁘면 계획한 거리를 절반으로 줄이는 판단도 필요합니다."]
+    ],
+    missed: "제주에서는 거리보다 바람 방향이 하루 난도를 결정합니다. 출발 전 풍속뿐 아니라 돌아오는 방향의 맞바람까지 확인하세요.",
+    notRecommended: "강풍 특보가 있거나, 차도 주행 경험이 거의 없거나, 숙소와 보급 지점을 정하지 않은 상태라면 권하지 않습니다.",
+    criteria: [["접근", "항공·선박 이동 뒤 현지 대여 또는 자전거 운송을 계획해야 하므로 준비 단계가 길어집니다."], ["난이도 체감", "공식 거리보다 맞바람, 횡풍, 차도 접점이 난도를 크게 올립니다."], ["보급", "관광지 밀집 구간은 편하지만 마을 사이가 긴 곳은 물을 먼저 채워야 합니다."], ["계절 변수", "강풍, 폭우 뒤 모래, 여름 일사, 겨울 체온 저하를 가장 먼저 봅니다."]],
+    faq: [["완주가 아니어도 의미가 있나요?", "충분합니다. 제주 라이딩은 짧은 구간도 바람과 풍경의 특성이 뚜렷합니다."], ["초보가 가도 될까요?", "차도 접점이 적은 짧은 구간부터 시작하고 강풍 예보가 없다면 가능합니다."], ["대여 자전거로 가능한가요?", "가능하지만 반납 위치, 정비 상태, 헬멧과 조명 제공 여부를 확인하세요."], ["비 오는 날은 어떤가요?", "해안 모래와 시야 문제 때문에 권하지 않습니다. 비가 그친 뒤에도 노면을 확인하세요."], ["숙소는 어디에 잡아야 하나요?", "하루 거리보다 바람 방향과 다음 날 이동 동선을 기준으로 잡는 편이 좋습니다."]],
+    related: ["info/planning/jeju-bike-trip-preparation.html", "info/planning/overnight-lodging-plan.html", "info/planning/no-supply-section-preparation.html"],
+    sources: [["제주관광공사 비짓제주", "https://www.visitjeju.net/"], ["대한민국 구석구석", "https://korean.visitkorea.or.kr/"], ["Open-Meteo Forecast API", "https://open-meteo.com/en/docs"]]
+  },
+  {
+    path: "routes/chungnam/geumgang.html",
+    id: "geumgang",
+    regionSlug: "chungnam",
+    region: "충남",
+    title: "금강 자전거길",
+    subtitle: "국토종주형 강변 장거리 예시",
+    h1: "금강 자전거길 - 국토종주형 강변 코스",
+    description: "금강 자전거길을 국토종주형 장거리 예시로 보고, 보급 공백과 인증 동선, 야간 위험을 기준으로 판단하는 상세 가이드입니다.",
+    distance: "장거리 분할 권장",
+    difficulty: "중급",
+    duration: "당일-1박 이상",
+    transit: "기차·버스 복귀 확인",
+    weatherLabel: "공주 금강 인근",
+    weather: { latitude: 36.446, longitude: 127.119 },
+    summary: [["거리", "장거리 분할 권장"], ["난이도", "중급"], ["예상 소요", "당일-1박 이상"], ["자전거 반입 교통", "기차·버스 복귀 조건 확인"]],
+    facts: [["노면 상태", "강변 포장 구간 중심이나 도심 외곽과 교량 접근부에서 길 폭과 노면이 달라질 수 있습니다."], ["누적 상승", "큰 산악 코스는 아니지만 긴 거리와 바람이 체력 부담을 만듭니다."], ["야간 조명", "외곽 강변 구간은 조명 공백이 생기므로 야간 주행을 일정에 넣지 않는 편이 좋습니다."]],
+    amenities: [["화장실 간격", "도시와 인증센터, 공원 지점을 기준으로 미리 표시하세요."], ["보급·편의점 간격", "도심을 벗어나기 전 물과 간식을 채우는 방식이 안전합니다."], ["주차", "출발지를 어디로 잡는지에 따라 달라지므로 공영주차장과 복귀 교통을 함께 확인하세요."], ["주의 구간", "긴 무인 구간, 교량 진입부, 강풍, 해질녘 조명 공백"]],
+    sections: [
+      ["코스 성격", "금강 자전거길은 짧은 관광 라이딩보다 일정 관리가 중요한 장거리형 코스입니다. 인증을 목표로 한다면 스탬프 위치와 숙박·복귀 교통을 먼저 맞춰야 합니다."],
+      ["구간별 노면과 경사", "강변을 따라 비교적 부드럽게 이어지는 구간이 많지만 전체 거리가 길어 후반 피로가 큽니다. 교량 접근부와 외곽 연결로는 시야와 노면 상태가 달라질 수 있어 속도를 낮춰야 합니다."],
+      ["보급과 화장실", "도시 사이를 잇는 구간에서는 보급이 갑자기 드물어질 수 있습니다. 마지막 편의점에서 물을 채우고, 화장실은 공원과 인증센터를 기준으로 미리 확인하세요."],
+      ["계절 변수", "여름 한낮에는 그늘 공백이 부담이고, 겨울에는 강변 바람과 체온 저하가 큽니다. 비 뒤에는 하천변 우회나 통제가 생길 수 있어 공식 공지 확인이 필요합니다."],
+      ["초보자 판단 기준", "처음 장거리를 시도한다면 금강 전체보다 도심 접근이 쉬운 짧은 구간을 먼저 타보세요. 중간 탈출 교통이 애매한 상태에서 무리하게 계속 가는 것이 가장 큰 위험입니다."]
+    ],
+    missed: "평지가 많아 보여도 긴 강변 코스는 보급 공백과 복귀 교통이 진짜 난도입니다. 마지막 편의점 이후 거리를 꼭 계산하세요.",
+    notRecommended: "장거리 경험이 없고, 숙박·복귀·보급 지점을 정하지 않았거나, 해질녘 이후까지 달리는 계획이라면 추천하지 않습니다.",
+    criteria: [["접근", "출발지와 도착지를 분리해서 잡아야 하므로 기차·버스 복귀 조건 확인이 먼저입니다."], ["난이도 체감", "경사보다 거리, 바람, 외곽 구간의 심리적 피로가 큽니다."], ["보급", "도시를 벗어나기 전 물과 간식을 채우고 다음 보급까지의 간격을 보수적으로 잡아야 합니다."], ["계절 변수", "여름 열기, 겨울 강풍, 비 뒤 하천변 통제 가능성이 핵심입니다."]],
+    faq: [["당일 완주가 가능한가요?", "경험자라면 가능할 수 있지만 처음이라면 구간 분할과 숙박 계획이 더 안전합니다."], ["인증수첩이 꼭 필요한가요?", "인증 목적이면 필요합니다. 단순 여행이라면 인증보다 복귀와 보급 계획을 우선하세요."], ["초보가 일부 구간만 타도 되나요?", "좋은 방법입니다. 도심 접근이 쉬운 구간부터 체감 난도를 확인하세요."], ["야간 주행은 어떤가요?", "외곽 조명 공백이 있어 권하지 않습니다. 일정은 해 지기 전에 끝나게 잡으세요."], ["보급은 충분한가요?", "도시 주변은 괜찮지만 외곽에서는 드문 구간이 있습니다. 마지막 보급 지점을 표시해두세요."]],
+    related: ["info/certification/cross-country-certification-guide.html", "info/planning/long-distance-bike-ride-planning.html", "info/planning/no-supply-section-preparation.html"],
+    sources: [["행정안전부 자전거 행복나눔", "https://www.bike.go.kr/"], ["공주시 문화관광", "https://www.gongju.go.kr/tour/"], ["Open-Meteo Forecast API", "https://open-meteo.com/en/docs"]]
+  }
+];
+
 function escapeAttr(value) {
   return String(value).replaceAll("&", "&amp;").replaceAll("\"", "&quot;").replaceAll("<", "&lt;");
 }
@@ -506,7 +638,133 @@ function articlePage(article) {
   });
 }
 
+function routeDetailPage(route) {
+  const tocItems = ["요약", "핵심 정보", "주의·편의", ...route.sections.map(([h]) => h), "추천하지 않는 경우", "선정 기준", "FAQ", "출처"].map((h, i) => `<a href="#r${i}">${h}</a>`).join("");
+  const facts = route.facts.map(([k, v]) => `<tr><th>${k}</th><td>${v}</td></tr>`).join("");
+  const summary = route.summary.map(([k, v]) => `<article><span>${k}</span><strong>${v}</strong></article>`).join("");
+  const amenities = route.amenities.map(([k, v]) => `<article><strong>${k}</strong><p>${v}</p></article>`).join("");
+  const sections = route.sections.map(([h, p], i) => `<h2 id="r${i + 3}">${h}</h2><p>${p}</p>`).join("\n");
+  const criteria = route.criteria.map(([k, v]) => `<li><b>${k}:</b> ${v}</li>`).join("");
+  const faq = route.faq.map(([q, a]) => `<details><summary>${q}</summary><p>${a}</p></details>`).join("\n");
+  const sources = route.sources.map(([name, url]) => `<li><a href="${url}" rel="nofollow noopener">${name}</a></li>`).join("");
+  const related = route.related.map(path => articles.find(article => article.path === path)).filter(Boolean).map(articleCard).join("");
+  const routeJson = JSON.stringify({ title: route.title, weatherLabel: route.weatherLabel, weather: route.weather });
+  return layout({
+    title: `${route.title} 상세 코스 | RideMoa`,
+    description: route.description,
+    canonical: `${site}/${route.path}`,
+    type: "article",
+    body: `
+  <main>
+    <section class="route-hero">
+      <nav class="breadcrumb" aria-label="현재 위치"><a href="/">홈</a><span>${route.region}</span><span>${route.title}</span></nav>
+      <p class="eyebrow">코스 상세</p>
+      <h1>${route.h1}</h1>
+      <p>${route.description}</p>
+      <div class="weather-widget" data-route-weather='${escapeAttr(routeJson)}'>
+        <strong>출발 전 날씨</strong>
+        <span>실시간 날씨 정보를 불러오는 중입니다.</span>
+      </div>
+      <div class="summary-grid" id="r0">${summary}</div>
+    </section>
+    <div class="article-layout route-layout">
+      <article class="article-body route-body">
+        <div class="ad-slot" aria-hidden="true"></div>
+        <figure class="route-visual">
+          <img src="/assets/images/river-route.svg" alt="${escapeAttr(route.title)} 코스 이미지">
+          <figcaption>${route.subtitle}</figcaption>
+        </figure>
+        <h2 id="r1">핵심 정보</h2>
+        <table class="fact-table">${facts}</table>
+        <h2 id="r2">주의·편의</h2>
+        <div class="amenity-grid">${amenities}</div>
+        <div class="ad-slot" aria-hidden="true"></div>
+        ${sections}
+        <aside class="info-note"><strong>이 코스에서 가장 자주 놓치는 것</strong><p>${route.missed}</p></aside>
+        <h2 id="r8">이 코스를 추천하지 않는 경우</h2>
+        <p>${route.notRecommended}</p>
+        <section class="criteria" id="r9">
+          <h2>이 코스를 고른 기준</h2>
+          <ul>${criteria}</ul>
+        </section>
+        <section class="faq" id="r10">
+          <h2>FAQ</h2>
+          ${faq}
+        </section>
+        <section id="r11">
+          <h2>출처 및 업데이트 정책</h2>
+          <p>최종 업데이트: ${today}. 거리, 통제, 교통 반입, 편의시설 운영은 바뀔 수 있으므로 출발 전 공식 채널과 현장 안내를 다시 확인하세요.</p>
+          <p>날씨 위젯은 Open-Meteo Forecast API를 클라이언트에서 호출합니다. API 키는 사용하지 않으며, 호출 실패 시 대체 안내 문구를 표시합니다.</p>
+          <ul>${sources}</ul>
+        </section>
+        <div class="share-row" aria-label="공유">
+          <button type="button" data-share-kakao>카카오톡 공유</button>
+          <button type="button" data-copy-link>링크 복사</button>
+          <span class="share-status" aria-live="polite"></span>
+        </div>
+        <div class="ad-slot" aria-hidden="true"></div>
+        <section>
+          <h2>함께 보면 좋은 라이딩 정보</h2>
+          <div class="info-grid">${related}</div>
+        </section>
+      </article>
+      <aside class="toc" aria-label="목차">${tocItems}<div class="side-box"><strong>출발 전</strong><p>날씨, 복귀 교통, 보급 지점을 먼저 확인하세요.</p></div></aside>
+    </div>
+  </main>
+  <script>
+    const weatherBox = document.querySelector("[data-route-weather]");
+    const renderWeather = (text) => {
+      if (weatherBox) weatherBox.querySelector("span").textContent = text;
+    };
+    if (weatherBox) {
+      const route = JSON.parse(weatherBox.dataset.routeWeather);
+      const url = new URL("https://api.open-meteo.com/v1/forecast");
+      url.search = new URLSearchParams({
+        latitude: route.weather.latitude,
+        longitude: route.weather.longitude,
+        current: "temperature_2m,wind_speed_10m,precipitation",
+        hourly: "precipitation_probability",
+        forecast_days: "1",
+        timezone: "Asia/Seoul",
+        wind_speed_unit: "ms"
+      });
+      fetch(url)
+        .then(response => {
+          if (!response.ok) throw new Error("weather");
+          return response.json();
+        })
+        .then(data => {
+          const current = data.current || {};
+          const probability = Array.isArray(data.hourly?.precipitation_probability) ? data.hourly.precipitation_probability[0] : null;
+          const rain = typeof current.precipitation === "number" ? current.precipitation + "mm" : "확인 필요";
+          const chance = typeof probability === "number" ? probability + "%" : rain;
+          renderWeather("오늘 " + route.weatherLabel + " - 기온 " + Math.round(current.temperature_2m) + "°C · 풍속 " + Number(current.wind_speed_10m).toFixed(1) + "m/s · 강수 " + chance);
+        })
+        .catch(() => renderWeather("실시간 날씨 정보를 불러오지 못했습니다. 출발 전 기상청 앱에서 확인하세요."));
+    }
+    document.querySelector("[data-copy-link]")?.addEventListener("click", async event => {
+      const status = document.querySelector(".share-status");
+      try {
+        await navigator.clipboard.writeText(location.href);
+        if (status) status.textContent = "링크를 복사했습니다.";
+      } catch {
+        if (status) status.textContent = "주소창의 링크를 복사해 주세요.";
+      }
+    });
+    document.querySelector("[data-share-kakao]")?.addEventListener("click", async () => {
+      const status = document.querySelector(".share-status");
+      if (navigator.share) {
+        await navigator.share({ title: document.title, url: location.href }).catch(() => {});
+      } else if (status) {
+        status.textContent = "카카오 SDK 연결 전입니다. 지금은 링크 복사를 이용하세요.";
+      }
+    });
+  </script>`
+  });
+}
+
 function homePage() {
+  const courseCards = routeCourses.map(routeCourseCard).join("");
   const cards = articles.map(a => `<article class="route-card"><img src="/assets/images/route-hero.svg" alt="${escapeAttr(a.title)} 이미지"><div><p class="tag">${labels[a.category]}</p><h3>${a.title}</h3><p>${a.description}</p><a class="cta" href="/${a.path}">가이드 보기</a></div></article>`).join("");
   return layout({
     title: "RideMoa | 전국 자전거길 여행 가이드",
@@ -520,8 +778,8 @@ function homePage() {
         <h1>어디를 달릴지보다 먼저, 어떻게 다녀올지 정하세요.</h1>
         <p>라이드모아는 코스 목록을 나열하는 데서 멈추지 않습니다. 거리, 복귀 동선, 보급, 계절 변수, 공식 확인 지점을 함께 정리해 출발 전 판단을 돕습니다.</p>
         <form class="filter-panel" id="route-filter" aria-label="자전거길 후보 필터">
-          <label><span>지역</span><select name="region"><option value="">전체</option><option>수도권</option><option>강원</option><option>제주</option><option>전국</option></select></label>
-          <label><span>난이도</span><select name="difficulty"><option value="">전체</option><option>초보</option><option>중급</option></select></label>
+          <label><span>지역</span><select name="region"><option value="">전체</option><option>서울</option><option>수도권</option><option>강원</option><option>제주</option><option>충남</option><option>전국</option></select></label>
+          <label><span>난이도</span><select name="difficulty"><option value="">전체</option><option>초보</option><option>초보-중급</option><option>중급</option></select></label>
           <label><span>소요시간</span><select name="duration"><option value="">전체</option><option>반나절</option><option>당일</option><option>1박 이상</option></select></label>
           <button type="submit">후보 보기</button>
         </form>
@@ -536,7 +794,7 @@ function homePage() {
     </section>
     <section class="section">
       <div class="section-head"><p class="eyebrow">Latest guides</p><h2>라이드모아 추천 가이드</h2><p>초보 코스부터 1박 종주 준비까지, 출발 전에 실제로 확인해야 할 내용을 모았습니다.</p></div>
-      <div class="route-grid">${cards}</div>
+      <div class="route-grid">${courseCards}${cards}</div>
     </section>
     <section class="section split">
       <div><p class="eyebrow">Directory</p><h2>상황별로 바로 찾기</h2><p>지역, 거리, 목적에 따라 필요한 가이드를 빠르게 고를 수 있습니다.</p></div>
@@ -574,7 +832,7 @@ function homePage() {
       const region = formData.get("region");
       const difficulty = formData.get("difficulty");
       const duration = formData.get("duration");
-      const matched = cachedRoutes.filter(route => (!region || route.region === region) && (!difficulty || route.difficulty === difficulty) && (!duration || route.duration === duration));
+      const matched = cachedRoutes.filter(route => (!region || route.region === region) && (!difficulty || route.difficulty.includes(difficulty)) && (!duration || route.duration.includes(duration)));
       renderRoutes(matched, "조건에 맞는 후보가 없습니다. 조건을 하나 줄여보세요.");
     });
   </script>`
@@ -604,8 +862,28 @@ function articleCard(article) {
   return `<article class="info-card"><h2>${article.title}</h2><p>${article.description}</p><a href="/${article.path}">읽기</a></article>`;
 }
 
+function routeCourseCard(route) {
+  return `<article class="route-card"><img src="/assets/images/river-route.svg" alt="${escapeAttr(route.title)} 코스 이미지"><div><p class="tag">코스</p><h3>${route.title}</h3><p>${route.description}</p><a class="cta" href="/${route.path}">코스 보기</a></div></article>`;
+}
+
+function infoRouteCard(route) {
+  return `<article class="info-card"><h2>${route.title}</h2><p>${route.description}</p><a href="/${route.path}">코스 보기</a></article>`;
+}
+
+const routeSearchItems = routeCourses.map(route => ({
+  title: route.title,
+  category: "route",
+  categoryLabel: "코스",
+  region: route.region,
+  difficulty: route.difficulty,
+  duration: route.duration,
+  url: `/${route.path}`,
+  description: route.description
+}));
+
 write("index.html", homePage());
 for (const article of articles) write(article.path, articlePage(article));
+for (const route of routeCourses) write(route.path, routeDetailPage(route));
 
 write("pages/about.html", simplePage("사이트 소개", "라이드모아의 운영 목적, 편집 기준, 출처 확인 원칙을 안내합니다.", "pages/about.html", `
 <p>라이드모아는 전국 자전거길 여행을 준비하는 방문자를 위해 코스 선택, 이동 동선, 안전 준비, 계절별 주의사항을 정리하는 정보 사이트입니다.</p>
@@ -625,20 +903,27 @@ write("pages/privacy.html", simplePage("개인정보처리방침", "라이드모
 
 write("pages/routes-by-region.html", simplePage("지역별 자전거길 가이드", "수도권, 제주, 강원 등 지역별 자전거길 여행 준비 가이드 모음입니다.", "pages/routes-by-region.html", `
 <p>출발 지역과 복귀 교통을 기준으로 코스를 고르면 여행 실패 확률이 줄어듭니다.</p>
+<h2>상세 코스</h2>
+<div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div>
+<h2>지역 준비 가이드</h2>
 <div class="info-grid">${articles.filter(a => ["수도권", "제주", "강원"].includes(a.region)).map(articleCard).join("")}</div>`));
 
 write("pages/routes-by-distance.html", simplePage("거리별 자전거길 가이드", "반나절, 당일, 1박 이상 자전거 여행에 맞는 거리별 준비 기준입니다.", "pages/routes-by-distance.html", `
 <p>거리보다 복귀 가능성과 휴식 간격을 먼저 정하세요.</p>
+<h2>상세 코스</h2>
+<div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div>
+<h2>거리별 준비 가이드</h2>
 <div class="info-grid">${["반나절", "당일", "1박 이상"].map(duration => `<section><h2>${duration}</h2><div class="info-grid">${articles.filter(a => a.duration === duration).map(articleCard).join("")}</div></section>`).join("")}</div>`));
 
 write("pages/routes-by-purpose.html", simplePage("목적별 자전거길 가이드", "초보, 계획, 인증, 안전 카테고리별 자전거길 가이드입니다.", "pages/routes-by-purpose.html", `
 <p>누구와 왜 가는지에 따라 좋은 코스의 기준이 달라집니다.</p>
+<section id="route"><h2>상세 코스</h2><div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div></section>
 ${["beginner", "planning", "certification", "safety"].map(category => `<section id="${category}"><h2>${labels[category]}</h2><div class="info-grid">${articles.filter(a => a.category === category).map(articleCard).join("")}</div></section>`).join("")}`));
 
 write("data/routes.json", JSON.stringify({
   updated: today,
-  categories: ["beginner", "planning", "certification", "safety"],
-  routes: articles.map(a => ({
+  categories: ["route", "beginner", "planning", "certification", "safety"],
+  routes: [...routeSearchItems, ...articles.map(a => ({
     title: a.title,
     category: a.category,
     categoryLabel: labels[a.category],
@@ -647,7 +932,7 @@ write("data/routes.json", JSON.stringify({
     duration: a.duration,
     url: `/${a.path}`,
     description: a.description
-  }))
+  }))]
 }, null, 2));
 
 write("data/grand-routes.json", JSON.stringify({
@@ -660,6 +945,6 @@ for (const article of articles) {
   write(oldPath, redirectPage(oldPath, article.path));
 }
 
-const urls = ["", "calendar/", ...articles.map(a => a.path), "pages/privacy.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html", "pages/routes-by-distance.html", "pages/routes-by-purpose.html"];
+const urls = ["", "calendar/", ...routeCourses.map(route => route.path), ...articles.map(a => a.path), "pages/privacy.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html", "pages/routes-by-distance.html", "pages/routes-by-purpose.html"];
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url, i) => `  <url><loc>${site}/${url}</loc><lastmod>${today}</lastmod><priority>${i === 0 ? "1.0" : "0.8"}</priority></url>`).join("\n")}\n</urlset>\n`);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);

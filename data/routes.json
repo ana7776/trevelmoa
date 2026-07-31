@@ -1,12 +1,53 @@
 {
-  "updated": "2026-07-23",
+  "updated": "2026-07-31",
   "categories": [
+    "route",
     "beginner",
     "planning",
     "certification",
     "safety"
   ],
   "routes": [
+    {
+      "title": "한강 자전거길",
+      "category": "route",
+      "categoryLabel": "코스",
+      "region": "서울",
+      "difficulty": "초보",
+      "duration": "반나절",
+      "url": "/routes/seoul/hangang.html",
+      "description": "서울 한강공원 일대를 기준으로 초보자가 거리, 혼잡, 복귀 교통을 조절하기 쉬운 대표 자전거길 상세 가이드입니다."
+    },
+    {
+      "title": "의암호 자전거길",
+      "category": "route",
+      "categoryLabel": "코스",
+      "region": "강원",
+      "difficulty": "초보-중급",
+      "duration": "당일",
+      "url": "/routes/gangwon/uiamho.html",
+      "description": "춘천 의암호 주변을 달리는 호반형 자전거길로, 풍경은 뛰어나지만 교량과 관광지 주변 흐름을 함께 봐야 하는 코스입니다."
+    },
+    {
+      "title": "제주 환상 종주 일부 구간",
+      "category": "route",
+      "categoryLabel": "코스",
+      "region": "제주",
+      "difficulty": "중급",
+      "duration": "반나절-당일",
+      "url": "/routes/jeju/jeju-coastal.html",
+      "description": "제주 해안 자전거 여행을 처음 준비하는 사람을 위해 바람, 보급, 숙소 분할을 중심으로 일부 구간을 판단하는 상세 페이지입니다."
+    },
+    {
+      "title": "금강 자전거길",
+      "category": "route",
+      "categoryLabel": "코스",
+      "region": "충남",
+      "difficulty": "중급",
+      "duration": "당일-1박 이상",
+      "url": "/routes/chungnam/geumgang.html",
+      "description": "금강 자전거길을 국토종주형 장거리 예시로 보고, 보급 공백과 인증 동선, 야간 위험을 기준으로 판단하는 상세 가이드입니다."
+    },
     {
       "title": "첫 자전거길 여행은 몇 km가 좋을까",
       "category": "beginner",

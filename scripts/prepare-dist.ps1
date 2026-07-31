@@ -73,6 +73,7 @@ $items = @(
   "assets",
   "calendar",
   "data",
+  "routes",
   "info",
   "pages",
   "posts",
@@ -85,7 +86,7 @@ $items = @(
 foreach ($item in $items) {
   $source = Join-Path $root $item
   $target = Join-Path $dist $item
-  if (($item -eq "info" -or $item -eq "pages" -or $item -eq "posts") -and (Test-Path $source -PathType Container)) {
+  if (($item -eq "routes" -or $item -eq "info" -or $item -eq "pages" -or $item -eq "posts") -and (Test-Path $source -PathType Container)) {
     Copy-PublishedDirectory -Source $source -Target $target -PublicRoot $item
   } elseif (Test-Path $source -PathType Container) {
     Copy-Item -LiteralPath $source -Destination $target -Recurse
