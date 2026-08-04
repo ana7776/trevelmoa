@@ -1,0 +1,55 @@
+{
+  "captionTemplate": "AI로 생성한 이미지이며 실제 현장과 다를 수 있습니다",
+  "slots": [
+    {
+      "id": "home-hero",
+      "label": "홈 히어로",
+      "source": "assets/images/generated/home-hero.jpg",
+      "webp": "assets/images/webp/home-hero.webp",
+      "card": "assets/images/webp/home-hero-card.webp",
+      "og": "assets/images/webp/home-hero-og.webp",
+      "alt": "강변 자전거길을 나란히 달리는 두 명의 라이더와 도시 스카이라인",
+      "status": "pending"
+    },
+    {
+      "id": "hangang-card",
+      "label": "한강 카드",
+      "source": "assets/images/generated/hangang-card.jpg",
+      "webp": "assets/images/webp/hangang-card.webp",
+      "card": "assets/images/webp/hangang-card-card.webp",
+      "og": "assets/images/webp/hangang-card-og.webp",
+      "alt": "현대적인 다리와 도시 공원이 보이는 넓은 강변 자전거길",
+      "status": "pending"
+    },
+    {
+      "id": "uiamho-card",
+      "label": "의암호 카드",
+      "source": "assets/images/generated/uiamho-card.jpg",
+      "webp": "assets/images/webp/uiamho-card.webp",
+      "card": "assets/images/webp/uiamho-card-card.webp",
+      "og": "assets/images/webp/uiamho-card-og.webp",
+      "alt": "산과 잔잔한 호수 반사가 어우러진 호반 자전거길",
+      "status": "pending"
+    },
+    {
+      "id": "jeju-card",
+      "label": "제주 카드",
+      "source": "assets/images/generated/jeju-card.jpg",
+      "webp": "assets/images/webp/jeju-card.webp",
+      "card": "assets/images/webp/jeju-card-card.webp",
+      "og": "assets/images/webp/jeju-card-og.webp",
+      "alt": "맑은 하늘 아래 바다와 절벽을 따라 이어지는 제주 해안 자전거길",
+      "status": "pending"
+    },
+    {
+      "id": "geumgang-card",
+      "label": "금강 카드",
+      "source": "assets/images/generated/geumgang-card.jpg",
+      "webp": "assets/images/webp/geumgang-card.webp",
+      "card": "assets/images/webp/geumgang-card-card.webp",
+      "og": "assets/images/webp/geumgang-card-og.webp",
+      "alt": "초록 언덕과 긴 직선길이 이어지는 시골 강변 자전거길",
+      "status": "pending"
+    }
+  ]
+}
