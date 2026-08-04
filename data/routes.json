@@ -1,11 +1,12 @@
 {
-  "updated": "2026-07-31",
+  "updated": "2026-08-04",
   "categories": [
     "route",
     "beginner",
     "planning",
     "certification",
-    "safety"
+    "safety",
+    "onroad"
   ],
   "routes": [
     {
@@ -247,6 +248,56 @@
       "duration": "당일",
       "url": "/info/safety/bicycle-insurance-decision-guide.html",
       "description": "자전거 라이딩 전 배상책임, 본인상해 담보, 실손보험과의 중복 여부를 확인하는 판단 기준입니다."
+    },
+    {
+      "title": "자전거 여행자 숙소 고르는 법",
+      "category": "onroad",
+      "categoryLabel": "여행 실전",
+      "region": "전국",
+      "difficulty": "초보-중급",
+      "duration": "1박 이상",
+      "url": "/info/onroad/bike-traveler-accommodation.html",
+      "description": "자전거 보관, 코스 종료 지점, 젖은 장비 건조까지 여행 중 숙소 선택 기준을 정리했습니다."
+    },
+    {
+      "title": "자전거 캠핑 첫 도전 가이드",
+      "category": "onroad",
+      "categoryLabel": "여행 실전",
+      "region": "전국",
+      "difficulty": "중급",
+      "duration": "1박 이상",
+      "url": "/info/onroad/bikepacking-first-guide.html",
+      "description": "바이크패킹을 처음 시도할 때 짐 배분, 최소 장비, 공식 야영장 판단 기준을 안내합니다."
+    },
+    {
+      "title": "자전거와 대중교통 환승 동선 짜는 법",
+      "category": "onroad",
+      "categoryLabel": "여행 실전",
+      "region": "전국",
+      "difficulty": "초보-중급",
+      "duration": "당일",
+      "url": "/info/onroad/bike-transit-transfer-route.html",
+      "description": "반입 가능 여부를 넘어 역 안 계단, 엘리베이터, 코스 출발점까지 실제 이동 동선을 잡습니다."
+    },
+    {
+      "title": "우천·폭염 특보 시 코스 전환 판단 기준",
+      "category": "onroad",
+      "categoryLabel": "여행 실전",
+      "region": "전국",
+      "difficulty": "초보",
+      "duration": "당일",
+      "url": "/info/onroad/weather-alert-route-change.html",
+      "description": "출발 후 날씨가 바뀌었을 때 계속 갈지, 대체 경로로 갈지, 중단할지 결정하는 순서입니다."
+    },
+    {
+      "title": "여행 중 자전거 고장 대처와 근처 수리점 찾는 법",
+      "category": "onroad",
+      "categoryLabel": "여행 실전",
+      "region": "전국",
+      "difficulty": "초보",
+      "duration": "당일",
+      "url": "/info/onroad/on-trip-bike-repair.html",
+      "description": "펑크, 체인 이탈, 변속 불량을 현장에서 나누고 수리점과 이동 대안을 찾는 방법입니다."
     }
   ]
 }

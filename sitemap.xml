@@ -2,6 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://trevelmoa.com/</loc><lastmod>2026-07-31</lastmod><priority>1.0</priority></url>
   <url><loc>https://trevelmoa.com/calendar/</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://trevelmoa.com/info/</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/routes/seoul/hangang.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/routes/gangwon/uiamho.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/routes/jeju/jeju-coastal.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
@@ -26,6 +27,11 @@
   <url><loc>https://trevelmoa.com/info/planning/no-supply-section-preparation.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/info/certification/cross-country-bike-trip-budget.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/info/safety/bicycle-insurance-decision-guide.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://trevelmoa.com/info/onroad/bike-traveler-accommodation.html</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://trevelmoa.com/info/onroad/bikepacking-first-guide.html</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://trevelmoa.com/info/onroad/bike-transit-transfer-route.html</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://trevelmoa.com/info/onroad/weather-alert-route-change.html</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
+  <url><loc>https://trevelmoa.com/info/onroad/on-trip-bike-repair.html</loc><lastmod>2026-08-04</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/pages/privacy.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/pages/about.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/pages/contact.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
