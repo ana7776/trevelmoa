@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-04",
+  "updated": "2026-08-06",
   "categories": [
     "route",
     "beginner",
@@ -298,6 +298,56 @@
       "duration": "당일",
       "url": "/info/onroad/on-trip-bike-repair.html",
       "description": "펑크, 체인 이탈, 변속 불량을 현장에서 나누고 수리점과 이동 대안을 찾는 방법입니다."
+    },
+    {
+      "title": "여성 라이더가 장거리 자전거 여행에서 따로 챙기는 것",
+      "category": "beginner",
+      "categoryLabel": "초보",
+      "region": "전국",
+      "difficulty": "초보",
+      "duration": "1박 이상",
+      "url": "/info/beginner/female-rider-long-distance-packing.html",
+      "description": "장거리 자전거 여행에서 위생용품, 자외선 대비, 화장실 접근성, 동선 공유를 실용 기준으로 정리했습니다."
+    },
+    {
+      "title": "접이식 자전거로 국토종주가 가능할까",
+      "category": "planning",
+      "categoryLabel": "계획",
+      "region": "전국",
+      "difficulty": "중급",
+      "duration": "1박 이상",
+      "url": "/info/planning/folding-bike-grand-route.html",
+      "description": "접이식 자전거의 장거리 체감, 대중교통 반입 장점, 작은 바퀴와 접이부 관리 변수를 정리했습니다."
+    },
+    {
+      "title": "반려견과 함께 타는 자전거길, 코스는 이렇게 고른다",
+      "category": "planning",
+      "categoryLabel": "계획",
+      "region": "전국",
+      "difficulty": "초보",
+      "duration": "반나절",
+      "url": "/info/planning/dog-friendly-bike-route.html",
+      "description": "반려견 동반 코스를 고를 때 리드줄, 장비, 노면 온도, 급수 간격을 기준으로 판단합니다."
+    },
+    {
+      "title": "전동킥보드·전기자전거는 국토종주 인증이 가능할까",
+      "category": "certification",
+      "categoryLabel": "인증",
+      "region": "전국",
+      "difficulty": "중급",
+      "duration": "1박 이상",
+      "url": "/info/certification/e-bike-certification-eligibility.html",
+      "description": "전기자전거와 전동킥보드의 인증 가능성을 장비 분류, 스탬프 방식, 배터리 변수로 살펴봅니다."
+    },
+    {
+      "title": "인증센터 마감 시간을 놓쳤을 때 대처법",
+      "category": "certification",
+      "categoryLabel": "인증",
+      "region": "전국",
+      "difficulty": "중급",
+      "duration": "1박 이상",
+      "url": "/info/certification/certification-center-closed-workaround.html",
+      "description": "마감 후 도착했을 때 사진 기록, 앱 기록, 다음날 재방문 등 대처 순서를 정리했습니다."
     }
   ]
 }
