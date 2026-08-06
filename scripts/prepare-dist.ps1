@@ -79,6 +79,7 @@ $items = @(
   "posts",
   "robots.txt",
   "sitemap.xml",
+  "ads.txt",
   "_headers",
   "_redirects"
 )

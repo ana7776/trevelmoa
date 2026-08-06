@@ -3,6 +3,8 @@ import { dirname } from "node:path";
 
 const site = "https://trevelmoa.com";
 const today = "2026-07-31";
+const adsenseSnippet = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424"
+     crossorigin="anonymous"></script>`;
 
 const labels = {
   route: "코스",
@@ -556,6 +558,7 @@ function layout({ title, description, canonical, body, type = "website" }) {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  ${adsenseSnippet}
   <title>${title}</title>
   <meta name="description" content="${escapeAttr(pageDescription)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
