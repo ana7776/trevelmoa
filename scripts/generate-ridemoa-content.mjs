@@ -1,6 +1,29 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 
+/**
+ * 주의: 이 스크립트는 현재 사이트보다 뒤처져 있습니다 (2026-08-15 기준).
+ *
+ * 실행하면 아래 내용이 조용히 사라집니다.
+ *  - info/onroad/* 5편과 이후 추가된 글 등, 이 파일의 articles 배열에 없는 글 10편
+ *    (파일 자체는 남지만 sitemap.xml, data/routes.json, 목록 페이지에서 빠집니다)
+ *  - index.html 의 네이버 사이트 확인 메타태그와 webp 히어로 이미지
+ *  - 전 페이지의 og:image(jpg), twitter 카드, BreadcrumbList 구조화 데이터
+ *  - _redirects 로 옮긴 /posts/ 301 처리 (posts/ 안내 페이지가 다시 생성됨)
+ *  - info/index.html 가이드 허브
+ *
+ * 다시 쓰려면 먼저 articles 배열과 layout() 을 현재 HTML 기준으로 맞추세요.
+ * 그때까지는 실수 방지를 위해 환경변수를 요구합니다.
+ */
+if (process.env.RIDEMOA_ALLOW_REGEN !== "1") {
+  console.error([
+    "generate-ridemoa-content.mjs 는 현재 사이트와 동기화되어 있지 않아 실행을 막았습니다.",
+    "실행하면 글 10편이 sitemap/목록에서 빠지고 SEO 메타태그가 되돌아갑니다.",
+    "내용을 확인하고도 실행하려면: RIDEMOA_ALLOW_REGEN=1 node scripts/generate-ridemoa-content.mjs"
+  ].join("\n"));
+  process.exit(1);
+}
+
 const site = "https://trevelmoa.com";
 const today = "2026-07-31";
 const adsenseSnippet = `<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5804969457082424"

@@ -1057,3 +1057,42 @@ a { color: inherit; }
     flex-wrap: wrap;
   }
 }
+
+/* /info/ 가이드 허브 */
+.toc-inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 32px;
+}
+.toc-inline a {
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--forest);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.toc-inline a:hover,
+.toc-inline a:focus-visible {
+  background: var(--forest);
+  color: var(--white);
+}
+.policy section {
+  scroll-margin-top: 90px;
+  margin-bottom: 40px;
+}
+.info-card h3 {
+  margin: 0 0 8px;
+  font-size: 17px;
+  line-height: 1.45;
+}
+.info-card p {
+  margin: 0 0 6px;
+}
+.card-meta {
+  color: var(--muted);
+  font-size: 13px;
+}

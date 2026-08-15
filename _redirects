@@ -1,4 +1,31 @@
-/guide /posts/national-bike-route-guide.html 301
-/info/region/seoul-gyeonggi-short-bike-routes.html /info/planning/seoul-gyeonggi-short-bike-routes.html 301
+# 이전 /posts/ 주소 -> 현재 /info/ 주소
+# (meta refresh 안내 페이지 대신 실제 301 리다이렉트로 처리)
+/posts/beautiful-bike-routes-selection-guide.html /info/planning/beautiful-bike-routes-selection-guide.html 301
+/posts/bicycle-insurance-decision-guide.html /info/safety/bicycle-insurance-decision-guide.html 301
+/posts/bike-trip-packing-checklist.html /info/planning/bike-trip-packing-checklist.html 301
+/posts/cross-country-bike-trip-budget.html /info/certification/cross-country-bike-trip-budget.html 301
+/posts/cross-country-certification-guide.html /info/certification/cross-country-certification-guide.html 301
+/posts/family-bike-ride-safety-guide.html /info/beginner/family-bike-ride-safety-guide.html 301
+/posts/first-ride-distance.html /info/beginner/first-ride-distance.html 301
+/posts/gangwon-scenic-bike-route-prep.html /info/planning/gangwon-scenic-bike-route-prep.html 301
+/posts/han-river-bike-beginner-course.html /info/beginner/han-river-bike-beginner-course.html 301
+/posts/jeju-bike-trip-preparation.html /info/planning/jeju-bike-trip-preparation.html 301
+/posts/long-distance-bike-ride-planning.html /info/planning/long-distance-bike-ride-planning.html 301
+/posts/long-distance-pain-prevention-posture.html /info/safety/long-distance-pain-prevention-posture.html 301
+/posts/no-supply-section-preparation.html /info/planning/no-supply-section-preparation.html 301
+/posts/overnight-lodging-plan.html /info/planning/overnight-lodging-plan.html 301
+/posts/passbook-vs-app-certification.html /info/certification/passbook-vs-app-certification.html 301
+/posts/pre-ride-bike-check-routine.html /info/beginner/pre-ride-bike-check-routine.html 301
+/posts/recommended-grand-route-order.html /info/certification/recommended-grand-route-order.html 301
+/posts/seoul-gyeonggi-short-bike-routes.html /info/beginner/seoul-gyeonggi-short-bike-routes.html 301
+/posts/summer-winter-riding-risks.html /info/safety/summer-winter-riding-risks.html 301
+/posts/tunnel-night-riding-safety.html /info/safety/tunnel-night-riding-safety.html 301
+
+# 이전 /info/region/ 주소 -> 현재 카테고리 경로
+/info/region/seoul-gyeonggi-short-bike-routes.html /info/beginner/seoul-gyeonggi-short-bike-routes.html 301
 /info/region/jeju-bike-trip-preparation.html /info/planning/jeju-bike-trip-preparation.html 301
 /info/region/gangwon-scenic-bike-route-prep.html /info/planning/gangwon-scenic-bike-route-prep.html 301
+
+# 남은 /posts/ 주소와 짧은 주소는 전체 가이드 허브로
+/posts/* /info/ 301
+/guide /info/ 301
