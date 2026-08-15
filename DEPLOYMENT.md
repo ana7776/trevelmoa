@@ -44,16 +44,13 @@ Cloudflare Pages에서 루트 도메인 `trevelmoa.com`과 `www.trevelmoa.com`�
 - **운영 브랜치는 `main` 하나로 통합했다.** 작업은 Claude Code에서 main에만 진행한다.
 - `codex/ridemoa-static-site`는 더 이상 쓰지 않는다. 커밋하거나 병합하지 않는다.
 
-### ⚠️ Cloudflare 대시보드에서 한 번만 해야 하는 설정
+### 브랜치 전환 이력
 
-Cloudflare Pages의 production branch가 아직 `codex/ridemoa-static-site`로 되어 있다.
-아래를 바꾸기 전까지는 main에 push해도 사이트에 반영되지 않는다.
+2026-08-15에 Cloudflare Pages 설정을 정리했다.
 
-1. Cloudflare 대시보드 > Workers & Pages > `trevelmoa`
-2. Settings > Builds & deployments > Production branch
-3. `codex/ridemoa-static-site` -> `main` 으로 변경 후 저장
-4. Deployments 탭에서 main 기준 빌드가 성공했는지 확인
-5. 확인되면 이 절을 삭제한다
+- GitHub 앱 연결이 끊겨 있어(`This project is disconnected from your Git account`) 자동 배포가 동작하지 않던 상태를 재승인으로 복구했다.
+- Production branch를 `codex/ridemoa-static-site`에서 `main`으로 변경했다.
+- 전환 직전 마지막 배포는 `05fc388`(codex 브랜치, 2026-08-06)이었다. 그 이후 작업은 모두 main에 있다.
 
 ## 배포 후 검색엔진 작업
 
