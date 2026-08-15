@@ -89,6 +89,28 @@ npm run images:r2      # 이미지 R2 업로드
 
 카테고리는 `beginner / planning / certification / safety / onroad` 5종이며, `routes-by-purpose.html`의 앵커 id와 구조화 데이터 breadcrumb가 이 값에 묶여 있습니다.
 
+### 헤더와 푸터는 44쪽이 똑같아야 합니다
+
+공통 레이아웃 파일이 없어 헤더·푸터가 페이지마다 복사돼 있습니다. 한 곳만 고치면 나머지가 조용히 어긋나므로, 바꿀 때는 전 페이지를 함께 고칩니다. `index.html`은 홈 전용 디자인(`home-header`/`home-nav`)이라 예외입니다.
+
+```bash
+# nav 링크 구성과 푸터 링크 구성이 몇 종류인지 — 홈 제외하고 각각 1종이어야 정상
+python3 -c "
+import glob,re
+from collections import defaultdict
+for tag,cls in (('nav','nav'),('footer','site-footer')):
+    d=defaultdict(list)
+    for p in sorted(glob.glob('**/*.html',recursive=True)):
+        if p=='index.html': continue
+        m=re.search(rf'<{tag}[^>]*class=\"{cls}\".*?</{tag}>',open(p,encoding='utf-8-sig').read(),re.S)
+        d[tuple(re.findall(r'href=\"([^\"]+)\"',m.group(0))) if m else 'NONE'].append(p)
+    print(tag,'유형',len(d))
+    for k,v in d.items():
+        if len(v)<5: print('  어긋남:',v,k)"
+```
+
+푸터 저작권 줄은 `© 2026 라이드모아.`로 통일돼 있습니다. `RideMoa`로 쓰지 마세요.
+
 ### 되살리면 안 되는 설정
 
 - **`scripts/generate-ridemoa-content.mjs`는 실행 금지입니다.** 이 파일은 글 30편 중 20편만 알고 있고, `index.html`의 네이버 사이트 확인 태그와 webp 히어로, 전 페이지 og/twitter/breadcrumb 메타를 모릅니다. 실행하면 글 10편이 sitemap·목록·`routes.json`에서 사라지고 SEO 메타가 되돌아갑니다. `RIDEMOA_ALLOW_REGEN=1` 가드가 걸려 있으니 **가드를 제거하지 마세요.**
@@ -102,7 +124,26 @@ npm run images:r2      # 이미지 R2 업로드
 - **본문 없는 화면에 광고 로더를 넣지 마세요.** 리다이렉트 안내, 빈 허브, 준비 중 페이지가 여기 해당합니다. 과거 거절 위험 요인이었습니다.
 - `pages/privacy.html`의 "광고와 제3자 쿠키" 절은 애드센스 정책 필수 고지입니다. 삭제하지 마세요.
 - 현재 `<ins class="adsbygoogle">` 광고 유닛이 0개이며 자동 광고 설정에 의존합니다. 코스 페이지의 `.ad-slot` div는 비어 있고 CSS에서 `display:none`입니다.
-- **남은 최대 위험은 분량입니다.** 승인 거절 1위 사유가 "가치 없는 콘텐츠"인데, 현재 본문 1,500자 미만이 16쪽입니다. 특히 `pages/contact.html` 157자, `pages/about.html` 311자는 심사에서 반드시 보는 페이지입니다. 초보·계획 카테고리 10편도 1,250~1,470자로, 같은 사이트의 다른 글(2,500~2,800자) 대비 절반입니다.
+- **분량 위험은 대부분 해소했습니다.** 승인 거절 1위 사유가 "가치 없는 콘텐츠"라 본문을 늘려 왔고, 글 30편은 현재 2,190~3,587자입니다. `pages/about.html`은 1,519자, `pages/terms.html`은 1,670자로 올렸습니다.
+- **아직 1,500자 미만인 5쪽이 남은 위험입니다.** `index.html` 694자(홈은 코스 찾기 UI 중심이라 정상), `pages/contact.html` 832자, `pages/privacy.html` 855자, `pages/routes-by-region.html` 900자, `calendar/index.html` 1,378자(12행 표 포함). 이 중 `routes-by-region.html`은 형제 페이지(`routes-by-distance` 1,948자, `routes-by-purpose` 2,730자)보다 안내 문단이 짧아 가장 먼저 손볼 곳입니다.
+
+분량은 아래로 다시 잽니다. 본문만 재고 nav/footer/script는 뺍니다.
+
+```bash
+python3 -c "
+import glob,re
+rows=[]
+for p in sorted(glob.glob('**/*.html',recursive=True)):
+    s=open(p,encoding='utf-8-sig').read()
+    m=re.search(r'<main.*?</main>',s,re.S) or re.search(r'<body.*?</body>',s,re.S)
+    t=m.group(0) if m else s
+    for tag in ('script','style','nav','footer'):
+        t=re.sub(rf'<{tag}.*?</{tag}>','',t,flags=re.S)
+    t=re.sub(r'\s+',' ',re.sub(r'<[^>]+>',' ',t)).strip()
+    rows.append((len(t),p))
+for n,p in sorted(rows):
+    print(f'{n:6d}  {p}' + ('  <-- 1500 미만' if n<1500 else ''))"
+```
 
 ### 사이트 정보
 
