@@ -9,7 +9,7 @@
 - Cloudflare Pages 프로젝트: `trevelmoa`
 - 현재 Pages 배포 URL: `https://6d7172d1.trevelmoa.pages.dev`
 - GitHub 저장소: `https://github.com/ana7776/trevelmoa`
-- GitHub 운영 브랜치: `codex/ridemoa-static-site`
+- GitHub 운영 브랜치: `main` (2026-08-15부터 main 단일 브랜치로 통합)
 - Cloudflare 네임서버:
   - `clark.ns.cloudflare.com`
   - `elaine.ns.cloudflare.com`
@@ -35,15 +35,25 @@ Cloudflare Pages에서 루트 도메인 `trevelmoa.com`과 `www.trevelmoa.com`�
 - Build command: 비워두기
 - Build output directory: `/`
 - Framework preset: None 또는 Static HTML
-- Production branch: `codex/ridemoa-static-site`
+- Production branch: `main`
 
 ## GitHub 연동 상태
 
 - 로컬 저장소 원격: `origin https://github.com/ana7776/trevelmoa.git`
-- GitHub에는 `main`과 `codex/ridemoa-static-site` 브랜치가 push되어 있다.
-- Cloudflare Pages 프로젝트는 `ana7776/trevelmoa` GitHub 저장소와 연결되어 있다.
-- Cloudflare production branch는 `codex/ridemoa-static-site`이며 자동 배포가 켜져 있다.
-- 최신 GitHub 기반 배포 커밋: `4b1d628`
+- Cloudflare Pages 프로젝트는 `ana7776/trevelmoa` GitHub 저장소와 연결되어 있고 자동 배포가 켜져 있다.
+- **운영 브랜치는 `main` 하나로 통합했다.** 작업은 Claude Code에서 main에만 진행한다.
+- `codex/ridemoa-static-site`는 더 이상 쓰지 않는다. 커밋하거나 병합하지 않는다.
+
+### ⚠️ Cloudflare 대시보드에서 한 번만 해야 하는 설정
+
+Cloudflare Pages의 production branch가 아직 `codex/ridemoa-static-site`로 되어 있다.
+아래를 바꾸기 전까지는 main에 push해도 사이트에 반영되지 않는다.
+
+1. Cloudflare 대시보드 > Workers & Pages > `trevelmoa`
+2. Settings > Builds & deployments > Production branch
+3. `codex/ridemoa-static-site` -> `main` 으로 변경 후 저장
+4. Deployments 탭에서 main 기준 빌드가 성공했는지 확인
+5. 확인되면 이 절을 삭제한다
 
 ## 배포 후 검색엔진 작업
 

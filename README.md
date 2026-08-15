@@ -22,7 +22,7 @@ npm run serve
 ## GitHub
 
 - Repository: `https://github.com/ana7776/trevelmoa`
-- Production branch: `main`
+- Production branch: `main` (단일 브랜치로 운영합니다. 작업 규칙은 `CLAUDE.md` 참고)
 
 ## 이미지 자동화
 
