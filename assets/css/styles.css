@@ -1107,3 +1107,49 @@ a { color: inherit; }
   white-space: nowrap;
   width: 6em;
 }
+
+/* 함께 읽기 - 관련 글 목록 */
+.related-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.related-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  padding: 12px 14px;
+  background: var(--soft);
+  border: 1px solid var(--line);
+}
+
+.related-list a {
+  font-weight: 800;
+  color: var(--forest);
+  text-decoration: none;
+}
+
+.related-list a:hover,
+.related-list a:focus {
+  text-decoration: underline;
+}
+
+.related-list span {
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+/* breadcrumb 안의 링크도 구분되게 */
+.breadcrumb span a {
+  color: var(--forest);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.breadcrumb [aria-current="page"] {
+  font-weight: 400;
+}

@@ -857,6 +857,11 @@ const MANUAL_PAGES = new Set([
   "pages/routes-by-distance.html",
   "pages/routes-by-purpose.html",
   "info/index.html",
+  "info/beginner/index.html",
+  "info/planning/index.html",
+  "info/certification/index.html",
+  "info/safety/index.html",
+  "info/onroad/index.html",
   "_redirects"
 ]);
 
@@ -958,6 +963,7 @@ const legacyRedirects = articles
   .join("\n");
 console.log(`구 주소 301 규칙 (필요 시 _redirects에 반영):\n${legacyRedirects}`);
 
-const urls = ["", "calendar/", "info/", ...routeCourses.map(route => route.path), ...articles.map(a => a.path), "pages/privacy.html", "pages/terms.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html", "pages/routes-by-distance.html", "pages/routes-by-purpose.html"];
+const categoryIndexes = ["beginner", "planning", "certification", "safety", "onroad"].map(key => `info/${key}/`);
+const urls = ["", "calendar/", "info/", ...categoryIndexes, ...routeCourses.map(route => route.path), ...articles.map(a => a.path), "pages/privacy.html", "pages/terms.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html", "pages/routes-by-distance.html", "pages/routes-by-purpose.html"];
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url, i) => `  <url><loc>${site}/${url}</loc><lastmod>${today}</lastmod><priority>${i === 0 ? "1.0" : "0.8"}</priority></url>`).join("\n")}\n</urlset>\n`);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);

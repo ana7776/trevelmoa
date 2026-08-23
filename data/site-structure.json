@@ -1,0 +1,88 @@
+{
+  "note": "사이트 계층과 글 사이 연결을 한곳에서 관리한다. 카테고리 인덱스, breadcrumb, 함께 읽기 링크가 이 파일을 기준으로 생성된다.",
+  "categories": [
+    {
+      "key": "beginner",
+      "name": "초보",
+      "navLabel": "초보 가이드",
+      "title": "초보 자전거길 가이드",
+      "lead": "처음 또는 오랜만에 자전거길을 나서는 사람이 부담을 낮추는 기준을 모았습니다.",
+      "intro": "첫 라이딩에서 가장 자주 생기는 문제는 체력 부족이 아니라 <strong>돌아올 방법을 정하지 않은 것</strong>입니다. 이 분류의 글은 거리와 장비를 정하기 전에 복귀 동선과 안전 기준을 먼저 세우도록 구성했습니다.",
+      "readOrder": "처음이라면 거리 기준을 정하는 글부터 읽고, 출발 직전에 점검 루틴을 확인하는 순서를 권합니다."
+    },
+    {
+      "key": "planning",
+      "name": "계획",
+      "navLabel": "계획 가이드",
+      "title": "자전거 여행 계획 가이드",
+      "lead": "거리, 숙박, 준비물, 지역 조건을 출발 전에 정하는 기준을 모았습니다.",
+      "intro": "일정이 무너지는 지점은 대부분 <strong>보급과 숙박 사이의 거리</strong>입니다. 이 분류의 글은 하루 주행거리를 먼저 정하고 그에 맞춰 숙소와 보급을 배치하는 순서로 구성했습니다.",
+      "readOrder": "장거리를 준비한다면 일정 설계 글을 먼저 보고, 숙박 분할과 보급 공백 대비를 이어서 확인하세요."
+    },
+    {
+      "key": "certification",
+      "name": "인증",
+      "navLabel": "인증 가이드",
+      "title": "국토종주 인증 가이드",
+      "lead": "인증수첩 발급부터 스탬프, 완주 신청까지 인증 절차를 준비하는 기준을 모았습니다.",
+      "intro": "인증은 코스를 달리는 것보다 <strong>인증센터의 위치와 운영 시간에 동선을 맞추는 일</strong>에 가깝습니다. 이 분류의 글은 절차를 순서대로 확인하고 예외 상황까지 대비하도록 구성했습니다.",
+      "readOrder": "인증제 전체 흐름을 먼저 보고, 종주 순서와 비용을 정한 뒤 예외 상황 대처를 확인하는 순서를 권합니다."
+    },
+    {
+      "key": "safety",
+      "name": "안전",
+      "navLabel": "안전 가이드",
+      "title": "라이딩 안전 가이드",
+      "lead": "야간, 계절, 통증, 보험처럼 사고와 부상 위험을 줄이는 기준을 모았습니다.",
+      "intro": "안전은 장비를 늘리는 문제가 아니라 <strong>어떤 조건에서 중단할지 미리 정해두는 문제</strong>입니다. 이 분류의 글은 위험 요인별로 판단 기준과 중단 신호를 함께 제시합니다.",
+      "readOrder": "계절 위험과 야간 주행 기준을 먼저 확인하고, 장거리를 계획한다면 통증 예방과 보험 판단을 이어서 보세요."
+    },
+    {
+      "key": "onroad",
+      "name": "여행 실전",
+      "navLabel": "여행 실전 가이드",
+      "title": "여행 중 문제 해결 가이드",
+      "lead": "출발한 뒤 현장에서 생기는 문제를 해결하는 순서를 모았습니다.",
+      "intro": "계획대로 되지 않는 순간에 필요한 것은 새로운 정보가 아니라 <strong>미리 정해둔 판단 순서</strong>입니다. 이 분류의 글은 날씨, 고장, 환승처럼 여행 중 실제로 겪는 상황을 다룹니다.",
+      "readOrder": "출발 전에 숙소와 환승 기준을 정해두고, 날씨 전환과 고장 대처는 저장해두었다가 현장에서 확인하세요."
+    }
+  ],
+  "nextStep": {
+    "family-bike-ride-safety-guide": "/info/beginner/seoul-gyeonggi-short-bike-routes.html",
+    "female-rider-long-distance-packing": "/info/planning/bike-trip-packing-checklist.html",
+    "first-ride-distance": "/info/beginner/pre-ride-bike-check-routine.html",
+    "han-river-bike-beginner-course": "/routes/seoul/hangang.html",
+    "pre-ride-bike-check-routine": "/info/onroad/on-trip-bike-repair.html",
+    "seoul-gyeonggi-short-bike-routes": "/info/beginner/first-ride-distance.html",
+    "beautiful-bike-routes-selection-guide": "/info/planning/gangwon-scenic-bike-route-prep.html",
+    "bike-trip-packing-checklist": "/info/beginner/pre-ride-bike-check-routine.html",
+    "dog-friendly-bike-route": "/info/safety/summer-winter-riding-risks.html",
+    "folding-bike-grand-route": "/info/onroad/bike-transit-transfer-route.html",
+    "gangwon-scenic-bike-route-prep": "/routes/gangwon/uiamho.html",
+    "jeju-bike-trip-preparation": "/routes/jeju/jeju-coastal.html",
+    "long-distance-bike-ride-planning": "/info/planning/overnight-lodging-plan.html",
+    "no-supply-section-preparation": "/info/onroad/weather-alert-route-change.html",
+    "overnight-lodging-plan": "/info/onroad/bike-traveler-accommodation.html",
+    "certification-center-closed-workaround": "/info/certification/passbook-vs-app-certification.html",
+    "cross-country-bike-trip-budget": "/info/planning/overnight-lodging-plan.html",
+    "cross-country-certification-guide": "/info/certification/recommended-grand-route-order.html",
+    "e-bike-certification-eligibility": "/info/certification/cross-country-certification-guide.html",
+    "passbook-vs-app-certification": "/info/certification/cross-country-certification-guide.html",
+    "recommended-grand-route-order": "/routes/chungnam/geumgang.html",
+    "bicycle-insurance-decision-guide": "/info/safety/long-distance-pain-prevention-posture.html",
+    "long-distance-pain-prevention-posture": "/info/planning/long-distance-bike-ride-planning.html",
+    "summer-winter-riding-risks": "/info/onroad/weather-alert-route-change.html",
+    "tunnel-night-riding-safety": "/info/safety/summer-winter-riding-risks.html",
+    "bike-transit-transfer-route": "/info/planning/long-distance-bike-ride-planning.html",
+    "bike-traveler-accommodation": "/info/planning/overnight-lodging-plan.html",
+    "bikepacking-first-guide": "/info/planning/bike-trip-packing-checklist.html",
+    "on-trip-bike-repair": "/info/beginner/pre-ride-bike-check-routine.html",
+    "weather-alert-route-change": "/info/safety/summer-winter-riding-risks.html"
+  },
+  "routes": [
+    { "url": "/routes/seoul/hangang.html", "region": "서울", "name": "한강 자전거길" },
+    { "url": "/routes/gangwon/uiamho.html", "region": "강원", "name": "의암호 자전거길" },
+    { "url": "/routes/jeju/jeju-coastal.html", "region": "제주", "name": "제주 환상 종주 일부 구간" },
+    { "url": "/routes/chungnam/geumgang.html", "region": "충남", "name": "금강 자전거길" }
+  ]
+}
