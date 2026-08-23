@@ -1057,3 +1057,53 @@ a { color: inherit; }
     flex-wrap: wrap;
   }
 }
+
+.info-card h2,
+.info-card h3,
+.info-card h4 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  line-height: 1.45;
+}
+
+.info-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.policy .fact-table {
+  width: 100%;
+  margin: 18px 0 28px;
+}
+
+/* 좁은 화면에서 칸이 눌리지 않도록 표 자체를 가로 스크롤 영역으로 둔다. */
+.policy table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.policy table thead,
+.policy table tbody {
+  display: table;
+  width: 100%;
+  min-width: 520px;
+}
+
+/* 열이 많은 표는 더 넓은 최소 폭을 주고 가로 스크롤로 읽게 한다. */
+.policy table.wide thead,
+.policy table.wide tbody {
+  min-width: 680px;
+}
+
+.policy table .col-date {
+  white-space: nowrap;
+  width: 8.5em;
+}
+
+.policy table .col-cat {
+  white-space: nowrap;
+  width: 6em;
+}

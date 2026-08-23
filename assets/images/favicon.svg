@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="라이드모아">
+  <rect width="64" height="64" rx="14" fill="#1f6b4f"/>
+  <g fill="none" stroke="#ffffff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="19" cy="41" r="11"/>
+    <circle cx="45" cy="41" r="11"/>
+    <path d="M19 41l9-17h10"/>
+    <path d="M45 41L34 24"/>
+    <path d="M26 24h8"/>
+  </g>
+</svg>

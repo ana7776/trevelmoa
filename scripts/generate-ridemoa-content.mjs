@@ -846,17 +846,25 @@ function simplePage(title, description, path, content) {
   return layout({ title: `${title} | RideMoa`, description, canonical: `${site}/${path}`, body: `<main class="policy"><h1>${title}</h1>${content}</main>` });
 }
 
-function redirectPage(from, to) {
-  const slug = from.split("/").pop().replace(".html", "");
-  return layout({
-    title: `${slug} 새 주소 안내 | RideMoa`,
-    description: "이전 글 주소에서 현재 라이드모아 정보 글로 이동하는 안내 페이지입니다.",
-    canonical: `${site}/${to}`,
-    body: `<main class="policy"><h1>페이지가 이동되었습니다</h1><p><a href="/${to}">새 주소에서 글을 확인하세요.</a></p></main>`
-  }).replace("</head>", `  <meta http-equiv="refresh" content="0; url=/${to}">\n</head>`);
-}
+// 손으로 유지보수하는 페이지는 생성기가 덮어쓰지 않는다.
+// 애드센스 지침에 맞춰 직접 작성한 신뢰 페이지와 목록 페이지가 여기에 해당한다.
+const MANUAL_PAGES = new Set([
+  "pages/about.html",
+  "pages/contact.html",
+  "pages/privacy.html",
+  "pages/terms.html",
+  "pages/routes-by-region.html",
+  "pages/routes-by-distance.html",
+  "pages/routes-by-purpose.html",
+  "info/index.html",
+  "_redirects"
+]);
 
 function write(path, content) {
+  if (MANUAL_PAGES.has(path)) {
+    console.log(`skip (수동 관리 페이지): ${path}`);
+    return;
+  }
   mkdirSync(dirname(path), { recursive: true });
   writeFileSync(path, content, "utf8");
 }
@@ -943,11 +951,13 @@ write("data/grand-routes.json", JSON.stringify({
   chapters: articles.filter(a => a.category === "certification" || a.path.includes("planning")).map((a, i) => ({ chapter: i + 1, title: a.title, url: `/${a.path}` }))
 }, null, 2));
 
-for (const article of articles) {
-  const oldPath = `posts/${article.path.split("/").pop()}`;
-  write(oldPath, redirectPage(oldPath, article.path));
-}
+// 구 /posts/ 주소는 색인 가능한 얇은 안내 페이지 대신 _redirects의 301 규칙으로 처리한다.
+// 새 글을 추가하면 아래 목록을 참고해 _redirects에 규칙을 직접 추가한다.
+const legacyRedirects = articles
+  .map(article => `/posts/${article.path.split("/").pop()} /${article.path} 301`)
+  .join("\n");
+console.log(`구 주소 301 규칙 (필요 시 _redirects에 반영):\n${legacyRedirects}`);
 
-const urls = ["", "calendar/", ...routeCourses.map(route => route.path), ...articles.map(a => a.path), "pages/privacy.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html", "pages/routes-by-distance.html", "pages/routes-by-purpose.html"];
+const urls = ["", "calendar/", "info/", ...routeCourses.map(route => route.path), ...articles.map(a => a.path), "pages/privacy.html", "pages/terms.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html", "pages/routes-by-distance.html", "pages/routes-by-purpose.html"];
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url, i) => `  <url><loc>${site}/${url}</loc><lastmod>${today}</lastmod><priority>${i === 0 ? "1.0" : "0.8"}</priority></url>`).join("\n")}\n</urlset>\n`);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);
