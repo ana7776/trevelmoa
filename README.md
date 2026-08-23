@@ -54,7 +54,7 @@ npm run images:r2
 - [ ] Search Console, 네이버 서치어드바이저 소유 확인 및 사이트맵 제출
 - [ ] 대표 URL 검사로 noindex·canonical·크롤링 상태 확인
 - [ ] 실제 휴대폰에서 본문·표·메뉴·문의 링크 확인
-- [ ] `contact@trevelmoa.com` 수신 테스트
+- [ ] `anagim7776@gmail.com` 수신 테스트
 - [ ] 광고 승인 전 본문 광고 슬롯은 노출하지 않음 (`.ad-slot`은 `display:none` 유지)
 
 ### 콘텐츠 수정 시 주의
