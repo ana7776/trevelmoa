@@ -7,6 +7,7 @@
   <url><loc>https://trevelmoa.com/info/onroad/</loc><lastmod>2026-08-23</lastmod><priority>0.9</priority></url>
   <url><loc>https://trevelmoa.com/info/planning/</loc><lastmod>2026-08-23</lastmod><priority>0.9</priority></url>
   <url><loc>https://trevelmoa.com/info/safety/</loc><lastmod>2026-08-23</lastmod><priority>0.9</priority></url>
+  <url><loc>https://trevelmoa.com/pages/routes-by-region.html</loc><lastmod>2026-08-23</lastmod><priority>0.9</priority></url>
   <url><loc>https://trevelmoa.com/routes/chungnam/geumgang.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/routes/gangwon/uiamho.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/routes/jeju/jeju-coastal.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
@@ -45,8 +46,5 @@
   <url><loc>https://trevelmoa.com/pages/about.html</loc><lastmod>2026-08-23</lastmod><priority>0.5</priority></url>
   <url><loc>https://trevelmoa.com/pages/contact.html</loc><lastmod>2026-08-23</lastmod><priority>0.5</priority></url>
   <url><loc>https://trevelmoa.com/pages/privacy.html</loc><lastmod>2026-08-23</lastmod><priority>0.5</priority></url>
-  <url><loc>https://trevelmoa.com/pages/routes-by-distance.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://trevelmoa.com/pages/routes-by-purpose.html</loc><lastmod>2026-08-06</lastmod><priority>0.9</priority></url>
-  <url><loc>https://trevelmoa.com/pages/routes-by-region.html</loc><lastmod>2026-07-31</lastmod><priority>0.8</priority></url>
   <url><loc>https://trevelmoa.com/pages/terms.html</loc><lastmod>2026-08-23</lastmod><priority>0.5</priority></url>
 </urlset>

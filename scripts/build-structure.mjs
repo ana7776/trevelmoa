@@ -23,10 +23,8 @@ const NAV = `  <header class="site-header">
     <a class="brand" href="/">라이드모아</a>
     <nav class="nav" aria-label="주요 메뉴">
       <a href="/">홈</a>
+      <a href="/info/">목적별</a>
       <a href="/pages/routes-by-region.html">지역별</a>
-      <a href="/pages/routes-by-distance.html">거리별</a>
-      <a href="/pages/routes-by-purpose.html">목적별</a>
-      <a href="/info/">전체 가이드</a>
       <a href="/calendar/">계절 캘린더</a>
       <a href="/pages/about.html">소개</a>
       <a href="/pages/contact.html">문의</a>
@@ -163,7 +161,7 @@ ${rows}
 
 <h2>다른 분류</h2>
 <p>${siblings}</p>
-<p class="info-note">전체 글을 한 번에 보려면 <a href="/info/">전체 가이드 목록</a>을, 지역이나 거리로 좁히려면 <a href="/pages/routes-by-region.html">지역별</a> · <a href="/pages/routes-by-distance.html">거리별</a> 가이드를 이용하세요.</p>
+<p class="info-note">전체 글을 한 번에 보려면 <a href="/info/">목적별 가이드 전체</a>를, 갈 지역이 정해져 있다면 <a href="/pages/routes-by-region.html">지역별 코스</a>를 이용하세요. 거리와 소요시간으로 좁히려면 <a href="/#finder">홈의 코스 찾기</a>에서 조건을 고르면 됩니다.</p>
 </main>
 ${FOOTER}
 </body>
@@ -177,6 +175,110 @@ for (const [key, { meta, items }] of byCategory) {
   created++;
 }
 console.log(`분류 인덱스 ${created}개 생성`);
+
+/* ---------------------------------------------------------------- 1-2. 지역별 코스 허브 */
+
+/**
+ * 지역별에는 "지역이 특정되는" 콘텐츠만 넣는다.
+ * 지역과 무관한 준비 글은 목적별(/info/)이 담당하므로 두 허브의 목록이 겹치지 않는다.
+ */
+function regionHub() {
+  const url = `${SITE}/pages/routes-by-region.html`;
+  const total = structure.regions.reduce((n, r) => n + 1 + r.articles.length, 0);
+  const description =
+    "서울·수도권, 강원, 충남, 제주 지역의 자전거길 코스와 그 지역에서만 확인할 조건을 모았습니다. " +
+    "지역과 무관한 준비 기준은 목적별 가이드에서 확인할 수 있습니다.";
+
+  const sections = structure.regions
+    .map((r) => {
+      const course = allBySlug.get(r.course) || { url: r.course, title: r.course };
+      const items = r.articles.map((u) => {
+        const meta = readMeta(u.slice(1));
+        return { url: u, ...meta };
+      });
+      const articleCards = items.length
+        ? `      <div class="info-grid fluid">
+${items
+  .map((a) => `        <article class="info-card"><h4>${esc(a.title)}</h4><p>${esc(a.desc)}</p><a href="${a.url}">읽기</a></article>`)
+  .join("\n")}
+      </div>`
+        : `      <p>이 지역은 아직 코스 상세만 있습니다. 준비 기준은 <a href="/info/planning/">계획 가이드</a>에서 확인하세요.</p>`;
+
+      return `<section class="region-block" id="${r.key}">
+      <h2>${esc(r.name)}</h2>
+      <p>${esc(r.lead)}</p>
+      <div class="info-grid fluid">
+        <article class="info-card"><h3>${esc(course.title)}</h3><p>이 지역의 코스 상세 페이지입니다. 구간, 노면, 보급, 복귀 교통을 순서대로 확인할 수 있습니다.</p><a href="${course.url}">코스 보기</a></article>
+      </div>
+${items.length ? `      <h3>${esc(r.name)}에서 확인할 것</h3>\n${articleCards}` : articleCards}
+      <p class="info-note"><strong>이 지역의 변수</strong> · ${esc(r.note)}</p>
+    </section>`;
+    })
+    .join("\n\n    ");
+
+  const jump = structure.regions.map((r) => `<a href="#${r.key}">${esc(r.name)}</a>`).join(" · ");
+
+  const breadcrumbLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "홈", item: `${SITE}/` },
+      { "@type": "ListItem", position: 2, name: "지역별 코스", item: url }
+    ]
+  };
+  const pageLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    headline: "지역별 자전거길 코스 | 라이드모아",
+    description,
+    url,
+    dateModified: TODAY,
+    publisher: { "@type": "Organization", name: "라이드모아" }
+  };
+
+  return `<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  ${ADSENSE}
+  <title>지역별 자전거길 코스 | RideMoa</title>
+  <meta name="description" content="${esc(description)}">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="${url}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="지역별 자전거길 코스 | RideMoa">
+  <meta property="og:description" content="${esc(description)}">
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="${SITE}/assets/images/route-hero.svg">
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script type="application/ld+json">${JSON.stringify(pageLd)}</script>
+  <script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>
+</head>
+<body>
+${NAV}
+<main class="policy">
+<nav class="breadcrumb" aria-label="현재 위치"><a href="/">홈</a><span aria-current="page">지역별 코스</span></nav>
+<h1>지역별 자전거길 코스</h1>
+<p>갈 지역이 정해져 있을 때 쓰는 목록입니다. 코스 상세와 <strong>그 지역에서만 확인할 조건</strong>을 함께 묶었습니다.</p>
+<p class="info-note">지역과 상관없는 준비 기준(거리, 준비물, 인증, 안전, 현장 대처)은 <a href="/info/">목적별 가이드</a>에서 다룹니다. 두 목록은 겹치지 않으니 필요한 쪽만 보면 됩니다. 거리나 소요시간으로 좁히려면 <a href="/#finder">홈의 코스 찾기</a>를 이용하세요.</p>
+<p><strong>바로 가기</strong> · ${jump}</p>
+
+    ${sections}
+
+<h2>지역을 아직 정하지 않았다면</h2>
+<p>무엇을 준비해야 하는지부터 정하는 편이 빠릅니다. <a href="/info/beginner/">초보</a> · <a href="/info/planning/">계획</a> · <a href="/info/certification/">인증</a> · <a href="/info/safety/">안전</a> · <a href="/info/onroad/">여행 실전</a> 분류에서 상황에 맞는 기준을 먼저 확인하세요.</p>
+<p class="info-note">현재 코스 상세 ${structure.regions.length}편과 지역 특정 준비 글을 합쳐 ${total}개 항목을 다룹니다. 코스는 확인이 끝난 지역부터 순서대로 추가합니다.</p>
+</main>
+${FOOTER}
+</body>
+</html>
+`;
+}
+
+writeFileSync("pages/routes-by-region.html", regionHub(), "utf8");
+console.log("지역별 코스 허브 생성");
 
 /* ---------------------------------------------------------------- 2~4. 글 페이지 */
 

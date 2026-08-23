@@ -1,5 +1,5 @@
 {
-  "note": "사이트 계층과 글 사이 연결을 한곳에서 관리한다. 카테고리 인덱스, breadcrumb, 함께 읽기 링크가 이 파일을 기준으로 생성된다.",
+  "note": "사이트 계층과 글 사이 연결을 한곳에서 관리한다. 탐색 축은 두 개다. 목적별(/info/)은 무엇을 준비할지, 지역별(/pages/routes-by-region.html)은 어디로 갈지를 기준으로 나눈다. 지역별에는 지역이 특정되는 콘텐츠만 넣어 목적별과 목록이 겹치지 않게 한다.",
   "categories": [
     {
       "key": "beginner",
@@ -80,9 +80,66 @@
     "weather-alert-route-change": "/info/safety/summer-winter-riding-risks.html"
   },
   "routes": [
-    { "url": "/routes/seoul/hangang.html", "region": "서울", "name": "한강 자전거길" },
-    { "url": "/routes/gangwon/uiamho.html", "region": "강원", "name": "의암호 자전거길" },
-    { "url": "/routes/jeju/jeju-coastal.html", "region": "제주", "name": "제주 환상 종주 일부 구간" },
-    { "url": "/routes/chungnam/geumgang.html", "region": "충남", "name": "금강 자전거길" }
+    {
+      "url": "/routes/seoul/hangang.html",
+      "region": "서울",
+      "name": "한강 자전거길"
+    },
+    {
+      "url": "/routes/gangwon/uiamho.html",
+      "region": "강원",
+      "name": "의암호 자전거길"
+    },
+    {
+      "url": "/routes/jeju/jeju-coastal.html",
+      "region": "제주",
+      "name": "제주 환상 종주 일부 구간"
+    },
+    {
+      "url": "/routes/chungnam/geumgang.html",
+      "region": "충남",
+      "name": "금강 자전거길"
+    }
+  ],
+  "regions": [
+    {
+      "key": "seoul",
+      "name": "서울·수도권",
+      "lead": "접근과 복귀 교통이 가장 편해 첫 코스로 고르기 좋은 지역입니다.",
+      "note": "이용자가 많아 주말 낮에는 속도보다 간격 확보가 중요합니다.",
+      "course": "/routes/seoul/hangang.html",
+      "articles": [
+        "/info/beginner/han-river-bike-beginner-course.html",
+        "/info/beginner/seoul-gyeonggi-short-bike-routes.html"
+      ]
+    },
+    {
+      "key": "gangwon",
+      "name": "강원",
+      "lead": "호반과 산지 풍경이 좋지만 오르막과 기온 차를 함께 봐야 하는 지역입니다.",
+      "note": "보급 간격이 넓어지는 구간이 있어 출발 전 물과 행동식을 넉넉히 준비합니다.",
+      "course": "/routes/gangwon/uiamho.html",
+      "articles": [
+        "/info/planning/gangwon-scenic-bike-route-prep.html"
+      ]
+    },
+    {
+      "key": "chungnam",
+      "name": "충남",
+      "lead": "국토종주형 장거리를 연습하기 좋은 강변 구간이 이어지는 지역입니다.",
+      "note": "인증 동선과 야간 구간을 함께 계획해야 일정이 무너지지 않습니다.",
+      "course": "/routes/chungnam/geumgang.html",
+      "articles": []
+    },
+    {
+      "key": "jeju",
+      "name": "제주",
+      "lead": "해안 바람과 이동 수단이 일정 전체를 좌우하는 지역입니다.",
+      "note": "항공·선박으로 자전거를 옮기는 조건을 먼저 확인한 뒤 코스를 정합니다.",
+      "course": "/routes/jeju/jeju-coastal.html",
+      "articles": [
+        "/info/planning/jeju-bike-trip-preparation.html"
+      ]
+    }
   ]
 }

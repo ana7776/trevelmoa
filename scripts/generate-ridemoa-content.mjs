@@ -576,9 +576,8 @@ function layout({ title, description, canonical, body, type = "website" }) {
     <a class="brand" href="/">라이드모아</a>
     <nav class="nav" aria-label="주요 메뉴">
       <a href="/">홈</a>
+      <a href="/info/">목적별</a>
       <a href="/pages/routes-by-region.html">지역별</a>
-      <a href="/pages/routes-by-distance.html">거리별</a>
-      <a href="/pages/routes-by-purpose.html">목적별</a>
       <a href="/calendar/">계절 캘린더</a>
       <a href="/pages/about.html">소개</a>
       <a href="/pages/contact.html">문의</a>
@@ -802,10 +801,10 @@ function homePage() {
     <section class="section split">
       <div><p class="eyebrow">Directory</p><h2>상황별로 바로 찾기</h2><p>지역, 거리, 목적에 따라 필요한 가이드를 빠르게 고를 수 있습니다.</p></div>
       <div class="info-grid">
-        <article class="info-card"><h3>초보</h3><p>첫 라이딩, 한강 입문, 가족 나들이처럼 부담을 낮추는 기준을 봅니다.</p><a href="/pages/routes-by-purpose.html#beginner">보기</a></article>
-        <article class="info-card"><h3>계획</h3><p>숙박, 준비물, 장거리 일정과 지역별 여행 판단 기준을 정합니다.</p><a href="/pages/routes-by-purpose.html#planning">보기</a></article>
-        <article class="info-card"><h3>인증</h3><p>인증수첩, 스탬프, 종주 순서처럼 인증 준비에 필요한 흐름을 확인합니다.</p><a href="/pages/routes-by-purpose.html#certification">보기</a></article>
-        <article class="info-card"><h3>안전</h3><p>야간, 계절 위험, 통증 예방처럼 출발 전에 줄여야 할 위험을 점검합니다.</p><a href="/pages/routes-by-purpose.html#safety">보기</a></article>
+        <article class="info-card"><h3>초보</h3><p>첫 라이딩, 한강 입문, 가족 나들이처럼 부담을 낮추는 기준을 봅니다.</p><a href="/info/beginner/">보기</a></article>
+        <article class="info-card"><h3>계획</h3><p>숙박, 준비물, 장거리 일정과 지역별 여행 판단 기준을 정합니다.</p><a href="/info/planning/">보기</a></article>
+        <article class="info-card"><h3>인증</h3><p>인증수첩, 스탬프, 종주 순서처럼 인증 준비에 필요한 흐름을 확인합니다.</p><a href="/info/certification/">보기</a></article>
+        <article class="info-card"><h3>안전</h3><p>야간, 계절 위험, 통증 예방처럼 출발 전에 줄여야 할 위험을 점검합니다.</p><a href="/info/safety/">보기</a></article>
       </div>
     </section>
   </main>
@@ -847,15 +846,14 @@ function simplePage(title, description, path, content) {
 }
 
 // 손으로 유지보수하는 페이지는 생성기가 덮어쓰지 않는다.
-// 애드센스 지침에 맞춰 직접 작성한 신뢰 페이지와 목록 페이지가 여기에 해당한다.
+// 애드센스 지침에 맞춰 직접 작성한 신뢰 페이지와, scripts/build-structure.mjs가
+// data/site-structure.json을 기준으로 생성하는 목록 페이지가 여기에 해당한다.
 const MANUAL_PAGES = new Set([
   "pages/about.html",
   "pages/contact.html",
   "pages/privacy.html",
   "pages/terms.html",
   "pages/routes-by-region.html",
-  "pages/routes-by-distance.html",
-  "pages/routes-by-purpose.html",
   "info/index.html",
   "info/beginner/index.html",
   "info/planning/index.html",
@@ -917,25 +915,6 @@ write("pages/privacy.html", simplePage("개인정보처리방침", "라이드모
 <h2>보관과 삭제</h2><p>문의로 전달된 정보는 답변과 오류 확인 목적에 필요한 기간 동안만 보관합니다. 삭제 요청이 있으면 법령상 보관이 필요한 경우를 제외하고 확인 뒤 처리합니다.</p>
 <h2>문의</h2><p>개인정보와 콘텐츠 관련 문의는 anagim7776@gmail.com 으로 보내주세요.</p><p>시행일: 2026년 7월 23일</p>`));
 
-write("pages/routes-by-region.html", simplePage("지역별 자전거길 가이드", "수도권, 제주, 강원 등 지역별 자전거길 여행 준비 가이드 모음입니다.", "pages/routes-by-region.html", `
-<p>출발 지역과 복귀 교통을 기준으로 코스를 고르면 여행 실패 확률이 줄어듭니다.</p>
-<h2>상세 코스</h2>
-<div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div>
-<h2>지역 준비 가이드</h2>
-<div class="info-grid">${articles.filter(a => ["수도권", "제주", "강원"].includes(a.region)).map(articleCard).join("")}</div>`));
-
-write("pages/routes-by-distance.html", simplePage("거리별 자전거길 가이드", "반나절, 당일, 1박 이상 자전거 여행에 맞는 거리별 준비 기준입니다.", "pages/routes-by-distance.html", `
-<p>거리보다 복귀 가능성과 휴식 간격을 먼저 정하세요.</p>
-<h2>상세 코스</h2>
-<div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div>
-<h2>거리별 준비 가이드</h2>
-<div class="info-grid">${["반나절", "당일", "1박 이상"].map(duration => `<section><h2>${duration}</h2><div class="info-grid">${articles.filter(a => a.duration === duration).map(articleCard).join("")}</div></section>`).join("")}</div>`));
-
-write("pages/routes-by-purpose.html", simplePage("목적별 자전거길 가이드", "초보, 계획, 인증, 안전 카테고리별 자전거길 가이드입니다.", "pages/routes-by-purpose.html", `
-<p>누구와 왜 가는지에 따라 좋은 코스의 기준이 달라집니다.</p>
-<section id="route"><h2>상세 코스</h2><div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div></section>
-${["beginner", "planning", "certification", "safety"].map(category => `<section id="${category}"><h2>${labels[category]}</h2><div class="info-grid">${articles.filter(a => a.category === category).map(articleCard).join("")}</div></section>`).join("")}`));
-
 write("data/routes.json", JSON.stringify({
   updated: today,
   categories: ["route", "beginner", "planning", "certification", "safety"],
@@ -964,6 +943,6 @@ const legacyRedirects = articles
 console.log(`구 주소 301 규칙 (필요 시 _redirects에 반영):\n${legacyRedirects}`);
 
 const categoryIndexes = ["beginner", "planning", "certification", "safety", "onroad"].map(key => `info/${key}/`);
-const urls = ["", "calendar/", "info/", ...categoryIndexes, ...routeCourses.map(route => route.path), ...articles.map(a => a.path), "pages/privacy.html", "pages/terms.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html", "pages/routes-by-distance.html", "pages/routes-by-purpose.html"];
+const urls = ["", "calendar/", "info/", ...categoryIndexes, ...routeCourses.map(route => route.path), ...articles.map(a => a.path), "pages/privacy.html", "pages/terms.html", "pages/about.html", "pages/contact.html", "pages/routes-by-region.html"];
 write("sitemap.xml", `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map((url, i) => `  <url><loc>${site}/${url}</loc><lastmod>${today}</lastmod><priority>${i === 0 ? "1.0" : "0.8"}</priority></url>`).join("\n")}\n</urlset>\n`);
 write("robots.txt", `User-agent: *\nAllow: /\n\nSitemap: ${site}/sitemap.xml\n`);

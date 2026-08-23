@@ -1153,3 +1153,12 @@ a { color: inherit; }
 .breadcrumb [aria-current="page"] {
   font-weight: 400;
 }
+
+/* 항목 수가 적을 때 카드가 빈 공간을 남기지 않도록 자동으로 폭을 채운다. */
+.info-grid.fluid {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.region-block + .region-block {
+  margin-top: 36px;
+}

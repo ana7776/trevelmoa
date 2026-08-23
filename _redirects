@@ -27,3 +27,8 @@
 /posts/seoul-gyeonggi-short-bike-routes.html /info/beginner/seoul-gyeonggi-short-bike-routes.html 301
 /posts/summer-winter-riding-risks.html /info/safety/summer-winter-riding-risks.html 301
 /posts/tunnel-night-riding-safety.html /info/safety/tunnel-night-riding-safety.html 301
+
+# 허브 통합: 목적별은 /info/, 지역별은 /pages/routes-by-region.html 두 축으로 정리
+# 거리·소요시간은 홈의 코스 찾기 필터가 대신한다
+/pages/routes-by-purpose.html /info/ 301
+/pages/routes-by-distance.html /info/ 301
