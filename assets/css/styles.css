@@ -1096,3 +1096,30 @@ a { color: inherit; }
   color: var(--muted);
   font-size: 13px;
 }
+
+/* 홈 하단 이용 안내 - 코스를 고르는 순서 */
+#how-to-use p {
+  max-width: 68ch;
+  margin: 0 0 14px;
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+.how-steps {
+  max-width: 68ch;
+  margin: 18px 0;
+  padding-left: 20px;
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+.how-steps li {
+  margin-bottom: 12px;
+}
+
+#how-to-use .home-note {
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.95rem;
+}

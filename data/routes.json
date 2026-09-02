@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-06",
+  "updated": "2026-09-02",
   "categories": [
     "route",
     "beginner",
@@ -48,6 +48,26 @@
       "duration": "당일-1박 이상",
       "url": "/routes/chungnam/geumgang.html",
       "description": "금강 자전거길을 국토종주형 장거리 예시로 보고, 보급 공백과 인증 동선, 야간 위험을 기준으로 판단하는 상세 가이드입니다."
+    },
+    {
+      "title": "전주천·삼천 자전거길",
+      "category": "route",
+      "categoryLabel": "코스",
+      "region": "전북",
+      "difficulty": "초보",
+      "duration": "반나절",
+      "url": "/routes/jeonbuk/jeonjucheon.html",
+      "description": "전주천과 삼천을 따라 도심에서 바로 시작하는 하천형 코스로, 큰 오르막 없이 어느 지점에서든 돌아설 수 있는 것이 장점입니다."
+    },
+    {
+      "title": "장항 스카이워크 연계 코스",
+      "category": "route",
+      "categoryLabel": "코스",
+      "region": "충남",
+      "difficulty": "초보",
+      "duration": "반나절",
+      "url": "/routes/chungnam/janghang-skywalk.html",
+      "description": "금강 자전거길이 끝나는 하구에서 해안으로 이어 붙이는 짧은 연계 코스로, 종주 마지막 날 마무리 목적지로 삼기 좋습니다."
     },
     {
       "title": "첫 자전거길 여행은 몇 km가 좋을까",
