@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="장거리 라이딩에서 통증이 생기는 부위와 조정 항목 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">통증 부위마다 조정할 곳이 다르다</text>  <circle cx="130" cy="170" r="16" fill="#e0574a"/>
+  <text class="t" x="130" y="212" text-anchor="middle" font-size="17">목 · 어깨</text>
+  <text class="s" x="130" y="242" text-anchor="middle" font-size="14">핸들 거리 · 시선</text>
+  <circle cx="330" cy="170" r="16" fill="#e0574a"/>
+  <text class="t" x="330" y="212" text-anchor="middle" font-size="17">손목</text>
+  <text class="s" x="330" y="242" text-anchor="middle" font-size="14">장갑 · 체중 분산</text>
+  <circle cx="530" cy="170" r="16" fill="#e0574a"/>
+  <text class="t" x="530" y="212" text-anchor="middle" font-size="17">엉덩이</text>
+  <text class="s" x="530" y="242" text-anchor="middle" font-size="14">안장 높이 · 각도</text>
+  <circle cx="690" cy="170" r="16" fill="#e0574a"/>
+  <text class="t" x="690" y="212" text-anchor="middle" font-size="17">무릎</text>
+  <text class="s" x="690" y="242" text-anchor="middle" font-size="14">안장 높이 · 회전수</text>
+  <text class="s" x="400" y="320" text-anchor="middle">통증은 참을 신호가 아니라 세팅을 바꾸라는 신호다</text>
+</svg>

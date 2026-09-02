@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="코스 소요시간을 속도와 휴식으로 계산하는 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">소요시간 = 주행 + 휴식 + 사진 시간</text>  <rect x="70" y="165" width="374" height="86" rx="10" fill="#1f6b4f"/>
+  <text class="s" x="257" y="288" text-anchor="middle">주행</text>
+  <rect x="450" y="165" width="154" height="86" rx="10" fill="#78b8ce"/>
+  <text class="s" x="527" y="288" text-anchor="middle">휴식</text>
+  <rect x="610" y="165" width="114" height="86" rx="10" fill="#f5b641"/>
+  <text class="s" x="667" y="288" text-anchor="middle">사진 · 식사</text>
+  <text class="s" x="400" y="338" text-anchor="middle">평속 15km/h로 계산하고 휴식과 사진 시간을 40% 더한다</text>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="봄 여름 가을 겨울 계절별 자전거 여행 위험 요소 비교 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">계절마다 먼저 대비할 위험이 다르다</text>  <rect x="68" y="140" width="152" height="130" rx="14" fill="#78b8ce"/>
+  <text class="w" x="144" y="186" text-anchor="middle" font-size="22">봄</text>
+  <text x="144" y="222" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">강풍 · 혼잡</text>
+  <rect x="240" y="140" width="152" height="130" rx="14" fill="#e0574a"/>
+  <text class="w" x="316" y="186" text-anchor="middle" font-size="22">여름</text>
+  <text x="316" y="222" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">온열질환 · 소나기</text>
+  <rect x="412" y="140" width="152" height="130" rx="14" fill="#f5b641"/>
+  <text class="w" x="488" y="186" text-anchor="middle" font-size="22">가을</text>
+  <text x="488" y="222" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">일몰 빨라짐</text>
+  <rect x="584" y="140" width="152" height="130" rx="14" fill="#1e5f8c"/>
+  <text class="w" x="660" y="186" text-anchor="middle" font-size="22">겨울</text>
+  <text x="660" y="222" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">결빙 · 저체온</text>
+  <text class="s" x="400" y="330" text-anchor="middle">같은 코스도 계절에 따라 출발 시각과 복장 기준이 달라진다</text>
+</svg>

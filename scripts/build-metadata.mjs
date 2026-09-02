@@ -7,6 +7,9 @@ import { readFileSync, writeFileSync } from "node:fs";
 import { execFileSync } from "node:child_process";
 import { loadPages, categoryLabels, site } from "./catalog.mjs";
 
+// 글마다 다른 도해를 본문에 넣는다. 사진이 아니라 그 글이 다루는 판단을 그린 그림이다.
+const figures = JSON.parse(readFileSync("data/figures.json", "utf8"));
+
 const publisher = {
   "@type": "Organization",
   name: "라이드모아",
@@ -61,6 +64,7 @@ for (const page of loadPages()) {
   html = setMeta(html, "property", "og:image:width", "1200");
   html = setMeta(html, "property", "og:image:height", "630");
   html = setMeta(html, "property", "og:image:alt", title);
+  html = setMeta(html, "property", "og:description", description);
   html = setMeta(html, "property", "og:site_name", "라이드모아");
   html = setMeta(html, "property", "og:locale", "ko_KR");
   html = setMeta(html, "name", "twitter:card", "summary_large_image");
@@ -152,6 +156,17 @@ for (const page of loadPages()) {
     html = /<script type="application\/ld\+json">[\s\S]*?<\/script>/.test(html)
       ? html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, ld)
       : html.replace("</head>", `  ${ld}\n</head>`);
+  }
+
+  /* ---- 본문 도해 ---- */
+  const fig = figures[file];
+  if (fig && !html.includes("build:figure")) {
+    const [name, alt, caption] = fig;
+    const block = `\n        <figure class="article-figure"><!-- build:figure -->
+          <img src="/assets/images/figures/${name}.svg" alt="${alt}" width="800" height="400" loading="lazy" decoding="async">
+          <figcaption>${caption}</figcaption>
+        </figure>`;
+    html = html.replace("</table>", `</table>${block}`);
   }
 
   /* ---- 본문 최상단 이동 경로 ---- */

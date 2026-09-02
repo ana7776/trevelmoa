@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="자전거길 코스를 난이도 기준으로 비교한 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">난이도는 거리보다 상승과 바람이 정한다</text>  <rect x="78" y="260" width="110" height="60" rx="10" fill="#78b8ce"/>
+  <text class="t" x="133" y="244" text-anchor="middle">낮음</text>
+  <text class="s" x="133" y="346" text-anchor="middle">평지 강변형</text>
+  <rect x="246" y="215" width="110" height="105" rx="10" fill="#1f6b4f"/>
+  <text class="t" x="301" y="199" text-anchor="middle">보통</text>
+  <text class="s" x="301" y="346" text-anchor="middle">호반 · 완만한 언덕</text>
+  <rect x="414" y="165" width="110" height="155" rx="10" fill="#f5b641"/>
+  <text class="t" x="469" y="149" text-anchor="middle">높음</text>
+  <text class="s" x="469" y="346" text-anchor="middle">누적 상승 · 맞바람</text>
+  <rect x="582" y="120" width="110" height="200" rx="10" fill="#e0574a"/>
+  <text class="t" x="637" y="104" text-anchor="middle">매우 높음</text>
+  <text class="s" x="637" y="346" text-anchor="middle">장거리 · 보급 공백</text>  <text class="s" x="400" y="384" text-anchor="middle">같은 40km라도 상승과 바람에 따라 체감이 두 배로 갈린다</text>
+</svg>

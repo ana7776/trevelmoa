@@ -1087,3 +1087,24 @@ a { color: inherit; }
 .guide-index a:hover {
   color: var(--forest);
 }
+
+/* 본문 도해 - 그 글이 다루는 판단을 그림으로 먼저 보여준다 */
+.article-figure {
+  margin: 26px 0 30px;
+}
+
+.article-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--soft);
+}
+
+.article-figure figcaption {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}

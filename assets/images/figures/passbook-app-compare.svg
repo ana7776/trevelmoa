@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="종주 인증수첩과 앱 인증 방식의 장단점 비교 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">수첩과 앱은 서로의 약점을 메운다</text>  <rect x="72" y="115" width="316" height="180" rx="16" fill="#1f6b4f"/>
+  <text class="w" x="230" y="158" text-anchor="middle" font-size="22">인증수첩</text>
+  <text x="230" y="196" text-anchor="middle" fill="#ffffff" font-size="15" opacity="0.9">현장 스탬프로 확정</text>
+  <text x="230" y="226" text-anchor="middle" fill="#ffffff" font-size="15" opacity="0.9">배터리와 무관</text>
+  <text x="230" y="256" text-anchor="middle" fill="#ffffff" font-size="15" opacity="0.9">분실 시 복구 불가</text>
+  <rect x="412" y="115" width="316" height="180" rx="16" fill="#1e5f8c"/>
+  <text class="w" x="570" y="158" text-anchor="middle" font-size="22">앱 기록</text>
+  <text x="570" y="196" text-anchor="middle" fill="#ffffff" font-size="15" opacity="0.9">자동 기록 · 백업</text>
+  <text x="570" y="226" text-anchor="middle" fill="#ffffff" font-size="15" opacity="0.9">분실 위험 낮음</text>
+  <text x="570" y="256" text-anchor="middle" fill="#ffffff" font-size="15" opacity="0.9">오프라인 구간 취약</text>
+  <text class="s" x="400" y="345" text-anchor="middle">둘 다 남겨두면 한쪽이 실패해도 구간을 다시 갈 일이 없다</text>
+</svg>

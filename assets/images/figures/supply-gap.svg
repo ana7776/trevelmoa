@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="보급 지점이 드문 구간에서 물과 행동식을 계산하는 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">보급 공백은 거리가 아니라 시간으로 센다</text>  <line x1="70" y1="200" x2="730" y2="200" stroke="#cfe0d8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="110" cy="200" r="13" fill="#1f6b4f"/>
+  <text class="t" x="110" y="170" text-anchor="middle">편의점</text>
+  <text class="s" x="110" y="242" text-anchor="middle">출발 보급</text>
+  <circle cx="280" cy="200" r="13" fill="#f5b641"/>
+  <text class="t" x="280" y="170" text-anchor="middle">공백 25km</text>
+  <text class="s" x="280" y="242" text-anchor="middle">약 1시간 30분</text>
+  <circle cx="520" cy="200" r="13" fill="#e0574a"/>
+  <text class="t" x="520" y="170" text-anchor="middle">공백 지속</text>
+  <text class="s" x="520" y="242" text-anchor="middle">통신 사각 주의</text>
+  <circle cx="720" cy="200" r="13" fill="#1f6b4f"/>
+  <text class="t" x="720" y="170" text-anchor="middle">편의점</text>
+  <text class="s" x="720" y="242" text-anchor="middle">다음 보급</text>  <text class="s" x="400" y="330" text-anchor="middle">물 1L와 행동식 2개를 공백 구간 진입 전에 미리 채운다</text>
+</svg>

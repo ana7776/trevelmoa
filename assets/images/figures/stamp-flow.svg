@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="국토종주 인증수첩 발급부터 완주 신청까지의 순서 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">인증은 수첩 · 스탬프 · 신청 세 단계</text>  <rect x="25" y="150" width="210" height="96" rx="14" fill="#1e5f8c"/>
+  <text class="w" x="130" y="188" text-anchor="middle">수첩 발급</text>
+  <text x="130" y="216" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.85">인증센터·온라인</text>
+  <rect x="295" y="150" width="210" height="96" rx="14" fill="#1f6b4f"/>
+  <text class="w" x="400" y="188" text-anchor="middle">구간 스탬프</text>
+  <text x="400" y="216" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.85">무인 부스에서 직접</text>
+  <rect x="565" y="150" width="210" height="96" rx="14" fill="#1e5f8c"/>
+  <text class="w" x="670" y="188" text-anchor="middle">완주 신청</text>
+  <text x="670" y="216" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.85">빠짐 확인 후 제출</text>
+  <path d="M243 198 h44" stroke="#60706a" stroke-width="4" marker-end="url(#a)"/>
+  <path d="M513 198 h44" stroke="#60706a" stroke-width="4" marker-end="url(#a)"/>
+  <defs><marker id="a" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#60706a"/></marker></defs>
+  <text class="s" x="400" y="320" text-anchor="middle">스탬프가 빠지면 그 구간만 다시 가야 하므로 도착 즉시 확인한다</text>
+</svg>

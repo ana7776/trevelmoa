@@ -98,6 +98,26 @@ for (const p of pages) {
   seen.set(key, p.file);
 }
 
+/* 7b. 설명이 서로 다른 말을 하는가 (완전 중복이 아니어도 상투구가 스니펫을 먹는다) */
+const sentences = new Map();
+for (const p of pages) {
+  for (const raw of p.description.split(/(?<=다\.|요\.|\.)\s*/)) {
+    const s = raw.trim();
+    if (s.length < 10) continue;
+    if (!sentences.has(s)) sentences.set(s, []);
+    sentences.get(s).push(p.file);
+  }
+}
+const totalChars = pages.reduce((n, p) => n + p.description.length, 0);
+for (const [sentence, users] of sentences) {
+  const share = users.length / pages.length;
+  if (share < 0.25) continue;
+  const charShare = Math.round((sentence.length * users.length / totalChars) * 100);
+  const line = `"${sentence}" 가 ${users.length}/${pages.length} 페이지에 그대로 (설명 글자수의 ${charShare}%)`;
+  if (share >= 0.5) fail("boilerplate", line);
+  else warn("boilerplate", line);
+}
+
 /* 8. og:image 가 절대 경로 래스터 이미지인가 (SVG 는 미리보기에서 무시됨) */
 for (const p of pages) {
   const og = read(p.file).match(/<meta property="og:image" content="([^"]+)"/)?.[1];

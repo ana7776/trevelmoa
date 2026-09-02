@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="자전거를 들고 역에서 코스 출발점까지 이동하는 환승 동선 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">반입 가능 여부보다 역 안 동선이 문제</text>  <line x1="70" y1="210" x2="730" y2="210" stroke="#cfe0d8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="110" cy="210" r="13" fill="#1f6b4f"/>
+  <text class="t" x="110" y="180" text-anchor="middle">개찰구</text>
+  <text class="s" x="110" y="252" text-anchor="middle">반입 시간대 확인</text>
+  <circle cx="320" cy="210" r="13" fill="#1f6b4f"/>
+  <text class="t" x="320" y="180" text-anchor="middle">계단·엘리베이터</text>
+  <text class="s" x="320" y="252" text-anchor="middle">실제 병목</text>
+  <circle cx="530" cy="210" r="13" fill="#1f6b4f"/>
+  <text class="t" x="530" y="180" text-anchor="middle">출구</text>
+  <text class="s" x="530" y="252" text-anchor="middle">지상까지 거리</text>
+  <circle cx="700" cy="210" r="13" fill="#1e5f8c"/>
+  <text class="t" x="700" y="180" text-anchor="middle">출발점</text>
+  <text class="s" x="700" y="252" text-anchor="middle">라스트마일</text>  <text class="s" x="400" y="352" text-anchor="middle">엘리베이터 위치를 미리 확인하지 않으면 계단에서 시간을 잃는다</text>
+</svg>

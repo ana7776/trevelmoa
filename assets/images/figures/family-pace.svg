@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="보호자와 아이가 함께 탈 때의 위치와 휴식 간격 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">아이 앞, 보호자 뒤, 20~30분마다 휴식</text>  <path d="M70 240 C220 190 420 270 730 210" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="470" cy="243" r="20" fill="#f5b641"/><text x="470" y="212" text-anchor="middle" class="t" font-size="16">아이</text>
+  <circle cx="600" cy="228" r="22" fill="#1f6b4f"/><text x="600" y="196" text-anchor="middle" class="t" font-size="16">보호자</text>
+  <line x1="150" y1="310" x2="730" y2="310" stroke="#cfe0d8" stroke-width="5"/>
+  <circle cx="210" cy="310" r="9" fill="#1e5f8c"/><text class="s" x="210" y="342" text-anchor="middle">휴식 25분</text><circle cx="400" cy="310" r="9" fill="#1e5f8c"/><text class="s" x="400" y="342" text-anchor="middle">휴식 50분</text><circle cx="590" cy="310" r="9" fill="#1e5f8c"/><text class="s" x="590" y="342" text-anchor="middle">휴식 75분</text>
+  <text class="s" x="400" y="380" text-anchor="middle">피곤하다는 말이 나오기 전에 돌아갈 준비를 한다</text>
+</svg>

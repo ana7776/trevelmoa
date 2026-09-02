@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="날씨가 바뀌었을 때 계속 갈지 우회할지 중단할지 판단하는 분기 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">계속 · 우회 · 중단을 미리 정해둔다</text>  <path d="M400 118 L170 168" stroke="#60706a" stroke-width="3"/>
+  <rect x="70" y="168" width="200" height="110" rx="16" fill="#1f6b4f"/>
+  <text class="w" x="170" y="214" text-anchor="middle" font-size="22">계속</text>
+  <text x="170" y="246" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">시야 확보 · 노면 정상</text>
+  <path d="M400 118 L400 168" stroke="#60706a" stroke-width="3"/>
+  <rect x="300" y="168" width="200" height="110" rx="16" fill="#f5b641"/>
+  <text class="w" x="400" y="214" text-anchor="middle" font-size="22">우회</text>
+  <text x="400" y="246" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">바람 · 침수 구간 회피</text>
+  <path d="M400 118 L630 168" stroke="#60706a" stroke-width="3"/>
+  <rect x="530" y="168" width="200" height="110" rx="16" fill="#e0574a"/>
+  <text class="w" x="630" y="214" text-anchor="middle" font-size="22">중단</text>
+  <text x="630" y="246" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">특보 · 체온 저하</text>
+  <circle cx="400" cy="112" r="16" fill="#1e5f8c"/>
+  <text class="s" x="400" y="332" text-anchor="middle">출발 전에 기준을 정해두면 현장에서 무리하지 않는다</text>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="야간과 터널 구간에서 전조등과 후미등으로 시인성을 확보하는 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">야간은 보는 것보다 보이는 것이 먼저</text>  <rect x="60" y="120" width="680" height="180" rx="14" fill="#22303a"/>
+  <path d="M470 210 L700 150 L700 270 Z" fill="#f5b641" opacity="0.5"/>
+  <path d="M330 210 L140 165 L140 255 Z" fill="#e0574a" opacity="0.45"/>
+  <circle cx="400" cy="210" r="26" fill="#ffffff"/>
+  <text x="400" y="216" text-anchor="middle" font-size="14" font-weight="700" fill="#17201b">라이더</text>
+  <text class="w" x="620" y="288" text-anchor="middle" font-size="15">전조등 · 노면 확인</text>
+  <text class="w" x="200" y="288" text-anchor="middle" font-size="15">후미등 · 뒤차 인지</text>
+  <text class="s" x="400" y="352" text-anchor="middle">터널 진입 전 속도를 낮추고 등화를 먼저 켠다</text>
+</svg>

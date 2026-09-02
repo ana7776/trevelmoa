@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="바이크패킹에서 짐을 자전거에 나눠 싣는 위치 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">무거운 짐은 낮고 가운데로</text>  <path d="M150 300 h500" stroke="#cfe0d8" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="215" cy="300" r="46" fill="none" stroke="#60706a" stroke-width="8"/>
+  <circle cx="585" cy="300" r="46" fill="none" stroke="#60706a" stroke-width="8"/>
+  <path d="M215 300 L330 200 L470 200 L585 300" fill="none" stroke="#17201b" stroke-width="7"/>
+  <rect x="330" y="205" width="120" height="60" rx="10" fill="#1f6b4f"/>
+  <text class="w" x="390" y="242" text-anchor="middle" font-size="15">프레임백</text>
+  <rect x="470" y="150" width="130" height="46" rx="10" fill="#1e5f8c"/>
+  <text class="w" x="535" y="180" text-anchor="middle" font-size="15">안장백</text>
+  <rect x="228" y="150" width="120" height="46" rx="10" fill="#f5b641"/>
+  <text class="w" x="288" y="180" text-anchor="middle" font-size="15">핸들바백</text>
+  <text class="s" x="400" y="368" text-anchor="middle">무게 중심이 높으면 저속에서 핸들이 흔들린다</text>
+</svg>

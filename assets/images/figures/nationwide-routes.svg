@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="전국 자전거길을 권역별로 나눈 개요 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">전국 자전거길은 권역으로 나눠 본다</text>  <rect x="64" y="120" width="208" height="106" rx="14" fill="#78b8ce"/>
+  <text class="w" x="168" y="166" text-anchor="middle" font-size="21">수도권</text>
+  <text x="168" y="196" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">한강 · 아라 · 남한강</text>
+  <rect x="296" y="120" width="208" height="106" rx="14" fill="#1f6b4f"/>
+  <text class="w" x="400" y="166" text-anchor="middle" font-size="21">충청</text>
+  <text x="400" y="196" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">금강 · 오천</text>
+  <rect x="528" y="120" width="208" height="106" rx="14" fill="#1e5f8c"/>
+  <text class="w" x="632" y="166" text-anchor="middle" font-size="21">강원</text>
+  <text x="632" y="196" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">북한강 · 의암호</text>
+  <rect x="64" y="250" width="208" height="106" rx="14" fill="#4f8f74"/>
+  <text class="w" x="168" y="296" text-anchor="middle" font-size="21">영·호남</text>
+  <text x="168" y="326" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">낙동강 · 영산강</text>
+  <rect x="296" y="250" width="208" height="106" rx="14" fill="#f5b641"/>
+  <text class="w" x="400" y="296" text-anchor="middle" font-size="21">제주</text>
+  <text x="400" y="326" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">환상 종주</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="장거리 자전거 여행의 일자별 주행거리와 숙박 지점 분할 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">하루 거리보다 숙박 지점을 먼저 잡는다</text>  <rect x="78" y="200" width="110" height="120" rx="10" fill="#78b8ce"/>
+  <text class="t" x="133" y="184" text-anchor="middle">60km</text>
+  <text class="s" x="133" y="346" text-anchor="middle">1일차 · 적응</text>
+  <rect x="246" y="150" width="110" height="170" rx="10" fill="#1f6b4f"/>
+  <text class="t" x="301" y="134" text-anchor="middle">85km</text>
+  <text class="s" x="301" y="346" text-anchor="middle">2일차 · 최장</text>
+  <rect x="414" y="180" width="110" height="140" rx="10" fill="#1f6b4f"/>
+  <text class="t" x="469" y="164" text-anchor="middle">70km</text>
+  <text class="s" x="469" y="346" text-anchor="middle">3일차 · 인증</text>
+  <rect x="582" y="230" width="110" height="90" rx="10" fill="#78b8ce"/>
+  <text class="t" x="637" y="214" text-anchor="middle">45km</text>
+  <text class="s" x="637" y="346" text-anchor="middle">4일차 · 복귀</text>  <text class="s" x="400" y="384" text-anchor="middle">숙박지와 보급 지점이 있는 곳에서 하루를 끊는다</text>
+</svg>

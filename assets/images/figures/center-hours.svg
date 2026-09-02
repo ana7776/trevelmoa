@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="인증센터 마감 시간과 도착 시각에 따른 대처 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">마감 후 도착이면 기록부터 남긴다</text>  <line x1="70" y1="200" x2="730" y2="200" stroke="#cfe0d8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="130" cy="200" r="13" fill="#1f6b4f"/>
+  <text class="t" x="130" y="170" text-anchor="middle">운영 중</text>
+  <text class="s" x="130" y="242" text-anchor="middle">스탬프 즉시</text>
+  <circle cx="370" cy="200" r="13" fill="#f5b641"/>
+  <text class="t" x="370" y="170" text-anchor="middle">마감 직후</text>
+  <text class="s" x="370" y="242" text-anchor="middle">사진 · 앱 기록</text>
+  <circle cx="630" cy="200" r="13" fill="#e0574a"/>
+  <text class="t" x="630" y="170" text-anchor="middle">다음날</text>
+  <text class="s" x="630" y="242" text-anchor="middle">재방문 판단</text>  <text class="s" x="400" y="320" text-anchor="middle">무인 부스는 24시간인 곳이 있으므로 센터 유형을 먼저 확인한다</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="국토종주 비용을 항목별로 나눈 비율 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">비용은 숙박과 식비에서 갈린다</text>  <rect x="70" y="160" width="255" height="90" rx="10" fill="#1f6b4f"/>
+  <text class="s" x="197.5" y="286" text-anchor="middle">숙박</text>
+  <rect x="331" y="160" width="150" height="90" rx="10" fill="#78b8ce"/>
+  <text class="s" x="406" y="286" text-anchor="middle">식비</text>
+  <rect x="487" y="160" width="107" height="90" rx="10" fill="#1e5f8c"/>
+  <text class="s" x="540.5" y="286" text-anchor="middle">교통</text>
+  <rect x="600" y="160" width="72" height="90" rx="10" fill="#f5b641"/>
+  <text class="s" x="636" y="286" text-anchor="middle">소모품</text>
+  <rect x="678" y="160" width="46" height="90" rx="10" fill="#60706a"/>
+  <text class="s" x="701" y="286" text-anchor="middle">예비비</text>
+  <text class="s" x="400" y="340" text-anchor="middle">예비비를 빼면 하루만 틀어져도 계획 전체가 무너진다</text>
+</svg>

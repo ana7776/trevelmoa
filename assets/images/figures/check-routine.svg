@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="출발 직전 5분 자전거 점검 순서 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">출발 직전 5분, 순서를 지켜 점검한다</text>  <circle cx="104" cy="185" r="42" fill="#1f6b4f"/>
+  <text class="w" x="104" y="192" text-anchor="middle" font-size="17">공기압</text>
+  <text class="s" x="104" y="258" text-anchor="middle" font-size="14">손으로 눌러 확인</text>
+  <text x="104" y="126" text-anchor="middle" fill="#60706a" font-size="14">1단계</text>
+  <circle cx="252" cy="185" r="42" fill="#1f6b4f"/>
+  <text class="w" x="252" y="192" text-anchor="middle" font-size="17">브레이크</text>
+  <text class="s" x="252" y="258" text-anchor="middle" font-size="14">앞뒤 각각</text>
+  <text x="252" y="126" text-anchor="middle" fill="#60706a" font-size="14">2단계</text>
+  <circle cx="400" cy="185" r="42" fill="#1e5f8c"/>
+  <text class="w" x="400" y="192" text-anchor="middle" font-size="17">체인</text>
+  <text class="s" x="400" y="258" text-anchor="middle" font-size="14">소리와 늘어짐</text>
+  <text x="400" y="126" text-anchor="middle" fill="#60706a" font-size="14">3단계</text>
+  <circle cx="548" cy="185" r="42" fill="#1e5f8c"/>
+  <text class="w" x="548" y="192" text-anchor="middle" font-size="17">안장</text>
+  <text class="s" x="548" y="258" text-anchor="middle" font-size="14">높이 · 고정</text>
+  <text x="548" y="126" text-anchor="middle" fill="#60706a" font-size="14">4단계</text>
+  <circle cx="696" cy="185" r="42" fill="#1e5f8c"/>
+  <text class="w" x="696" y="192" text-anchor="middle" font-size="17">라이트</text>
+  <text class="s" x="696" y="258" text-anchor="middle" font-size="14">잔량 확인</text>
+  <text x="696" y="126" text-anchor="middle" fill="#60706a" font-size="14">5단계</text>
+  <text class="s" x="400" y="330" text-anchor="middle">순서를 정해두면 하나를 빠뜨려도 바로 알아차린다</text>
+</svg>

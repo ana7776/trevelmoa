@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="자전거 여행 준비물을 안전 수리 보급 세 묶음으로 나눈 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">준비물은 세 묶음으로 나눠 담는다</text>  <rect x="70" y="140" width="200" height="140" rx="16" fill="#1f6b4f"/>
+  <text class="w" x="170" y="196" text-anchor="middle" font-size="24">안전</text>
+  <text x="170" y="232" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">헬멧 · 전조등 · 후미등</text>
+  <rect x="300" y="140" width="200" height="140" rx="16" fill="#1e5f8c"/>
+  <text class="w" x="400" y="196" text-anchor="middle" font-size="24">수리</text>
+  <text x="400" y="232" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">펌프 · 튜브 · 멀티툴</text>
+  <rect x="530" y="140" width="200" height="140" rx="16" fill="#f5b641"/>
+  <text class="w" x="630" y="196" text-anchor="middle" font-size="24">보급</text>
+  <text x="630" y="232" text-anchor="middle" fill="#ffffff" font-size="14" opacity="0.9">물 · 행동식 · 현금</text>
+  <text class="s" x="400" y="336" text-anchor="middle">셋 중 하나라도 비면 그날 일정 전체가 흔들린다</text>
+</svg>

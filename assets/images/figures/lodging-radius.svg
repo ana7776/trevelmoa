@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="코스 종료 지점을 기준으로 숙소를 고르는 거리 기준 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">숙소는 코스 종료 지점 기준으로 고른다</text>  <circle cx="330" cy="205" r="120" fill="#78b8ce" opacity="0.22"/>
+  <circle cx="330" cy="205" r="66" fill="#1f6b4f" opacity="0.3"/>
+  <circle cx="330" cy="205" r="14" fill="#1f6b4f"/>
+  <text class="t" x="330" y="180" text-anchor="middle">코스 종료</text>
+  <text class="s" x="330" y="300" text-anchor="middle">3km 이내 권장</text>
+  <text class="t" x="560" y="160">확인할 것</text>
+  <text class="s" x="560" y="196">실내 자전거 보관</text>
+  <text class="s" x="560" y="228">젖은 장비 건조</text>
+  <text class="s" x="560" y="260">늦은 체크인 가능</text>
+  <text class="s" x="400" y="360" text-anchor="middle">가격보다 자전거를 어디에 두느냐가 먼저다</text>
+</svg>

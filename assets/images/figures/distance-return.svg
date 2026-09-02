@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" role="img" aria-label="첫 자전거길 여행의 거리와 복귀 지점을 나타낸 도해">
+  <rect width="800" height="400" rx="18" fill="#eef6f2"/>
+  <style>text{font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif}.t{fill:#17201b;font-size:20px;font-weight:700}.s{fill:#60706a;font-size:16px}.w{fill:#ffffff;font-size:16px;font-weight:700}</style>
+  <text class="t" x="60" y="62" font-size="24">첫 여행은 복귀 방법을 먼저 정한다</text>  <line x1="70" y1="210" x2="730" y2="210" stroke="#cfe0d8" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="110" cy="210" r="13" fill="#1f6b4f"/>
+  <text class="t" x="110" y="180" text-anchor="middle">출발</text>
+  <text class="s" x="110" y="252" text-anchor="middle">체력 100%</text>
+  <circle cx="300" cy="210" r="13" fill="#1f6b4f"/>
+  <text class="t" x="300" y="180" text-anchor="middle">10km</text>
+  <text class="s" x="300" y="252" text-anchor="middle">첫 휴식</text>
+  <circle cx="490" cy="210" r="13" fill="#f5b641"/>
+  <text class="t" x="490" y="180" text-anchor="middle">20km</text>
+  <text class="s" x="490" y="252" text-anchor="middle">판단 지점</text>
+  <circle cx="690" cy="210" r="13" fill="#1e5f8c"/>
+  <text class="t" x="690" y="180" text-anchor="middle">복귀</text>
+  <text class="s" x="690" y="252" text-anchor="middle">대중교통</text>  <text class="s" x="400" y="352" text-anchor="middle">왕복 20~35km 또는 편도 후 대중교통 복귀 · 휴식 포함 반나절</text>
+</svg>
