@@ -1057,3 +1057,33 @@ a { color: inherit; }
     flex-wrap: wrap;
   }
 }
+
+/* 홈 하단 전체 가이드 색인 - 모든 글이 자바스크립트 없이 크롤되도록 노출한다 */
+#all-guides h3 {
+  margin: 26px 0 10px;
+  font-size: 1.02rem;
+  color: var(--forest);
+}
+
+.guide-index {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 6px 22px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.guide-index a {
+  display: block;
+  padding: 7px 0;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-index a:hover {
+  color: var(--forest);
+}

@@ -1,3 +1,16 @@
+// [주의] 이 스크립트는 2026-07-31 시점 20개 글만 알고 있는 구버전 생성기입니다.
+// 현재 사이트에는 /info/ 아래 30개 글이 있고, 이 스크립트를 그대로 실행하면
+//   - 나중에 추가한 10개 글이 목록·사이트맵·허브에서 사라지고
+//   - GSC "리디렉션 오류"의 원인이던 /posts/*.html meta refresh 스텁이 되살아납니다.
+// 리디렉션은 이제 _redirects(서버 301)가, 목록·사이트맵·피드는 scripts/build-indexes.mjs가 담당합니다.
+// 정말 재생성해야 한다면 위 목록을 현재 파일 기준으로 먼저 갱신한 뒤
+// ALLOW_LEGACY_GENERATOR=1 을 붙여 실행하세요.
+if (!process.env.ALLOW_LEGACY_GENERATOR) {
+  console.error("구버전 생성기입니다. 실행하면 최신 글과 리디렉션 설정이 덮어써집니다.");
+  console.error("목록 갱신은 `npm run build:index`, 점검은 `npm run check:seo` 를 사용하세요.");
+  process.exit(1);
+}
+
 import { mkdirSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 

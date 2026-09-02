@@ -1,4 +1,12 @@
 User-agent: *
 Allow: /
 
+# 색인 대상이 아닌 경로
+Disallow: /assets/data/
+Disallow: /data/
+
+# 네이버 검색로봇
+User-agent: Yeti
+Allow: /
+
 Sitemap: https://trevelmoa.com/sitemap.xml
