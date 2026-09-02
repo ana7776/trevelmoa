@@ -1,32 +1,177 @@
 {
-  "info/beginner/first-ride-distance.html": ["distance-return", "첫 자전거길 여행의 거리 구간과 복귀 지점을 나타낸 도해", "왕복 20~35km를 기준으로 10km마다 휴식하고, 20km 지점에서 계속 갈지 대중교통으로 복귀할지 판단합니다."],
-  "info/beginner/han-river-bike-beginner-course.html": ["time-estimate", "한강 자전거길 소요시간을 주행 휴식 사진 시간으로 나눈 도해", "한강 구간 10~30km는 평속 15km/h로 계산한 뒤 휴식과 사진 시간을 40% 더해 잡으면 실제와 크게 벌어지지 않습니다."],
-  "info/beginner/family-bike-ride-safety-guide.html": ["family-pace", "보호자와 아이의 주행 위치와 휴식 간격을 나타낸 도해", "아이를 앞에 두고 보호자가 뒤에서 간격을 유지하며, 20~30분마다 짧게 쉬는 것이 기본 대형입니다."],
-  "info/beginner/seoul-gyeonggi-short-bike-routes.html": ["beginner-path", "초보가 단계별로 주행 거리를 늘려가는 과정을 나타낸 도해", "서울·경기권 짧은 코스는 이 단계표의 1~2단계에 해당합니다. 한 단계를 두세 번 반복한 뒤 다음으로 넘어가세요."],
-  "info/beginner/pre-ride-bike-check-routine.html": ["check-routine", "출발 직전 5분 점검을 다섯 단계로 나눈 도해", "공기압, 브레이크, 체인, 안장, 라이트 순서로 점검하면 하나를 빠뜨렸을 때 바로 알아차릴 수 있습니다."],
-  "info/beginner/female-rider-long-distance-packing.html": ["packing-groups", "자전거 여행 준비물을 안전 수리 보급 세 묶음으로 나눈 도해", "기본 세 묶음을 채운 뒤, 위생용품과 자외선 대비 물품을 별도 파우치로 하나 더 만드는 방식이 관리하기 쉽습니다."],
-  "info/planning/beautiful-bike-routes-selection-guide.html": ["route-difficulty", "자전거길 난이도를 상승과 바람 기준으로 비교한 도해", "풍경 좋은 코스일수록 언덕과 바람 노출이 큽니다. 사진보다 이 난이도 축을 먼저 확인하세요."],
-  "info/planning/bike-trip-packing-checklist.html": ["packing-groups", "자전거 여행 준비물을 안전 수리 보급 세 묶음으로 나눈 도해", "안전, 수리, 보급 중 하나라도 비면 그날 일정 전체가 흔들립니다. 묶음 단위로 확인하세요."],
-  "info/planning/long-distance-bike-ride-planning.html": ["day-split", "장거리 자전거 여행의 일자별 주행거리와 숙박 지점 분할 도해", "하루 거리를 먼저 정하는 대신 숙박과 보급이 되는 지점에서 끊고, 그 사이 거리를 하루치로 잡습니다."],
-  "info/planning/overnight-lodging-plan.html": ["lodging-radius", "코스 종료 지점을 기준으로 숙소를 고르는 거리 기준 도해", "코스 종료 지점에서 3km 이내를 우선 보고, 자전거 보관과 장비 건조가 되는 곳으로 좁힙니다."],
-  "info/planning/jeju-bike-trip-preparation.html": ["day-split", "제주 자전거 여행의 일자별 주행거리 분할 도해", "제주 환상 종주는 바람 방향에 따라 체감이 달라지므로, 최장 구간을 둘째 날에 두고 앞뒤를 짧게 잡는 편이 안전합니다."],
-  "info/planning/gangwon-scenic-bike-route-prep.html": ["route-difficulty", "자전거길 난이도를 상승과 바람 기준으로 비교한 도해", "강원권은 같은 거리라도 누적 상승이 커서 이 표의 높음 구간에 들어가는 코스가 많습니다."],
-  "info/planning/no-supply-section-preparation.html": ["supply-gap", "보급 지점이 드문 구간의 간격과 준비량을 나타낸 도해", "공백 구간은 거리가 아니라 통과에 걸리는 시간으로 계산하고, 진입 전에 물과 행동식을 미리 채웁니다."],
-  "info/planning/folding-bike-grand-route.html": ["transit-transfer", "자전거를 들고 역에서 코스 출발점까지 이동하는 환승 동선 도해", "접이식 자전거의 가장 큰 강점이 이 구간입니다. 접어서 들고 타면 계단과 반입 시간대 제약에서 자유롭습니다."],
-  "info/planning/dog-friendly-bike-route.html": ["family-pace", "동반자와 함께 탈 때의 주행 위치와 휴식 간격을 나타낸 도해", "반려견 동반도 같은 원리입니다. 속도를 반려견에 맞추고 휴식 간격을 먼저 정한 뒤 거리를 정합니다."],
-  "info/certification/cross-country-certification-guide.html": ["stamp-flow", "국토종주 인증수첩 발급부터 완주 신청까지의 순서 도해", "수첩 발급, 구간 스탬프, 완주 신청 세 단계입니다. 스탬프가 빠지면 그 구간만 다시 가야 합니다."],
-  "info/certification/passbook-vs-app-certification.html": ["passbook-app-compare", "종주 인증수첩과 앱 인증 방식의 장단점 비교 도해", "수첩은 배터리와 무관하지만 분실에 약하고, 앱은 백업되지만 오프라인 구간에 약합니다."],
-  "info/certification/recommended-grand-route-order.html": ["beginner-path", "초보가 단계별로 주행 거리를 늘려가는 과정을 나타낸 도해", "종주 순서도 같은 원리로 짭니다. 짧고 평탄한 구간에서 시작해 누적 상승이 큰 구간을 뒤로 미룹니다."],
-  "info/certification/cross-country-bike-trip-budget.html": ["budget-split", "국토종주 비용을 항목별 비율로 나눈 도해", "숙박과 식비가 전체의 절반을 넘습니다. 예비비를 빼면 하루만 틀어져도 계획이 무너집니다."],
-  "info/certification/e-bike-certification-eligibility.html": ["stamp-flow", "국토종주 인증수첩 발급부터 완주 신청까지의 순서 도해", "장비 종류와 무관하게 인증 흐름 자체는 같습니다. 문제는 이 흐름에 진입할 수 있는 장비인지입니다."],
-  "info/certification/certification-center-closed-workaround.html": ["center-hours", "인증센터 도착 시각에 따른 대처 순서를 나타낸 도해", "마감 후 도착이면 먼저 사진과 앱 기록을 남기고, 무인 부스인지 유인 센터인지에 따라 재방문을 판단합니다."],
-  "info/safety/tunnel-night-riding-safety.html": ["night-visibility", "야간과 터널 구간의 전조등 후미등 시인성 범위 도해", "야간에는 내가 보는 범위보다 상대가 나를 알아보는 거리가 중요합니다. 전조등과 후미등의 역할이 다릅니다."],
-  "info/safety/summer-winter-riding-risks.html": ["season-risk", "봄 여름 가을 겨울 계절별 위험 요소를 비교한 도해", "계절마다 먼저 대비할 위험이 다르고, 그에 따라 출발 시각과 복장 기준도 달라집니다."],
-  "info/safety/long-distance-pain-prevention-posture.html": ["pain-points", "장거리 라이딩 통증 부위와 조정 항목을 나타낸 도해", "통증 부위마다 손댈 곳이 다릅니다. 참지 말고 해당 부위에 대응하는 세팅을 바꾸세요."],
-  "info/safety/bicycle-insurance-decision-guide.html": ["insurance-check", "자전거 보험 가입 전 확인할 담보 항목 도해", "배상책임과 본인상해를 나눠 보고, 실손보험이나 지자체 자전거 보험과 중복되는지 먼저 확인합니다."],
-  "info/onroad/bike-traveler-accommodation.html": ["lodging-radius", "코스 종료 지점을 기준으로 숙소를 고르는 거리 기준 도해", "가격보다 자전거를 어디에 두느냐가 먼저입니다. 코스 종료 지점 3km 이내에서 보관과 건조가 되는 곳을 찾습니다."],
-  "info/onroad/bikepacking-first-guide.html": ["bikepacking-load", "바이크패킹 짐을 자전거에 나눠 싣는 위치 도해", "무거운 짐은 프레임백으로 낮고 가운데에, 가벼운 부피는 안장백과 핸들바백으로 보냅니다."],
-  "info/onroad/bike-transit-transfer-route.html": ["transit-transfer", "자전거를 들고 역에서 코스 출발점까지 이동하는 환승 동선 도해", "반입 가능 여부보다 개찰구에서 코스 출발점까지의 실제 동선이 시간을 잡아먹습니다."],
-  "info/onroad/weather-alert-route-change.html": ["weather-decision", "날씨 변화에 따라 계속 우회 중단을 판단하는 분기 도해", "출발 전에 세 갈래의 기준을 미리 정해두면 현장에서 무리한 선택을 하지 않게 됩니다."],
-  "info/onroad/on-trip-bike-repair.html": ["repair-triage", "여행 중 자전거 고장 유형별 대처 분기 도해", "펑크와 체인 이탈은 현장 복구가 가능하고, 변속과 휠 문제는 수리점 이동으로 넘겨야 합니다."]
+  "info/beginner/first-ride-distance.html": [
+    "distance-return",
+    "첫 자전거길 여행의 거리 구간과 복귀 지점을 나타낸 도해",
+    "왕복 20~35km를 기준으로 10km마다 휴식하고, 20km 지점에서 계속 갈지 대중교통으로 복귀할지 판단합니다."
+  ],
+  "info/beginner/han-river-bike-beginner-course.html": [
+    "time-estimate",
+    "한강 자전거길 소요시간을 주행 휴식 사진 시간으로 나눈 도해",
+    "한강 구간 10~30km는 평속 15km/h로 계산한 뒤 휴식과 사진 시간을 40% 더해 잡으면 실제와 크게 벌어지지 않습니다."
+  ],
+  "info/beginner/family-bike-ride-safety-guide.html": [
+    "family-pace",
+    "보호자와 아이의 주행 위치와 휴식 간격을 나타낸 도해",
+    "아이를 앞에 두고 보호자가 뒤에서 간격을 유지하며, 20~30분마다 짧게 쉬는 것이 기본 대형입니다."
+  ],
+  "info/beginner/seoul-gyeonggi-short-bike-routes.html": [
+    "beginner-path",
+    "초보가 단계별로 주행 거리를 늘려가는 과정을 나타낸 도해",
+    "서울·경기권 짧은 코스는 이 단계표의 1~2단계에 해당합니다. 한 단계를 두세 번 반복한 뒤 다음으로 넘어가세요."
+  ],
+  "info/beginner/pre-ride-bike-check-routine.html": [
+    "check-routine",
+    "출발 직전 5분 점검을 다섯 단계로 나눈 도해",
+    "공기압, 브레이크, 체인, 안장, 라이트 순서로 점검하면 하나를 빠뜨렸을 때 바로 알아차릴 수 있습니다."
+  ],
+  "info/beginner/female-rider-long-distance-packing.html": [
+    "packing-groups",
+    "자전거 여행 준비물을 안전 수리 보급 세 묶음으로 나눈 도해",
+    "기본 세 묶음을 채운 뒤, 위생용품과 자외선 대비 물품을 별도 파우치로 하나 더 만드는 방식이 관리하기 쉽습니다."
+  ],
+  "info/planning/beautiful-bike-routes-selection-guide.html": [
+    "route-difficulty",
+    "자전거길 난이도를 상승과 바람 기준으로 비교한 도해",
+    "풍경 좋은 코스일수록 언덕과 바람 노출이 큽니다. 사진보다 이 난이도 축을 먼저 확인하세요."
+  ],
+  "info/planning/bike-trip-packing-checklist.html": [
+    "packing-groups",
+    "자전거 여행 준비물을 안전 수리 보급 세 묶음으로 나눈 도해",
+    "안전, 수리, 보급 중 하나라도 비면 그날 일정 전체가 흔들립니다. 묶음 단위로 확인하세요."
+  ],
+  "info/planning/long-distance-bike-ride-planning.html": [
+    "day-split",
+    "장거리 자전거 여행의 일자별 주행거리와 숙박 지점 분할 도해",
+    "하루 거리를 먼저 정하는 대신 숙박과 보급이 되는 지점에서 끊고, 그 사이 거리를 하루치로 잡습니다."
+  ],
+  "info/planning/overnight-lodging-plan.html": [
+    "lodging-radius",
+    "코스 종료 지점을 기준으로 숙소를 고르는 거리 기준 도해",
+    "코스 종료 지점에서 3km 이내를 우선 보고, 자전거 보관과 장비 건조가 되는 곳으로 좁힙니다."
+  ],
+  "info/planning/jeju-bike-trip-preparation.html": [
+    "day-split",
+    "제주 자전거 여행의 일자별 주행거리 분할 도해",
+    "제주 환상 종주는 바람 방향에 따라 체감이 달라지므로, 최장 구간을 둘째 날에 두고 앞뒤를 짧게 잡는 편이 안전합니다."
+  ],
+  "info/planning/gangwon-scenic-bike-route-prep.html": [
+    "route-difficulty",
+    "자전거길 난이도를 상승과 바람 기준으로 비교한 도해",
+    "강원권은 같은 거리라도 누적 상승이 커서 이 표의 높음 구간에 들어가는 코스가 많습니다."
+  ],
+  "info/planning/no-supply-section-preparation.html": [
+    "supply-gap",
+    "보급 지점이 드문 구간의 간격과 준비량을 나타낸 도해",
+    "공백 구간은 거리가 아니라 통과에 걸리는 시간으로 계산하고, 진입 전에 물과 행동식을 미리 채웁니다."
+  ],
+  "info/planning/folding-bike-grand-route.html": [
+    "transit-transfer",
+    "자전거를 들고 역에서 코스 출발점까지 이동하는 환승 동선 도해",
+    "접이식 자전거의 가장 큰 강점이 이 구간입니다. 접어서 들고 타면 계단과 반입 시간대 제약에서 자유롭습니다."
+  ],
+  "info/planning/dog-friendly-bike-route.html": [
+    "family-pace",
+    "동반자와 함께 탈 때의 주행 위치와 휴식 간격을 나타낸 도해",
+    "반려견 동반도 같은 원리입니다. 속도를 반려견에 맞추고 휴식 간격을 먼저 정한 뒤 거리를 정합니다."
+  ],
+  "info/certification/cross-country-certification-guide.html": [
+    "stamp-flow",
+    "국토종주 인증수첩 발급부터 완주 신청까지의 순서 도해",
+    "수첩 발급, 구간 스탬프, 완주 신청 세 단계입니다. 스탬프가 빠지면 그 구간만 다시 가야 합니다."
+  ],
+  "info/certification/passbook-vs-app-certification.html": [
+    "passbook-app-compare",
+    "종주 인증수첩과 앱 인증 방식의 장단점 비교 도해",
+    "수첩은 배터리와 무관하지만 분실에 약하고, 앱은 백업되지만 오프라인 구간에 약합니다."
+  ],
+  "info/certification/recommended-grand-route-order.html": [
+    "beginner-path",
+    "초보가 단계별로 주행 거리를 늘려가는 과정을 나타낸 도해",
+    "종주 순서도 같은 원리로 짭니다. 짧고 평탄한 구간에서 시작해 누적 상승이 큰 구간을 뒤로 미룹니다."
+  ],
+  "info/certification/cross-country-bike-trip-budget.html": [
+    "budget-split",
+    "국토종주 비용을 항목별 비율로 나눈 도해",
+    "숙박과 식비가 전체의 절반을 넘습니다. 예비비를 빼면 하루만 틀어져도 계획이 무너집니다."
+  ],
+  "info/certification/e-bike-certification-eligibility.html": [
+    "stamp-flow",
+    "국토종주 인증수첩 발급부터 완주 신청까지의 순서 도해",
+    "장비 종류와 무관하게 인증 흐름 자체는 같습니다. 문제는 이 흐름에 진입할 수 있는 장비인지입니다."
+  ],
+  "info/certification/certification-center-closed-workaround.html": [
+    "center-hours",
+    "인증센터 도착 시각에 따른 대처 순서를 나타낸 도해",
+    "마감 후 도착이면 먼저 사진과 앱 기록을 남기고, 무인 부스인지 유인 센터인지에 따라 재방문을 판단합니다."
+  ],
+  "info/safety/tunnel-night-riding-safety.html": [
+    "night-visibility",
+    "야간과 터널 구간의 전조등 후미등 시인성 범위 도해",
+    "야간에는 내가 보는 범위보다 상대가 나를 알아보는 거리가 중요합니다. 전조등과 후미등의 역할이 다릅니다."
+  ],
+  "info/safety/summer-winter-riding-risks.html": [
+    "season-risk",
+    "봄 여름 가을 겨울 계절별 위험 요소를 비교한 도해",
+    "계절마다 먼저 대비할 위험이 다르고, 그에 따라 출발 시각과 복장 기준도 달라집니다."
+  ],
+  "info/safety/long-distance-pain-prevention-posture.html": [
+    "pain-points",
+    "장거리 라이딩 통증 부위와 조정 항목을 나타낸 도해",
+    "통증 부위마다 손댈 곳이 다릅니다. 참지 말고 해당 부위에 대응하는 세팅을 바꾸세요."
+  ],
+  "info/safety/bicycle-insurance-decision-guide.html": [
+    "insurance-check",
+    "자전거 보험 가입 전 확인할 담보 항목 도해",
+    "배상책임과 본인상해를 나눠 보고, 실손보험이나 지자체 자전거 보험과 중복되는지 먼저 확인합니다."
+  ],
+  "info/onroad/bike-traveler-accommodation.html": [
+    "lodging-radius",
+    "코스 종료 지점을 기준으로 숙소를 고르는 거리 기준 도해",
+    "가격보다 자전거를 어디에 두느냐가 먼저입니다. 코스 종료 지점 3km 이내에서 보관과 건조가 되는 곳을 찾습니다."
+  ],
+  "info/onroad/bikepacking-first-guide.html": [
+    "bikepacking-load",
+    "바이크패킹 짐을 자전거에 나눠 싣는 위치 도해",
+    "무거운 짐은 프레임백으로 낮고 가운데에, 가벼운 부피는 안장백과 핸들바백으로 보냅니다."
+  ],
+  "info/onroad/bike-transit-transfer-route.html": [
+    "transit-transfer",
+    "자전거를 들고 역에서 코스 출발점까지 이동하는 환승 동선 도해",
+    "반입 가능 여부보다 개찰구에서 코스 출발점까지의 실제 동선이 시간을 잡아먹습니다."
+  ],
+  "info/onroad/weather-alert-route-change.html": [
+    "weather-decision",
+    "날씨 변화에 따라 계속 우회 중단을 판단하는 분기 도해",
+    "출발 전에 세 갈래의 기준을 미리 정해두면 현장에서 무리한 선택을 하지 않게 됩니다."
+  ],
+  "info/onroad/on-trip-bike-repair.html": [
+    "repair-triage",
+    "여행 중 자전거 고장 유형별 대처 분기 도해",
+    "펑크와 체인 이탈은 현장 복구가 가능하고, 변속과 휠 문제는 수리점 이동으로 넘겨야 합니다."
+  ],
+  "info/planning/uiamho-riding-time.html": [
+    "time-estimate",
+    "자전거 코스 소요시간을 주행 휴식 사진 시간으로 나눈 도해",
+    "주행 시간을 평속으로 구한 뒤 휴식과 사진 시간을 30~40% 더하면 실제와 크게 벌어지지 않습니다."
+  ],
+  "info/planning/jeju-route-difficulty.html": [
+    "route-difficulty",
+    "자전거길 난이도를 상승과 바람 기준으로 비교한 도해",
+    "제주 구간의 난이도도 이 축으로 갈립니다. 거리가 같아도 누적 상승과 맞바람이 있으면 한 단계 위로 봅니다."
+  ],
+  "info/planning/jeju-beginner-itinerary.html": [
+    "day-split",
+    "자전거 종주의 일자별 주행거리와 숙박 지점 분할 도해",
+    "첫날은 짧게, 가장 긴 구간은 둘째나 셋째 날에 두고, 마지막 날은 복귀 시간을 남겨 짧게 잡습니다."
+  ],
+  "info/planning/nationwide-bike-routes-overview.html": [
+    "nationwide-routes",
+    "전국 자전거길을 권역별로 나눈 개요 도해",
+    "권역별로 코스 성격이 다릅니다. 수도권은 평지 강변형, 강원은 호반형, 제주는 해안형입니다."
+  ],
+  "info/beginner/bike-travel-beginner-guide.html": [
+    "beginner-path",
+    "자전거 여행 초보가 단계별로 거리를 늘려가는 도해",
+    "왕복 10km에서 1박 종주까지 네 단계로 올리고, 각 단계를 두세 번 반복한 뒤 다음으로 넘어갑니다."
+  ]
 }

@@ -79,6 +79,43 @@ home = home.includes("<!-- build:guide-index -->")
   : home.replace("  </main>", `${homeBlock}\n  </main>`);
 writeFileSync("index.html", home, "utf8");
 
+/* ---------- pages/routes-by-*.html 세 허브 ---------- */
+// 정적 파일로 두면 글을 추가할 때마다 빠지므로 카탈로그에서 다시 만든다.
+
+const facets = JSON.parse(readFileSync("data/article-facets.json", "utf8"));
+const regionOrder = ["수도권", "강원", "충청", "제주", "전국"];
+const durationOrder = ["반나절", "당일", "1박 이상"];
+const facetOf = (p, i) => (facets[p.file] || [])[i] || "전국";
+
+function writeHub(file, heading, lead, sections) {
+  const html = readFileSync(file, "utf8");
+  writeFileSync(file, html.replace(/<main class="policy">[\s\S]*?<\/main>/,
+    `<main class="policy">
+    <nav class="breadcrumb" aria-label="현재 위치"><a href="/">홈</a><span>${heading}</span></nav>
+    <h1>${heading}</h1>
+    <p>${lead}</p>
+    <p><a class="cta" href="/info/">전체 가이드 목록 보기</a></p>
+${sections}
+  </main>`), "utf8");
+}
+
+const group = (list, label, id) => list.length
+  ? `<section id="${id}"><h2>${label} <span class="tag">${list.length}편</span></h2><div class="info-grid">${list.map(card).join("")}</div></section>`
+  : "";
+
+writeHub("pages/routes-by-purpose.html", "목적별 자전거길 가이드",
+  "누구와 왜 가는지에 따라 좋은 코스의 기준이 달라집니다. 목적별로 필요한 준비를 모았습니다.",
+  [group(routes, "상세 코스", "route"),
+   ...byCategory.map(([c, list]) => group(list, categoryLabels[c], c))].filter(Boolean).join("\n"));
+
+writeHub("pages/routes-by-region.html", "지역별 자전거길 가이드",
+  "출발 지역과 복귀 교통을 기준으로 코스를 고르면 여행 실패 확률이 줄어듭니다.",
+  regionOrder.map((r, i) => group(hubList.filter(p => facetOf(p, 0) === r), r, `region-${i}`)).filter(Boolean).join("\n"));
+
+writeHub("pages/routes-by-distance.html", "거리별 자전거길 가이드",
+  "거리보다 복귀 가능성과 휴식 간격을 먼저 정하세요. 소요 시간대별로 나눠 모았습니다.",
+  durationOrder.map((d, i) => group(hubList.filter(p => facetOf(p, 1) === d), d, `duration-${i}`)).filter(Boolean).join("\n"));
+
 /* ---------- sitemap.xml ---------- */
 
 writeFileSync("sitemap.xml",

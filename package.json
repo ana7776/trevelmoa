@@ -9,7 +9,9 @@
     "images:process": "node scripts/process-images.mjs",
     "images:r2": "node scripts/crawl-images-to-r2.mjs",
     "build:index": "node scripts/build-indexes.mjs && node scripts/build-metadata.mjs",
-    "check:seo": "node scripts/check-seo.mjs"
+    "check:seo": "node scripts/check-seo.mjs",
+    "build:figures": "node scripts/build-figures.mjs",
+    "new:articles": "node scripts/write-articles.mjs"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.621.0",

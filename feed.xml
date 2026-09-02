@@ -8,6 +8,13 @@
     <lastBuildDate>Wed, 02 Sep 2026 00:00:00 GMT</lastBuildDate>
     <atom:link href="https://trevelmoa.com/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>자전거 여행 초보 가이드</title>
+      <link>https://trevelmoa.com/info/beginner/bike-travel-beginner-guide.html</link>
+      <guid isPermaLink="true">https://trevelmoa.com/info/beginner/bike-travel-beginner-guide.html</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <description>자전거 여행을 처음 시작할 때 왕복 10km에서 1박 종주까지 네 단계로 거리를 늘리는 방법입니다. 단계마다 추가로 준비할 장비와 자주 하는 실수를 함께 정리했습니다.</description>
+    </item>
+    <item>
       <title>가족 자전거 나들이 안전 가이드</title>
       <link>https://trevelmoa.com/info/beginner/family-bike-ride-safety-guide.html</link>
       <guid isPermaLink="true">https://trevelmoa.com/info/beginner/family-bike-ride-safety-guide.html</guid>
@@ -139,13 +146,6 @@
       <guid isPermaLink="true">https://trevelmoa.com/info/planning/bike-trip-packing-checklist.html</guid>
       <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
       <description>당일과 1박 이상 자전거 여행에 필요한 안전 장비, 수리 도구, 의류, 보급품을 상황별로 정리했습니다. 짐을 줄이는 기준도 함께 담았습니다.</description>
-    </item>
-    <item>
-      <title>반려견과 함께 타는 자전거길, 코스는 이렇게 고른다</title>
-      <link>https://trevelmoa.com/info/planning/dog-friendly-bike-route.html</link>
-      <guid isPermaLink="true">https://trevelmoa.com/info/planning/dog-friendly-bike-route.html</guid>
-      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
-      <description>반려견 동반 자전거길을 고를 때 리드줄, 노면 온도, 급수 간격, 트레일러와 바구니 방식 차이를 정리했습니다. 추천 코스와 피해야 할 구간을 구분합니다.</description>
     </item>
   </channel>
 </rss>
