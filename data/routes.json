@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-02",
+  "updated": "2026-10-01",
   "categories": [
     "route",
     "beginner",
@@ -168,6 +168,16 @@
       "duration": "당일",
       "url": "/info/planning/gangwon-scenic-bike-route-prep.html",
       "description": "강원권 자전거 여행 전 오르막, 기온 차, 보급 간격, 복귀 교통을 확인하는 방법을 안내합니다."
+    },
+    {
+      "title": "국토종주 인증센터 85곳 전체 목록과 노선별 거리",
+      "category": "certification",
+      "categoryLabel": "인증",
+      "region": "전국",
+      "difficulty": "초보",
+      "duration": "1박 이상",
+      "url": "/info/certification/certification-centers.html",
+      "description": "12개 노선 인증센터 85곳을 달리는 순서대로 정리하고, 노선별 공식 거리와 스탬프 진행률 체크 도구를 제공합니다."
     },
     {
       "title": "국토종주 인증제 실전 가이드",
