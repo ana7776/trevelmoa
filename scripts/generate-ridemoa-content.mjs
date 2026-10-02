@@ -551,8 +551,9 @@ function normalizeDescription(value) {
   return text;
 }
 
-function layout({ title, description, canonical, body, type = "website" }) {
+function layout({ title, description, canonical, body, type = "website", schemaType }) {
   const pageDescription = normalizeDescription(description);
+  const resolvedSchemaType = schemaType || (type === "article" ? "Article" : "WebPage");
   return `<!doctype html>
 <html lang="ko">
 <head>
@@ -569,7 +570,7 @@ function layout({ title, description, canonical, body, type = "website" }) {
   <meta property="og:url" content="${canonical}">
   <meta property="og:image" content="${site}/assets/images/route-hero.svg">
   <link rel="stylesheet" href="/assets/css/styles.css">
-  <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": type === "article" ? "Article" : "WebPage", headline: title, description: pageDescription, url: canonical, dateModified: today, publisher: { "@type": "Organization", name: "라이드모아" } })}</script>
+  <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@type": resolvedSchemaType, headline: title, description: pageDescription, url: canonical, dateModified: today, publisher: { "@type": "Organization", name: "라이드모아" } })}</script>
 </head>
 <body>
   <header class="site-header">
@@ -773,6 +774,7 @@ function homePage() {
     title: "RideMoa | 전국 자전거길 여행 가이드",
     description: "전국 자전거길 여행을 준비하는 사람을 위한 거리, 난이도, 접근 교통, 보급, 계절별 주의사항 중심의 실전 가이드입니다.",
     canonical: `${site}/`,
+    schemaType: "CollectionPage",
     body: `
   <main>
     <section class="hero">
@@ -842,8 +844,8 @@ function homePage() {
   });
 }
 
-function simplePage(title, description, path, content) {
-  return layout({ title: `${title} | RideMoa`, description, canonical: `${site}/${path}`, body: `<main class="policy"><h1>${title}</h1>${content}</main>` });
+function simplePage(title, description, path, content, schemaType) {
+  return layout({ title: `${title} | RideMoa`, description, canonical: `${site}/${path}`, body: `<main class="policy"><h1>${title}</h1>${content}</main>`, schemaType });
 }
 
 function redirectPage(from, to) {
@@ -909,19 +911,19 @@ write("pages/routes-by-region.html", simplePage("지역별 자전거길 가이�
 <h2>상세 코스</h2>
 <div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div>
 <h2>지역 준비 가이드</h2>
-<div class="info-grid">${articles.filter(a => ["수도권", "제주", "강원"].includes(a.region)).map(articleCard).join("")}</div>`));
+<div class="info-grid">${articles.filter(a => ["수도권", "제주", "강원"].includes(a.region)).map(articleCard).join("")}</div>`, "CollectionPage"));
 
 write("pages/routes-by-distance.html", simplePage("거리별 자전거길 가이드", "반나절, 당일, 1박 이상 자전거 여행에 맞는 거리별 준비 기준입니다.", "pages/routes-by-distance.html", `
 <p>거리보다 복귀 가능성과 휴식 간격을 먼저 정하세요.</p>
 <h2>상세 코스</h2>
 <div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div>
 <h2>거리별 준비 가이드</h2>
-<div class="info-grid">${["반나절", "당일", "1박 이상"].map(duration => `<section><h2>${duration}</h2><div class="info-grid">${articles.filter(a => a.duration === duration).map(articleCard).join("")}</div></section>`).join("")}</div>`));
+<div class="info-grid">${["반나절", "당일", "1박 이상"].map(duration => `<section><h2>${duration}</h2><div class="info-grid">${articles.filter(a => a.duration === duration).map(articleCard).join("")}</div></section>`).join("")}</div>`, "CollectionPage"));
 
 write("pages/routes-by-purpose.html", simplePage("목적별 자전거길 가이드", "초보, 계획, 인증, 안전 카테고리별 자전거길 가이드입니다.", "pages/routes-by-purpose.html", `
 <p>누구와 왜 가는지에 따라 좋은 코스의 기준이 달라집니다.</p>
 <section id="route"><h2>상세 코스</h2><div class="info-grid">${routeCourses.map(infoRouteCard).join("")}</div></section>
-${["beginner", "planning", "certification", "safety"].map(category => `<section id="${category}"><h2>${labels[category]}</h2><div class="info-grid">${articles.filter(a => a.category === category).map(articleCard).join("")}</div></section>`).join("")}`));
+${["beginner", "planning", "certification", "safety"].map(category => `<section id="${category}"><h2>${labels[category]}</h2><div class="info-grid">${articles.filter(a => a.category === category).map(articleCard).join("")}</div></section>`).join("")}`, "CollectionPage"));
 
 write("data/routes.json", JSON.stringify({
   updated: today,
