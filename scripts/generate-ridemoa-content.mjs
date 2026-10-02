@@ -551,7 +551,7 @@ function normalizeDescription(value) {
   return text;
 }
 
-function layout({ title, description, canonical, body, type = "website", schemaType }) {
+function layout({ title, description, canonical, body, type = "website", schemaType, robots = "index, follow, max-image-preview:large", ads = true }) {
   const pageDescription = normalizeDescription(description);
   const resolvedSchemaType = schemaType || (type === "article" ? "Article" : "WebPage");
   return `<!doctype html>
@@ -559,10 +559,12 @@ function layout({ title, description, canonical, body, type = "website", schemaT
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  ${adsenseSnippet}
+  ${ads ? adsenseSnippet : ""}
+  <meta name="naver-site-verification" content="e84ddde000c492efd3b58193e2f3f1bc69d408c4" />
+  <meta name="google-site-verification" content="Y4NCnkq1Bb8sIA_PFxIZU6wrhCYw-RaUYy27y0rL3ck" />
   <title>${title}</title>
   <meta name="description" content="${escapeAttr(pageDescription)}">
-  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="robots" content="${robots}">
   <link rel="canonical" href="${canonical}">
   <meta property="og:type" content="${type}">
   <meta property="og:title" content="${escapeAttr(title)}">
@@ -854,6 +856,8 @@ function redirectPage(from, to) {
     title: `${slug} 새 주소 안내 | RideMoa`,
     description: "이전 글 주소에서 현재 라이드모아 정보 글로 이동하는 안내 페이지입니다.",
     canonical: `${site}/${to}`,
+    robots: "noindex, follow",
+    ads: false,
     body: `<main class="policy"><h1>페이지가 이동되었습니다</h1><p><a href="/${to}">새 주소에서 글을 확인하세요.</a></p></main>`
   }).replace("</head>", `  <meta http-equiv="refresh" content="0; url=/${to}">\n</head>`);
 }
@@ -890,21 +894,37 @@ write("index.html", homePage());
 for (const article of articles) write(article.path, articlePage(article));
 for (const route of routeCourses) write(route.path, routeDetailPage(route));
 
-write("pages/about.html", simplePage("사이트 소개", "라이드모아의 운영 목적, 편집 기준, 출처 확인 원칙을 안내합니다.", "pages/about.html", `
-<p>라이드모아는 전국 자전거길 여행을 준비하는 방문자를 위해 코스 선택, 이동 동선, 안전 준비, 계절별 주의사항을 정리하는 정보 사이트입니다.</p>
+write("pages/about.html", simplePage("사이트 소개", "라이드모아의 운영 목적, 편집 기준, 출처 확인 원칙, 운영 주체와 연락 방법을 안내합니다.", "pages/about.html", `
+<p>라이드모아(RideMoa)는 전국 자전거길 여행을 준비하는 방문자를 위해 코스 선택, 이동 동선, 안전 준비, 계절별 주의사항을 정리하는 독립 운영 정보 사이트입니다. 처음 자전거길을 타는 분도 출발 전에 무엇을 확인해야 하는지 한 곳에서 판단할 수 있도록 돕는 것이 목적입니다.</p>
+<h2>운영 주체</h2><p>라이드모아는 개인 운영자가 기획, 작성, 검수를 맡아 운영합니다. 특정 지자체, 공공기관, 자전거 브랜드나 숙박·교통 업체와 공식 제휴 관계가 아니며, 공식 기관의 입장을 대변하지 않습니다.</p>
+<h2>다루는 콘텐츠</h2><ul><li>지역별, 거리별, 목적별 자전거길 코스 가이드</li><li>초보자 준비물, 안전 수칙, 복귀 교통 계획</li><li>계절별 주의사항과 인증 코스 이용 팁</li></ul>
 <h2>편집 기준</h2><p>공식 자료를 참고하되 문장을 그대로 복사하지 않고, 방문자가 실제로 판단해야 할 체크리스트와 설명으로 다시 작성합니다. 운영시간, 요금, 통제처럼 바뀌기 쉬운 정보는 단정하지 않고 공식 확인을 안내합니다.</p>
-<h2>운영 원칙</h2><p>라이드모아는 출발 전 판단에 필요한 거리, 보급, 복귀 교통, 계절 위험을 중심으로 글을 구성합니다. 현장 상황이 바뀔 수 있는 항목은 방문 직전 공식 채널 재확인을 권합니다.</p>`));
+<h2>운영 원칙</h2><ul><li>출발 전 판단에 필요한 거리, 보급, 복귀 교통, 계절 위험을 중심으로 구성합니다.</li><li>현장 상황이 바뀔 수 있는 항목은 방문 직전 공식 채널 재확인을 권합니다.</li><li>광고가 게재되더라도 광고와 편집 내용은 구분하며, 광고 수익이 코스 설명의 객관성에 영향을 주지 않도록 합니다.</li><li>오류 제보를 받으면 확인 후 수정합니다.</li></ul>
+<h2>오류 제보와 문의</h2><p>잘못된 정보나 변경된 안내는 <a href="/pages/contact.html">문의 페이지</a>를 통해 알려주세요. 개인정보 처리 기준은 <a href="/pages/privacy.html">개인정보처리방침</a>에서 확인할 수 있습니다.</p>`));
 
-write("pages/contact.html", simplePage("문의", "라이드모아 콘텐츠 오류 제보와 수정 요청을 받는 연락 안내 페이지입니다.", "pages/contact.html", `
-<p>코스 정보 오류, 변경된 교통 안내, 통제 구간, 저작권 관련 요청이 있다면 아래 연락처로 알려주세요.</p>
-<h2>연락처</h2><p>이메일: contact@trevelmoa.com</p>
-<h2>보내주시면 좋은 내용</h2><ul><li>확인이 필요한 페이지 주소</li><li>수정이 필요한 문장이나 정보</li><li>근거가 되는 공식 안내 링크</li><li>확인한 날짜</li></ul>`));
+write("pages/contact.html", simplePage("문의", "라이드모아 콘텐츠 오류 제보, 수정 요청, 제휴 및 저작권 문의를 받는 연락 안내 페이지입니다.", "pages/contact.html", `
+<p>라이드모아는 개인이 운영하는 사이트입니다. 코스 정보 오류, 변경된 교통 안내, 통제 구간, 저작권 관련 요청, 일반 문의는 아래 이메일로 보내주세요.</p>
+<h2>연락처</h2><p>이메일: <a href="mailto:contact@trevelmoa.com">contact@trevelmoa.com</a></p>
+<h2>응답 안내</h2><p>문의는 접수 순서대로 확인하며, 보통 영업일 기준 3~5일 안에 답변드립니다. 내용 확인이 필요한 경우 추가 자료를 요청드릴 수 있습니다.</p>
+<h2>문의 유형</h2><ul><li>콘텐츠 오류 제보와 수정 요청</li><li>이미지, 문장 등 저작권 관련 요청</li><li>개인정보 열람·삭제 요청</li><li>광고, 제휴, 기타 문의</li></ul>
+<h2>보내주시면 좋은 내용</h2><ul><li>확인이 필요한 페이지 주소</li><li>수정이 필요한 문장이나 정보</li><li>근거가 되는 공식 안내 링크</li><li>확인한 날짜</li></ul>
+<p>사이트 운영 기준은 <a href="/pages/about.html">사이트 소개</a>에서 확인할 수 있습니다.</p>`));
 
-write("pages/privacy.html", simplePage("개인정보처리방침", "라이드모아의 개인정보 처리, 쿠키, 접속 로그, 문의 정보 보관 기준을 안내합니다.", "pages/privacy.html", `
-<p>라이드모아는 회원가입과 별도 로그인 기능을 운영하지 않으며, 현재 사용자가 직접 입력하는 민감한 개인정보를 수집하지 않습니다.</p>
-<h2>처리될 수 있는 정보</h2><p>사이트 안정성과 통계 확인을 위해 접속 로그, 브라우저 정보, 기기 정보, 쿠키 정보가 서비스 제공자에 의해 처리될 수 있습니다. 문의 기능이 추가되는 경우 사용자가 보낸 이메일 주소와 문의 내용은 답변 목적으로만 사용합니다.</p>
-<h2>보관과 삭제</h2><p>문의로 전달된 정보는 답변과 오류 확인 목적에 필요한 기간 동안만 보관합니다. 삭제 요청이 있으면 법령상 보관이 필요한 경우를 제외하고 확인 뒤 처리합니다.</p>
-<h2>문의</h2><p>개인정보와 콘텐츠 관련 문의는 contact@trevelmoa.com 으로 보내주세요.</p><p>시행일: 2026년 7월 23일</p>`));
+write("pages/privacy.html", simplePage("개인정보처리방침", "라이드모아의 개인정보 처리, 쿠키 사용, 구글 애드센스 등 제3자 광고, 접속 로그, 문의 정보 보관 기준을 안내합니다.", "pages/privacy.html", `
+<p>라이드모아(이하 "사이트")는 이용자의 개인정보를 소중히 다루며, 관련 법령을 준수합니다. 사이트는 회원가입과 로그인 기능을 운영하지 않으며, 이용자가 직접 입력하는 민감한 개인정보를 수집하지 않습니다.</p>
+<h2>1. 처리될 수 있는 정보</h2><p>사이트 안정성과 이용 통계 확인을 위해 접속 로그, IP 주소, 브라우저 및 기기 정보, 방문 페이지, 쿠키 정보가 호스팅 및 분석·광고 서비스 제공자에 의해 자동으로 처리될 수 있습니다. 이메일로 문의하시는 경우 이메일 주소와 문의 내용을 답변 목적으로만 사용합니다.</p>
+<h2>2. 쿠키 사용</h2><p>쿠키는 웹사이트가 이용자의 브라우저에 저장하는 작은 텍스트 파일입니다. 사이트와 제3자 서비스는 이용 환경 인식, 이용 통계 분석, 광고 제공 및 성과 측정을 위해 쿠키를 사용할 수 있습니다. 이용자는 브라우저 설정에서 쿠키 저장을 거부하거나 삭제할 수 있으며, 이 경우 일부 기능 이용에 제한이 있을 수 있습니다.</p>
+<h2>3. 제3자 광고 (Google AdSense)</h2><ul>
+<li>구글을 포함한 제3자 광고 공급업체는 쿠키를 사용하여 이용자가 이 사이트 또는 다른 웹사이트를 이전에 방문한 기록을 바탕으로 광고를 게재합니다.</li>
+<li>구글은 광고 쿠키(DART 쿠키 포함)를 사용하여 이용자의 이 사이트 및 인터넷상의 다른 사이트 방문 기록을 바탕으로 광고를 게재할 수 있습니다.</li>
+<li>이용자는 <a href="https://adssettings.google.com" rel="noopener" target="_blank">구글 광고 설정</a>에서 맞춤 광고를 해제할 수 있습니다. 또한 <a href="https://www.aboutads.info" rel="noopener" target="_blank">www.aboutads.info</a>에서 제3자 공급업체의 맞춤 광고용 쿠키 사용을 거부할 수 있습니다.</li>
+<li>구글의 광고 및 개인정보 보호 정책은 <a href="https://policies.google.com/technologies/ads" rel="noopener" target="_blank">policies.google.com/technologies/ads</a>에서 확인할 수 있습니다.</li></ul>
+<h2>4. 보관과 삭제</h2><p>문의로 전달된 정보는 답변과 오류 확인 목적에 필요한 기간 동안만 보관하며, 목적 달성 후 지체 없이 삭제합니다. 삭제 요청이 있으면 법령상 보관이 필요한 경우를 제외하고 확인 뒤 처리합니다.</p>
+<h2>5. 제3자 제공 및 외부 링크</h2><p>사이트는 법령에 근거한 경우를 제외하고 이용자의 개인정보를 제3자에게 판매하거나 제공하지 않습니다. 사이트에 포함된 외부 링크 사이트의 개인정보 처리에 대해서는 책임지지 않으므로 해당 사이트의 방침을 확인해 주세요.</p>
+<h2>6. 이용자의 권리</h2><p>이용자는 자신의 개인정보에 대한 열람, 정정, 삭제, 처리 정지를 요청할 수 있습니다. 요청은 아래 연락처로 보내주세요.</p>
+<h2>7. 문의</h2><p>개인정보와 콘텐츠 관련 문의: <a href="mailto:contact@trevelmoa.com">contact@trevelmoa.com</a> (<a href="/pages/contact.html">문의 페이지</a>)</p>
+<h2>8. 방침 변경</h2><p>법령이나 서비스 변경에 따라 이 방침이 수정될 수 있으며, 변경 시 이 페이지에 공지합니다.</p>
+<p>시행일: 2026년 7월 23일 / 최종 수정일: 2026년 10월 2일</p>`));
 
 write("pages/routes-by-region.html", simplePage("지역별 자전거길 가이드", "수도권, 제주, 강원 등 지역별 자전거길 여행 준비 가이드 모음입니다.", "pages/routes-by-region.html", `
 <p>출발 지역과 복귀 교통을 기준으로 코스를 고르면 여행 실패 확률이 줄어듭니다.</p>
